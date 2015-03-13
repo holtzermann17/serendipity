@@ -8,4 +8,6 @@ related-work.tex
 literature.tex
 serendipity-in-computational-context.tex
 discussion.tex
+recommendations.tex
+future-work.tex
 conclusion.tex
