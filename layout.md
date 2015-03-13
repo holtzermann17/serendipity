@@ -1,7 +1,7 @@
 introduction.tex
 background.tex
-SPECS continues.tex
 figures/schematic/schematic.png
+SPECS continues.tex
 literature.tex
 serendipity-in-computational-context.tex
 discussion.tex
