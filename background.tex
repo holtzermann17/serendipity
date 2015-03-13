@@ -39,42 +39,10 @@ $p^{\prime}$ denotes the preparations that facilitate the creation of a
 bridge to a result $R$, which is ultimately given a positive
 evaluation.
 
-\begin{center}
-\begingroup
-\tikzset{
-block/.style = {draw, fill=white, rectangle, minimum height=3em, minimum width=3em},
-tmp/.style  = {coordinate}, 
-sum/.style= {draw, fill=white, circle, node distance=1cm},
-input/.style = {coordinate},
-output/.style= {coordinate},
-pinstyle/.style = {pin edge={to-,thin,black}}
-}
-
-\begin{tikzpicture}[auto, node distance=2cm,>=latex']
-    \node [sum] (sum1) {};
-    \node [input, name=pinput, above left=.7cm and .7cm of sum1] (pinput) {};
-    \node [input, name=tinput, left of=sum1] (tinput) {};
-    \node [input, name=minput, below left of=sum1] (minput) {};
-    \node [input, name=minput, right of=sum1] (moutput) {};
-    \draw [->] (pinput) -- node{$p$} (sum1);
-    \draw [->] (tinput) -- node{\vphantom{{\tiny g}}$T$} (sum1);
-    \draw [->] (sum1) -- node{\vphantom{{\tiny g}}$T^{\star}$}  (moutput);
-\end{tikzpicture}
-\hspace{1cm}
-\begin{tikzpicture}[auto, node distance=2cm,>=latex']
-    \node [sum] (sum1) {};
-    \node [input, name=pinput, above left=.7cm and .7cm of sum1] (pinput) {};
-    \node [input, name=tinput, left of=sum1] (tinput) {};
-    \node [input, name=minput, below left of=sum1] (minput) {};
-    \node [sum, right of=sum1] (sum2) {};
-    \node [input, name=minput, right of=sum2] (moutput) {};
-    \draw [->] (pinput) -- node{$p^{\prime}$} (sum1);
-    \draw [->] (tinput) -- node{\vphantom{{\tiny g}}$T^{\star}$} (sum1);
-    \draw [->] (sum1) -- node{\vphantom{{\tiny g}}$R$} (sum2);
-    \draw [->] (sum2) -- node{$|R|>0$}  (moutput);
-\end{tikzpicture}
-\endgroup
-\end{center}
+% \input{schematic-tikz}
+{\centering
+\includegraphics[width=.8\textwidth]{schematic}
+\par}
 
 \subsubsection*{ Step 2: Evaluation standards for computational serendipity}
 \begin{quote} {\em Using Step 1, clearly state what standards you use to evaluate the serendipity of your
