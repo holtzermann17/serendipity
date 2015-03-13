@@ -1,3 +1,4 @@
+abstract.tex
 introduction.tex
 background.tex
 SPECS-begins.tex
