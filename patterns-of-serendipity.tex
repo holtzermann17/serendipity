@@ -1,0 +1,565 @@
+\section{Patterns of Serendipity} \label{sec:patterns-of-serendipity}
+
+\begin{figure}[p]
+\centering
+%\input{grid-input}
+\resizebox{1.0\textwidth}{!}{%
+\begin{tikzpicture}[framed]
+\draw[step=1cm,black,thin] (0,0) grid (12,13);
+% Zeroth column
+\node (bottom) at (-0.5,12.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node[draw=none,left=.2cm of bottom.west,anchor=east] {\emph{Analogy}};
+\node (bottom) at (-0.5,11.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node[draw=none,left=.2cm of bottom.west,anchor=east] {\emph{One surprising obs.}};
+\node (bottom) at (-0.5,10.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node[draw=none,left=.2cm of bottom.west,anchor=east] {\emph{Rep. of surprise}};
+\node (bottom) at (-0.5,9.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node[draw=none,left=.2cm of bottom.west,anchor=east] {\emph{Successful error}}; 
+\node (bottom) at (-0.5,8.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node[draw=none,left=.2cm of bottom.west,anchor=east] {\emph{Side effect}};
+\node (bottom) at (-0.5,7.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node[draw=none,left=.2cm of bottom.west,anchor=east] {\emph{Spin off}};
+\node (bottom) at (-0.5,6.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node[draw=none,left=.2cm of bottom.west,anchor=east] {\emph{Wrong hypothesis}};
+\node (bottom) at (-0.5,5.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node[draw=none,left=.2cm of bottom.west,anchor=east] {\emph{No hypothesis}};
+\node (bottom) at (-0.5,4.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node[draw=none,left=.2cm of bottom.west,anchor=east] {\emph{Inversion}};
+\node (bottom) at (-0.5,3.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node[draw=none,left=.2cm of bottom.west,anchor=east] {\emph{Testing popular belief}};
+\node (bottom) at (-0.5,2.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node[draw=none,left=.2cm of bottom.west,anchor=east] {\emph{Outsider}};
+\node (bottom) at (-0.5,1.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node[draw=none,left=.2cm of bottom.west,anchor=east] {\emph{Disturbance}};
+\node (bottom) at (-0.5,0.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node[draw=none,left=.2cm of bottom.west,anchor=east] {\emph{Scarcity}}; 
+\node (bottom) at (-0.5,-0.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node[draw=none,left=.2cm of bottom.west,anchor=east] {\emph{Interruption}};
+\node[draw=none,rotate=90,below=.2cm of bottom.south,yshift=-.1cm,anchor=east] {Focus shift};
+% First column
+\node (bottom) at (0.5,12.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node (bottom) at (0.5,11.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node (bottom) at (0.5,10.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node (bottom) at (0.5,9.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node (bottom) at (0.5,8.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node (bottom) at (0.5,7.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node (bottom) at (0.5,6.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node (bottom) at (0.5,5.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node (bottom) at (0.5,4.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node (bottom) at (0.5,3.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node (bottom) at (0.5,2.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node (bottom) at (0.5,1.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node (bottom) at (0.5,0.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node (bottom) at (0.5,-0.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node[draw=none,rotate=90,below=.2cm of bottom.south,yshift=-.1cm,anchor=east] {Prepared mind};
+ % Interruption               
+% Second column
+\node at (1.5,12.5) [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{};
+\node at (1.5,11.5) [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{};
+\node at (1.5,10.5) [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{};
+\node at (1.5,9.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{};
+\node at (1.5,8.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{};
+\node at (1.5,7.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{};
+\node at (1.5,6.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{};
+\node at (1.5,5.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{};
+\node at (1.5,4.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{};
+\node at (1.5,3.5)  [draw,fill=red!80,minimum width=1cm,minimum height=1cm]{};
+\node at (1.5,2.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{};
+\node at (1.5,1.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{};
+\node at (1.5,0.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{};
+\node (bottom) at (1.5,-0.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node[draw=none,rotate=90,below=.2cm of bottom.south,yshift=-.1cm,anchor=east] {Serendipity trigger};
+% Third column
+\node at (2.5,12.5) [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Analogy                    
+\node at (2.5,11.5) [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % One surprising observation 
+\node at (2.5,10.5) [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Repetition of surprise     
+\node at (2.5,9.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Successful error           
+\node at (2.5,8.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Side effect                
+\node at (2.5,7.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Spin off                   
+\node at (2.5,6.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Wrong hypothesis           
+\node at (2.5,5.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % No hypothesis              
+\node at (2.5,4.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Inversion                  
+\node at (2.5,3.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Testing popular belief     
+\node at (2.5,2.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % outsider    
+\node at (2.5,1.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Disturbance                
+\node at (2.5,0.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Scarcity                   
+\node (bottom) at (2.5,-0.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node[draw=none,rotate=90,below=.2cm of bottom.south,yshift=-.1cm,anchor=east] {Bridge};
+% Fourth column
+\node at (3.5,12.5) [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Analogy                    
+\node at (3.5,11.5) [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % One surprising observation 
+\node at (3.5,10.5) [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Repetition of surprise     
+\node at (3.5,9.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Successful error           
+\node at (3.5,8.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Side effect                
+\node at (3.5,7.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Spin off                   
+\node at (3.5,6.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Wrong hypothesis           
+\node at (3.5,5.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % No hypothesis              
+\node at (3.5,4.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Inversion
+\draw [fill=red!80] (3,4) -- (3,5) -- (4,4);  
+\node at (3.5,3.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Testing popular belief     
+\node at (3.5,2.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Outsider
+\node at (3.5,1.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Disturbance                
+\node at (3.5,0.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Scarcity                   
+%\node at (3,0)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Interruption               
+\node (bottom) at (3.5,-0.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node[draw=none,rotate=90,below=.2cm of bottom.south,yshift=-.1cm,anchor=east] {Result};
+% Fifth column
+\node at (4.5,12.5) [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Analogy                    
+\node at (4.5,11.5) [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % One surprising observation 
+\node at (4.5,10.5) [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Repetition of surprise     
+\node at (4.5,9.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Successful error           
+\node at (4.5,8.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Side effect                
+\node at (4.5,7.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Spin off                   
+\node at (4.5,6.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Wrong hypothesis           
+\node at (4.5,5.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % No hypothesis              
+\node at (4.5,4.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Inversion
+\node at (4.5,3.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Testing popular belief     
+\node at (4.5,2.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Testing popular belief     
+\node at (4.5,1.5)  [draw,fill=red!80,minimum width=1cm,minimum height=1cm]{}; % Disturbance                
+\node at (4.5,0.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Scarcity                   
+% \node at (4,0)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Interruption               
+\node (bottom) at (4.5,-0.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node[draw=none,rotate=90,below=.2cm of bottom.south,yshift=-.1cm,anchor=east] {Chance};
+% Sixth column
+\node at (5.5,12.5) [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Analogy                    
+\node at (5.5,11.5) [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % One surprising observation 
+\node at (5.5,10.5) [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Repetition of surprise     
+\node at (5.5,9.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Successful error           
+\node at (5.5,8.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Side effect                
+\node at (5.5,7.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Spin off                   
+\node at (5.5,6.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Wrong hypothesis           
+\node at (5.5,5.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % No hypothesis              
+\node at (5.5,4.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Inversion                  
+\draw [fill=red!80] (5,4) -- (5,5) -- (6,4);  
+\node at (5.5,3.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Testing popular belief     
+\node at (5.5,2.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Testing popular belief     
+\node at (5.5,1.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Disturbance                
+\node at (5.5,0.5)  [draw,fill=red!80,minimum width=1cm,minimum height=1cm]{}; % Scarcity                   
+% \node at (5,0)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Interruption               
+\node (bottom) at (5.5,-0.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node[draw=none,rotate=90,below=.2cm of bottom.south,yshift=-.1cm,anchor=east] {Curiosity};
+% Seventh column
+\node at (6.5,12.5) [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Analogy                    
+\node at (6.5,11.5) [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % One surprising observation 
+\node at (6.5,10.5) [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Repetition of surprise     
+\node at (6.5,9.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Successful error           
+\node at (6.5,8.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Side effect                
+\node at (6.5,7.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Spin off                   
+\node at (6.5,6.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Wrong hypothesis           
+\node at (6.5,5.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % No hypothesis              
+\node at (6.5,4.5)  [draw,fill=red!80,minimum width=1cm,minimum height=1cm]{}; % Inversion                  
+\node at (6.5,3.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Testing popular belief     
+\node at (6.5,2.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Testing popular belief     
+\node at (6.5,1.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Disturbance                
+\node at (6.5,0.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Scarcity                   
+% \node at (6,0)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Interruption               
+\node (bottom) at (6.5,-0.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node[draw=none,rotate=90,below=.2cm of bottom.south,yshift=-.1cm,anchor=east] {Sagacity};
+% Eighth column
+\node at (7.5,12.5) [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Analogy                    
+\node at (7.5,11.5) [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % One surprising observation 
+\node at (7.5,10.5) [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Repetition of surprise     
+\node at (7.5,9.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Successful error           
+\node at (7.5,8.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Side effect                
+\node at (7.5,7.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Spin off                   
+\node at (7.5,6.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Wrong hypothesis           
+\node at (7.5,5.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % No hypothesis              
+%\node at (7.5,4.5)  [draw,shading=axis,bottom color=green!60,top color=red,minimum width=1cm,minimum height=1cm,shading angle=45]{}; % Inversion
+\node at (7.5,4.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Inversion
+%% half off
+\draw [fill=red!80] (7,4) -- (7,5) -- (8,4);  % Interruption
+%\draw (7,4) -- (8,5);  % Interruption
+\node at (7.5,3.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Testing popular belief     
+\node at (7.5,2.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % outsider
+\node at (7.5,1.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Disturbance                
+\node at (7.5,0.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Scarcity                   
+%\node at (7,0)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Interruption               
+\node (bottom) at (7.5,-0.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node[draw=none,rotate=90,below=.2cm of bottom.south,yshift=-.1cm,anchor=east] {Value};
+%%%%%%%%%%%%%%%
+% Ninth column
+\node at (8.5,12.5) [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Analogy                    
+\node at (8.5,11.5) [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % One surprising observation 
+\node at (8.5,10.5) [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Repetition of surprise     
+\node at (8.5,9.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Successful error           
+\node at (8.5,8.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Side effect                
+\node at (8.5,7.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Spin off                   
+\node at (8.5,6.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Wrong hypothesis           
+\node at (8.5,5.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % No hypothesis              
+\node at (8.5,4.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Inversion                  
+\node at (8.5,3.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Testing popular belief     
+\node at (8.5,2.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Testing popular belief     
+\node at (8.5,1.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Disturbance                
+\node at (8.5,0.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Scarcity                   
+% \node at (8,0)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Interruption               
+\node (bottom) at (8.5,-0.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node[draw=none,rotate=90,below=.2cm of bottom.south,yshift=-.1cm,anchor=east] {Dynamic world};
+% Tenth column
+\node at (9.5,12.5) [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Analogy                    
+\node at (9.5,11.5) [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % One surprising observation 
+\node at (9.5,10.5) [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Repetition of surprise     
+\node at (9.5,9.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Successful error           
+\node at (9.5,8.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Side effect                
+\node at (9.5,7.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Spin off
+\draw [fill=red!80] (9,7) -- (9,8) -- (10,7);  
+\node at (9.5,6.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Wrong hypothesis           
+\node at (9.5,5.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % No hypothesis              
+\node at (9.5,4.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Inversion                  
+\node at (9.5,3.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Testing popular belief     
+\node at (9.5,2.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Testing popular belief     
+\node at (9.5,1.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Disturbance                
+\node at (9.5,0.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Scarcity                   
+% \node at (9,0)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Interruption               
+\node (bottom) at (9.5,-0.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node[draw=none,rotate=90,below=.2cm of bottom.south,yshift=-.1cm,anchor=east] {Multiple contexts};
+% Eleventh column
+\node at (10.5,12.5) [draw,fill=red!80,minimum width=1cm,minimum height=1cm]{}; % Analogy                    
+\node at (10.5,11.5) [draw,fill=red!80,minimum width=1cm,minimum height=1cm]{}; % One surprising observation 
+\node at (10.5,10.5) [draw,fill=red!80,minimum width=1cm,minimum height=1cm]{}; % Repetition of surprise     
+\node at (10.5,9.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Successful error           
+\node at (10.5,8.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Side effect                
+\node at (10.5,7.5)  [draw,fill=red!80,minimum width=1cm,minimum height=1cm]{}; % Spin off                   
+\node at (10.5,6.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Wrong hypothesis           
+\node at (10.5,5.5)  [draw,fill=red!80,minimum width=1cm,minimum height=1cm]{}; % No hypothesis              
+\node at (10.5,4.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Inversion                  
+\node at (10.5,3.5)  [draw,fill=red!80,minimum width=1cm,minimum height=1cm]{}; % Testing popular belief     
+\node at (10.5,2.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % outsider
+\node at (10.5,1.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Disturbance                
+\node at (10.5,0.5)  [draw,fill=red!80,minimum width=1cm,minimum height=1cm]{}; % Scarcity                   
+% \node at (10,0)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Interruption               
+\node (bottom) at (10.5,-0.5)[draw,fill=green!60,minimum width=1cm,minimum height=1cm] {};  
+\node[draw=none,rotate=90,below=.2cm of bottom.south,yshift=-.1cm,anchor=east] {Multiple tasks};
+% Twelfth column
+\node at (11.5,12.5) [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Analogy                    
+\node at (11.5,11.5) [draw,fill=red!80,minimum width=1cm,minimum height=1cm]{}; % One surprising observation 
+\node at (11.5,10.5) [draw,fill=red!80,minimum width=1cm,minimum height=1cm]{}; % Repetition of surprise     
+\node at (11.5,9.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Successful error           
+\node at (11.5,8.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Side effect                
+\node at (11.5,7.5)  [draw,fill=red!80,minimum width=1cm,minimum height=1cm]{}; % Spin off                   
+\node at (11.5,6.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Wrong hypothesis           
+\node at (11.5,5.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % No hypothesis              
+\node at (11.5,4.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Inversion                  
+\node at (11.5,3.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Testing popular belief     
+\node at (11.5,2.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Testing popular belief     
+\node at (11.5,1.5)  [draw,fill=green!60,minimum width=1cm,minimum height=1cm]{}; % Disturbance                
+\node at (11.5,0.5)  [draw,fill=red!80,minimum width=1cm,minimum height=1cm]{}; % Scarcity                   
+\node (bottom) at (11.5,-0.5)[draw,fill=red!80,minimum width=1cm,minimum height=1cm] {};  
+\node[draw=none,rotate=90,below=.2cm of bottom.south,yshift=-.1cm,anchor=east] {Multiple influences};
+
+\begin{scope}[xshift=.5cm,yshift=0cm]
+\node (A) at (-5.75,-2.0)  [draw,fill=green!60,minimum width=.7cm,minimum height=.7cm]{}; %
+\node[draw=none,right=.2cm of A.east,text width=3.10cm] {{\footnotesize Pattern includes\par feature}}; 
+\node (B) at (-5.75,-3.0)  [draw,fill=red!80,minimum width=.7cm,minimum height=.7cm]{}; %
+\node[draw=none,right=.2cm of B.east,text width=3.10cm] {{\footnotesize $\ldots$ does not include $\ldots$}}; 
+
+\node (C) at (-5.75,-4)  [draw,fill=green!60,minimum width=.7cm,minimum height=.7cm]{}; %
+\node[draw=none,right=.2cm of C.east,text width=3.10cm] (Ct) {{\footnotesize $\ldots$ only eventually}};
+%% half off
+\draw [fill=red!80] (-6.1,-4.35) -- (-6.1,-3.65) -- (-5.4,-4.35);  
+
+\node[draw=black!80, fit=(A) (B) (C) (Ct)](FIt1) {};
+\end{scope}
+\end{tikzpicture}
+}
+\caption{Characteristics of Pek van Andel's patterns of serendipity\label{fig:grid}}
+\end{figure}
+
+% ***AJ what is a 'situational pattern of serendipity'? Can we add a definition e.g. from van Andel***
+Figure \ref{fig:grid} examines 14 situational patterns of serendipity
+collected by van Andel \cite{van1994anatomy} through the lens of the evaluation
+criteria described in Section \ref{sec:literature-review}.
+%
+As required by our theory, a ``focus shift'' appears in each instance,
+although it has a different flavour in the different examples.  In
+this analysis, only three of the other criteria mentioned above are
+clearly present in \emph{all} of the patterns: ``a prepared mind'', a
+``bridge'', and a ``dynamic world.''  Similarly, only four of van
+Andel's patterns exhibit all of the characteristics we identified:
+\emph{Successful error}, \emph{Side effect}, \emph{Wrong hypothesis},
+and \emph{Outsider}.
+
+``Near misses'' are also of interest, and help to illustrate the role
+of the various factors from Section \ref{sec:literature-review}.
+%
+For example, the \emph{Inversion} pattern is somewhat closer to what is called an \emph{antipattern} in the design pattern literature \cite{brown1998antipatterns}.  Van Andel describes the story of a researcher observing an effect (the anticoagulant heparine) which was precisely the opposite of the one sought (factors that \emph{cause} blood clotting) -- and failing to acknowledge that this observation was important for over 40 years.  The result was eventually seen to be of value: however, in this instance, we may have an example of a mind that is \emph{over-prepared}, and focused on a particular sort of result, rather than a truly ``sagacious'' mind that is both prepared and open to serendipitous findings.
+
+In the case of \emph{Testing popular belief}, van Andel gives an
+account of a medical practise that originated in a folk claim, namely
+cowpox-derived immunity to smallpox.  This effect, for milkmaids,
+might indeed be called serendipitous.  Indeed, the medical use of
+cowpox has been described as ``widely know'' \cite{riedel2005edward}
+prior to its popularisation by Edward Jenner.  Nevertheless, 
+Jenner's ``relentless promotion and devoted research of vaccination
+\ldots changed the way medicine was practised'' \cite{riedel2005edward}.
+This again might be called serendipity, but most clearly at the social
+rather than personal level.  These comments should not be seen to
+disparage Jenner's contribution, or diminish the role of a curious
+chain of events in his personal history that tied his fate to that of
+the smallpox vaccine.  Many of these had the air of serendipity about
+them -- but even so, it is hard to find one specific ``serendipity
+trigger.''
+ 
+In describing \emph{Disturbance}, van Andel's exemplar is the
+creation of radio telescopy from noise in transatlantic telephone calls
+(paralleling the subsequent discovery by Penzias and Wilson).  Here it
+is hard to see an overt role for ``chance,'' since as machinery at
+various scales is created, disturbance is somewhat inevitable, even if
+a specific disturbance in a specific machine is unexpected.
+Similarly, in cases of \emph{Scarcity}, ``curiosity'' may not play a
+significant role, and may instead be replaced by the drive of desire
+and corresponding ingenuity.
+
+Multiple contexts, tasks, and influences should be seen to be
+conducive to serendipitous discovery, but not strictly necessary.  For
+example, in addition to the context of a research laboratory, there
+may be the context of subsequent industrial application.  However,
+within the laboratory itself (where a \emph{Spin off} discovery might
+be made) the future context is not typically in force.
+
+There are a number of additional reoccurring themes, which are worthy
+of further comment, and which could form the basis of further
+(meta-)patterns.
+
+\begin{description}
+\item[\emph{It's all part of a day's work.}] Often the discoverer had
+  a problem to solve or job to do, and made the serendipitous
+  discovery in the course of doing their job.  This sort of
+  serendipity is often ``social.''  For example, in the
+  \emph{Outsider} pattern, the ophthalmologist Gregg was simply
+  listening to his patient and taking what she said seriously; in
+  other words, he was doing his job.  But this led to a new
+  hypothesis.
+\item[\emph{Factorisation is useful.}] Variability, and in the case of
+  scientific work, factorisation (e.g. via control studies) often
+  plays a key role in establishing ``multiple contexts.''
+  Serendipitous discovery often happens in the context of ``natural
+  experiments,'' for example, in the case of \emph{One surprising
+    observation}, where van Andel's example dealt with the observation
+  that one tree in a row was taller and healthier than its
+  neighbours.\footnote{Concerning the broader issues associated with
+    the ``design'' of such experiments, see
+    \cite{imbens1994identification}.}
+\item[\emph{A good story is liable to change.}] Comparing
+  \emph{Inversion} and \emph{Spin off} suggests the value of being
+  able to change the story.  If Perkin had suppressed his discovery of
+  mauvine because he hadn't successfully synthesised quinine, there
+  would have been no spin off, and it would be hard to call the
+  discovery ``serendipitous'' -- or, indeed, to consider it to be a
+  discovery at all.  Whatever its value, an event may only be
+  \emph{described} as serendipitous at the narrative level.
+\item[\emph{Watch out for hidden symmetries.}] The \emph{Wrong
+  hypothesis} pattern involves several of the points above.  In van
+  Andel's anecdote about John Cade's discovery of lithium as a
+  \emph{treatment} for mania, the issues under investigation were,
+  rather, the \emph{causes} of the illness.  This was initially
+  conceptualised in terms of \emph{surfeit} and \emph{deficiency}.  A
+  more general interpretation is that the factors influencing the
+  course of an illness have hidden interactions between them.
+  Serendipitous discovery may be able to find and capitalise on this
+  type of (unexpected) invariant.
+\end{description}
+
+Van Andel describes three additional patterns that seem to be
+connected with personal qualities of the investigator rather than with
+situational features.  These are \emph{Playing}, \emph{Joke}, and
+\emph{Dream}.  The theme of personal qualities and skills that support
+serendipitous discovery will be taken up below, as part of a general
+approach to modelling serendipity.
+
+\subsection{Modelling serendipity with design patterns} \label{sec:unified-approach}
+
+As illustrated above, serendipity can take place on multiple scales.
+Something can be personally surprising while being socially mundane
+(Boden's \emph{P-creativity} \cite{boden}), or vice versa, as in
+the case of personally mundane discoveries that take on surprising
+social value.
+
+In the case of serendipitous discoveries at the personal level, the
+qualities of the investigator are understood to be important features.
+Thus, for example, van Andel writes that a ``sense of humour and
+  sense of serendipity have a lot in common.'' 
+% 
+Van Andel relates the \emph{Dream} pattern -- exemplified, for him by
+Descartes, but Kekul\'e's ouroborus provides another instance -- to
+Poincar\'e's \cite{poincare1910creation,poincare2013science} model of
+``preparation, incubation, illumination, and verification''
+(cf. \cite{wallas1926art}).  Poincar\'e \cite{poincare1910creation}
+clarifies that
+\begin{quote}
+``\emph{unconscious work}~\ldots~\emph{is possible, and of a
+    certainty, it is only fruitful, if it is on the one hand preceded
+    and on the other hand followed by a period of conscious work.}''
+\end{quote}
+
+What might conceptions like this mean for serendipity that takes place
+on a social or indeed computational level?  In order to understand
+this, we will refer van Andel's patterns and the serendipity factors
+introduced above to the heterodox theory of patterns coming from the
+field of design, mentioned briefly above.  First introduced by the
+architect Christopher Alexander
+\cite{alexander1979timeless,alexander1977pattern}, the design pattern
+methodology spread from architecture to software
+\cite{gabriel1996patterns}, and later, to other fields, including
+public affairs \cite{schuler2008liberating} and education
+\cite{bergin2012pedagogical}.
+
+Alexander's patterns are presented in a tree-like structure called a
+\emph{pattern language}, ordered in a top-down manner from large-scale
+to small-scale levels of application, with each pattern presented in
+terms of a \emph{picture}, a \emph{context} (including links to
+relevant larger patterns), the \emph{problem} that the pattern
+addresses, the \emph{solution}, a \emph{diagram}, and \emph{links to
+  smaller patterns} \cite[pp. x-xi]{alexander1977pattern}.
+%
+A relatively convincing implementation of
+Alexander's idea of patterns as a ``living
+  language''
+\cite[p. xvii]{alexander1977pattern} was realised
+with one of the earliest applications of wiki
+software developed by Ward Cunningham: the
+Portland Pattern
+Repository.\footnote{\url{http://c2.com/ppr/}}
+The notion of pattern-finding as a process
+related to, but distinct from abstraction, is
+described by Richard Gabriel, who emphasises that
+the ``patterns and the social process for
+  applying them are designed to produce organic
+  order through piecemeal growth''
+\cite[p. 31]{gabriel1996patterns}.
+%
+In its original form, this statement describes the generative use of
+patterns to create artefacts (buildings, object oriented programs,
+etc.).  However, this criterion can also be applied to the growth and
+development the pattern language itself, and this is the key idea
+underlying our application.
+
+Christian Kohls \cite{kohls2010structure,kohls2011structure}, deploys
+a ``path'' or ``journey'' metaphor to describe design patterns in the
+language of constrained optimisation problems, considering in
+particular the \emph{initial state}, \emph{end state}, and
+\emph{forces acting}.  This is useful because of its general nature:
+it suggests that any time there are predictable dynamics observed in
+the world, there is a corresponding design pattern waiting to be seen
+and recorded.  This perspective can be usefully combined with the
+proposal advanced by Manual DeLanda \cite{delanda2011philosophy},
+among others, to give the system a simulated embodiment, putting it in
+contact with a virtual world in which it does not need to, and indeed
+cannot, have everything worked out in advance.  DeLanda uses the term
+\emph{gradient} to describe the forces acting in a way that focuses on
+the relevant features.  Like Kohls, Peter Andersen
+\cite{andersen2002dynamic} considers one-dimensional paths through a
+two-dimensional space with a gradient, and writes that the basic
+metaphor for thought is travel.  A more general metaphor suggested
+by DeLanda would take into account
+%
+``a population of interacting physical entities, such as the molecules
+in a thin layer of soap'' \cite{delanda2005deleuze} exhibiting more
+complex non-linear interactions over higher-dimensional gradients.
+
+This discussion makes a distinction between an agential system of
+interest and its broader context, which could also be described as a
+physical ``system,'' or a simulation of one.  While such distinctions
+tend to be leaky, to avoid undo confusion about terminology, when we
+refer to ``the system'' without further qualification, we mean the
+agential sub-system -- the part that behaves -- and the context will
+be referred to as ``the environment.''
+
+Modelling serendipitous behaviour requires us, as designers, to engage
+in \emph{meta-modelling}: we need to build systems which are capable
+of modelling their environments.  Terence Deacon
+\cite{deacon2006emergence} refers to such systems as
+\emph{teleodynamic}, that is, organised with respect to what they are
+not.
+%
+However, most typical computational scenarios that simply involve reasoning
+about representations will not yield the twin features of discovery
+and invention that are central to our understanding of serendipity.
+Such reasoning considers
+%
+``identity with regard to concepts, opposition with regard to the determination of concepts, analogy with regard to judgement, resemblance with regard to objects''
+%
+and Gilles Deleuze \cite[p. 174]{deleuze1994difference} cautions that
+this activity relies on an assumed ``common sense'' that is not the
+same as thought.  For Deleuze, when thought arises, it is as a matter
+of necessity: ``the contingency of an encounter \ldots\ forces us to
+think'' \cite[p. 176]{deleuze1994difference}.
+
+Cast in the terms we introduced earlier: a ``prepared mind'' will have
+available to it certain patterns as designs for action.  It is
+understood to have an interactive dimension that makes it capable of
+enacting some of these designs in the context of a ``dynamic world.''
+An encounter between the system and some other aspect or occupant of
+this environment forms a ``trigger'' that composes with preexisting
+patterns, leading to a ``bridge'' that makes sense of the stimuli and
+that leads to new designs for action as a ``result,'' which may
+fundamentally change the system's subsequent behaviour.
+
+Representational forms will certainly play a role in such systems, but
+this role is secondary.  For example, actions are selected, delected,
+or deplored depending on their relationship to the gradient, by way of
+a model.  Nevertheless, the gradient is its own ``best model'' and it
+contributes the final evaluation of systems.
+%
+Design patterns may be communicable between agents, but in the manner
+of blueprints or genes, whereas it is the actualised building, body,
+or manifest pattern of behaviour forms the crux of the
+encounter.\footnote{DeLanda \cite{delanda1993virtual} emphasises the
+  role of population thinking on several scales, for example, at the
+  personal level relative to society, or at the neuronal level
+  relative to the person.  Design patterns are strictly lower level
+  than agents, and agents are lower level than interactions, but we
+  cannot reduce the trajectory of an evironment's evolution to its
+  representation by the agents that inhabit it: cf.
+  \url{http://c2.com/cgi/wiki?OfMiceAndMen}.}
+
+Jonathan Rowe \cite{rowe1994creativity} is one of the researchers who
+argue for ``the generation of structure and regularity as emergent
+phenomena arising from the interaction of low level structures,
+without any central control'' (cf. \cite{pearce-boden-and-beyond}).
+He favourably compares Hofstadter and Mitchell's {\sf Copycat}, in
+which ``[a]nalogies are generated through the interactions of
+low-level structures without any central control'' to Lenat's {\sf
+  EURISKO}, in which metarules provide ``templates for expressing a
+number of rules in a concise from'' and
+(cf. \cite{hofstadter1994copycat,mitchell1993analogy}).
+%
+Low-level explorations that take place before high-level structures
+have emerged can afford to be more random than changes in the
+high-level structures \cite[pp. 232--233]{hofstadter1994copycat}.
+\begin{quote}
+``\emph{In the early stages of a run, almost all discoveries are on a
+    very small, local scale: a primitive object acquires a
+    description, a bond is built, and so on.  Gradually, the scale of
+    actions increases: small groups begin to appear, acquire their own
+    descriptions, and so on.  In the later stages of a run, actions
+    take place on an even larger scale, often involving complex,
+    hierarchically structured objects.}''
+  \cite[p. 228]{hofstadter1994copycat}
+\end{quote}
+
+For {\sf Copycat}, a serendipitous discovery might take
+the form of an especially clever or unexpected solution to an analogy
+problem.  More broadly, it concerns observations that do not match a
+system's preprogrammed understanding or capabilities, but which it
+must nevertheless make sense of, learn from, and adapt to.  The
+successor system {\sf Metacat} explicitly aims to:
+\begin{quote}
+``\emph{perceive patterns in its own behavior in much the same way
+    that Copycat perceives patterns in letter-strings: via codelets
+    looking for relationships among perceptual
+    structures.}''~\cite{DBLP:journals/jetai/Marshall06}
+\end{quote}
+
+These patterns ``serve as a `medium' through which the program is able
+to wield control over its own behavior''
+\cite{DBLP:journals/jetai/Marshall06}.  It can also use thematic
+patterns to evaluate and explain examples supplied by the user.
+
+Our perspective is that computer programs in general can be described
+as collections of ``design patterns,'' understood to encode the
+dynamics of response to events which take place in the system's
+environment.  We are particularly interested in the process whereby
+\emph{new} patterns form, and we expect that this will typically
+progress through a process of progressive skill refinement.  We will
+develop the investigation of this theme further in the following
+section.
