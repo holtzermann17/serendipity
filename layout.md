@@ -1,6 +1,6 @@
 introduction.tex
+background.tex
 literature.tex
 serendipity-in-computational-context.tex
-related-work.tex
-recommendations.tex
+discussion.tex
 conclusion.tex
