@@ -56,6 +56,16 @@ inner ysep=10pt
 \newcommand{\keywords}[1]{\par\addvspace\baselineskip
 \noindent\keywordname\enspace\ignorespaces#1}
 
+\newcommand{\inlineitem}[1]{%
+\begingroup%
+\setlength\itemindent{-1em}%
+\item[]%
+\begin{minipage}{.96\textwidth}%
+#1%
+\end{minipage}%
+\endgroup
+}
+
 \begin{document}
 
 % TITLE INFORMATION
@@ -102,5 +112,7 @@ under FET-Open Grant numbers: 611553 (COINVENT) and 611560 (WHIM).
 
 \bibliographystyle{apacite}
 \bibliography{./bibliography/biblio}
+
+\input{plan}
 
 \end{document}
