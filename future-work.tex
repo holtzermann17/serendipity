@@ -2,38 +2,91 @@
 
 \subsubsection{``Hatching'' new designs: Which came first?}
 
-Whereas van Andel speaks of ``patterns of serendipity'' in a
-relatively informal way, this paper will rely on the somewhat more
-formal theory of \emph{design patterns} \cite{alexander1999origins},
-to which it makes several additions and alterations.  This theory is
-by no means limited to computing, and indeed, has its origins in
-architecture and urban planning.  Our approach to ``designing for
-serendipity'' \cite{andre2009discovery} centres on the use of design
-patterns to capture the dynamic aspects of serendipitous situations.
+Merton \cite{merton1948bearing} \cite<cited in>[pp. 195--196]{merton} refers to a generalised ``serendipity pattern''
+and its constituent parts:
 
-The typical use of design patterns, since they were introduced by
-Christopher Alexander
-\cite{alexander1979timeless,alexander1977pattern}, is to prescribe as
-well as to describe.  Design patterns provide models \emph{for} as
-well as models \emph{of} \cite<cf.>[p. 93]{geertz1973interpretation}.
-Thus, when Alexander describes the pattern \emph{A place to wait}, he
-is telling readers that it is a good idea to consider building such
-places when designing living spaces.  In connection with our
-understanding of serendipity as closely associated with deviations
-from familiar patterns, the central concern in this paper is the way
-in which \emph{new} patterns are formed.
+\begin{quote}
+\emph{The serendipity pattern refers to the fairly common experience of observing an \emph{unanticipated}, \emph{anomalous} \emph{and strategic} datum which becomes the occasion for developing a new theory or for extending an existing theory.}~\cite[p. 506]{merton1948bearing} (original emphasis)
+    %% The datum [that exerts a pressure for initiating theory] is, first of all, unanticipated. A research directed toward the test of one hypothesis yields a fortuitous by-product, an unexpected observation which bears upon theories not in question when the research was begun.
+    %% Secondly, the observation is anomalous, surprising, either because it seems inconsistent with prevailing theory or with other established facts. In either case, the seeming inconsistency provokes curiosity; it stimulates the investigator to "make sense of the datum," to fit it into a broader frame of knowledge....
+    %% And thirdly, in noting that the unexpected fact must be "strategic," i. e., that it must permit of implications which bear upon generalized theory, we are, of course, referring rather to what the observer brings to the datum than to the datum itself. For it obviously requires a theoretically sensitized observer to detect the universal in the particular. 
+\end{quote}
 
-For example, when Poincar\'e \citeyear{poincare1910creation} describes his
-discovery of the existence of Fuchsian functions, he includes the
-detail: ``contrary to my habit I took black coffee, I could not
-sleep.''  This is much more interesting as part of a story about an
-exceptional case of productive insomnia than it is as the broad
-characterisation of a typical nightly sleep schedule.  It might best
-be described as a part of a ``situational pattern,'' with a title like
-\emph{Change of pace}, rather than a ``behaviour pattern''; indeed, at
-the level of behaviour, a \emph{Change of pace} is the exception to a
-pattern!  Nevertheless, along with Poincar\'e, we can recognize a
-pattern at another level.
+These features match our earlier description quite well: $T$ is the
+unexpected observation; $T^\star$ classifies this as interesting; and
+as we noted in Section \ref{sec:connections-to-formal-definition}, the
+result $R$ may include updates to $p$ or $p^{\prime}$ that inform
+further phases of research.
+%
+When van Andel \citeyear{van1994anatomy} speaks of ``patterns of
+serendipity'' in a somewhat informal way, they are often instances of
+this broader pattern.
+
+%% \begin{quote}
+%% ``Given research set up for a certain purpose, some unexpected, puzzling data, and a scientist capable of being puzzled -- given all of these, an accidental discovery will occur, because the relationship between fact and theory in science is such that it must occur.''
+%% \end{quote}
+
+
+We now ask whether it is possible to use the somewhat more formal
+theory of \emph{design patterns} \cite{alexander1999origins} to design
+for serendipity \cite{andre2009discovery}.  Alexandrian design
+patterns are by no means limited to computing, and indeed, the
+approach has its origins in architecture and urban planning
+\cite{alexander1979timeless,alexander1977pattern}.
+
+Design patterns prescribe and describe: they provide models \emph{for}
+as well as models \emph{of}
+\cite<cf.>[p. 93]{geertz1973interpretation}.  Thus, when Alexander
+describes the pattern \emph{A place to wait}, he is also telling
+readers that it may be a good idea to consider build a place to wait
+when designing a living environment.
+%% Architecture always contains
+%% indeterminacy:
+
+%% \begin{quote}
+%% \emph{A bench is an object that provides a means for unforeseeable
+%%   behaviour; depending on its location, it can be a seat, a bed or a
+%%   sanctuary where conscious individuals may share a common durational
+%%   experience.}~\cite[p. 26]{mckay-serendipity}
+%% \end{quote}
+
+%% In connection with our understanding of serendipity as closely
+%% associated with deviations from familiar patterns, the central
+%% concern in this paper is the way in which \emph{new} patterns are
+%% formed.
+
+A question we would like to consider in future work is where new
+design patterns come from, and how they could be generated
+computationally.  This is challenging because noticing a new pattern
+means noticing something that deviates from what's known already.
+Creating new design patterns is almost the antithesis of ``pattern
+recognition'' in the usual computing sense.
+
+%% For example, when Poincar\'e
+%% \citeyear{poincare1910creation} describes his discovery of the
+%% existence of Fuchsian functions, he includes the detail: ``contrary to
+%% my habit I took black coffee, I could not sleep.''  This is much more
+%% interesting as part of a story about an exceptional case of productive
+%% insomnia than it is as the broad characterisation of a typical nightly
+%% sleep schedule.  It might best be described as a part of a
+%% ``situational pattern,'' with a title like \emph{Change of pace},
+%% rather than a ``behaviour pattern''; indeed, at the level of
+%% behaviour, a \emph{Change of pace} is the exception to a pattern!
+%% Nevertheless, along with Poincar\'e, we can recognize a pattern at
+%% another level.
+
+\textbf{[Tentatively\ldots]}
+
+\emph{Problem setting} is a fundamental issue for the field of
+computational creativity that will only be given due attention when
+the research culture is ready to fully embrace serendipity.
+
+\begin{quote}
+``[S]\emph{ocial cybernetics must be a second-order cybernetics--a
+    cybernetics of cybernetics--in order that the observer who enters
+    the system shall be allowed to stipulate his own purpose: he is
+    autonomous.}'' \cite[p. 286]{von2003essays}
+\end{quote}
 
 \subsubsection{Computational poetry}
 
