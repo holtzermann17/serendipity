@@ -1,0 +1,36 @@
+\begin{center}
+\begingroup
+\tikzset{
+block/.style = {draw, fill=white, rectangle, minimum height=3em, minimum width=3em},
+tmp/.style  = {coordinate}, 
+sum/.style= {draw, fill=white, circle, node distance=1cm},
+input/.style = {coordinate},
+output/.style= {coordinate},
+pinstyle/.style = {pin edge={to-,thin,black}}
+}
+
+\begin{tikzpicture}[auto, node distance=2cm,>=latex']
+    \node [sum] (sum1) {};
+    \node [input, name=pinput, above left=.7cm and .7cm of sum1] (pinput) {};
+    \node [input, name=tinput, left of=sum1] (tinput) {};
+    \node [input, name=minput, below left of=sum1] (minput) {};
+    \node [input, name=minput, right of=sum1] (moutput) {};
+    \draw [->] (tinput) -- node{\vphantom{{\tiny g}}{\tiny \emph{text}}} (sum1);
+    \draw [->] (pinput) -- node{{\tiny listening}} (sum1);
+    \draw [->] (sum1) -- node{\vphantom{{\tiny g}}{\tiny feedback}}  (moutput);
+\end{tikzpicture}
+\hspace{1cm}
+\begin{tikzpicture}[auto, node distance=2cm,>=latex']
+    \node [sum] (sum1) {};
+    \node [input, name=pinput, above left=.7cm and .7cm of sum1] (pinput) {};
+    \node [input, name=tinput, left of=sum1] (tinput) {};
+    \node [input, name=minput, below left of=sum1] (minput) {};
+    \node [sum, right=1.5cm of sum1] (sum2) {};
+    \node [input, name=minput, right of=sum2] (moutput) {};
+    \draw [->] (tinput) -- node{\vphantom{{\tiny g}}{\tiny feedback}} (sum1);
+    \draw [->] (pinput) -- node{{\tiny \emph{questions}}} (sum1);
+    \draw [->] (sum1) -- node{\vphantom{{\tiny g}}{\tiny answers}} (sum2);
+    \draw [->] (sum2) -- node{{\tiny \emph{reflections}}}  (moutput);
+\end{tikzpicture}
+\endgroup
+\end{center}
