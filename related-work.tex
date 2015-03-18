@@ -1,66 +1,94 @@
 \subsection{Related work} \label{sec:related}
 
-Paul Andr{\'e} et al.~\citeyear{andre2009discovery} look at serendipity
-from a design point of view.  They propose a two-part model, in which
-what we might call chance+curiosity exposes the unexpected, and
-sagacity+value is determined by another subsystem.  This corresponds
-to Bergson's distinction between \emph{discovery} and \emph{invention}
-(see Section \ref{sec:overview-serendipity}).  One survey related to
-the first phase is \cite{foster2003serendipity}.  According to Andr\'e
-et al., the first phase is the one that has most frequently been
+\textbf{[Since we are now have the formal definition, let's be sure
+    that we're sufficiently thorough in connecting this related work
+    back to it -- and pointing out what still needs to be done.]}
+
+Paul Andr{\'e} et al.~\citeyear{andre2009discovery} look at
+serendipity from a design point of view.  These authors also propose a
+two-part model, in which what we have called \emph{discovery} above
+exposes the unexpected, while \emph{invention} is the responsibility
+another subsystem that finds applications.  According to Andr\'e et
+al., the first phase is the one that has most frequently been
 automated, but they suggest that computational systems should be
 developed that support both aspects.  Their specific suggestions focus
 on representational features: \emph{domain expertise} and a
-\emph{common language model}.  We've advocated for a more
-experimentally-based approach that does not directly rely on shared
-understandings.  For example, participants in a Writers Workshop in
-poetry may not ``understand'' one another but can still find the
-experience of participating in the workshop rewarding.
+\emph{common language model}.
 
-The issue of designing for serendipity has also been taken up by
-Deborah Maxwell et al.~\cite{maxwell2012designing}, in their
+Although tremendously useful when they are available, these features
+are not always enough to account for serendipitious events.  Using the
+terminology we introduced above, these features seem to exemplify
+aspects of the \emph{prepared mind}.  However, as we mentioned above,
+the \emph{bridge} is a distinct process that mental preparation can
+support, but not always fully determine.  For example, participants in
+a Writers Workshop may a possess a very limited understanding of each
+other's aims or of the work they are critiquing, and may as a
+consequence talk past one another to a greater or lesser degree --
+while nevertheless finding the overall process of participating in the
+workshop itself illuminating and rewarding (often precisely because
+such misunderstandings elucidate poor communication choices!).
+Various social strategies, ranging from Writers Workshops to open
+source software, pair programming, and design charettes
+\cite[p. 11]{gabriel2002writer} have been developed to exploit similar
+emergent effects to develop new insights, and to develop \emph{new}
+shared language.  In \cite{poetry-workshop}, we investigate the
+feasibility of using designs of this sort in multi-agent systems that
+learn by sharing and discussing partial understandings.  This earlier
+paper remains broadly indicative, however, and the ideas it describes
+can see considerable benefit from the more formal thinking we develop
+in the current work.
+
+The issue of designing for serendipity has also been taken up recently
+by Deborah Maxwell et al.~\citeyear{maxwell2012designing}, in their
 description of a prototype of the {\sf SerenA} system.  This system is
-designed to support serendipitous discovery for its \emph{users}
+designed to support serendipitous discovery for its (human) users
 \cite{forth2013serena}.  The authors rely on a process-based model of
 serendipity \cite{Makri2012,Makri2012a} that is derived from user
 studies, including interviews with 28 researchers, looking for
 instances of serendipity from both their personal and professional
 lives.  This material was coded along three dimensions:
 \emph{unexpectedness}, \emph{insightfulness}, and \emph{value}.  This
-work aims to support the process of forming bridging connections that
-eventuate in an unanticipated valuable outcome.  They particularly
-focus on the acts of \emph{reflection} that foment both the bridge and
-estimates of the potential value of the result.  Both pattern-building
-activities and the practice of fomenting thought by structured
-encounters in Writers Workshops can be understood to contribute to the
-theory and practise of reflection\footnote{As with creativity and
-  serendipity, in order to carry out concrete evaluations of automated
-  reflection we may well ask ``what, exactly, are we looking for as
-  evidence of reflection?'' \cite{rodgers2002defining}.  A detailed
-  answer derived from the classic work of John Dewey
-  \citeyear{dewey1997we} is explored in \cite{rodgers2002defining}.}
+research aims to support the process of forming bridging connections
+from unexpected encounter to a previously unanticipated but valuable
+outcome.  They particularly focus on the acts of \emph{reflection}
+that foment both the creation of a bridge and estimates of the
+potential value of the result.
 
-{\sf SerenA} is a system like the ones described by Andr{\'e} et
-al.~\cite{andre2009discovery}, in which the user is expected to have
-the ``aha'' moment, and take the creative steps.  The computer is
-mainly used to facilitate this; and as indicated above this is usually
-done by searching outside of the normal search parameters to engineer
-potentially serendipitous (or at least pseudo-serendipitous)
-encounters.  Another earlier example of this sort of system is {\sf
-  Max}, created by Figueiredo and Campos \citeyear{Campos2002}.  The user
-emailed {\sf Max} with a list of interests and {\sf Max} would find a
-webpage that may be of interest to the user.  Other search-related
-examples support searching for analogies (\cite{Donoghue2002} and
-\cite{Donoghue2012}) and content \cite{Iaquinta2008}.
+Although this touches on all of the features of our model, {\sf
+  SerenA} nevertheless matches the description offered by Andr{\'e} et
+al.~\citeyear{andre2009discovery} of discovery-focused systems: the
+user is the primary agent with a prepared mind.  Accordingly it is the
+user that undergoes an ``aha'' moment and takes the creative steps to
+realise the result; the computer is mainly used to facilitate this.
+The primary computational method is to search outside of the normal
+search parameters in order to engineer potentially serendipitous (or
+at least pseudo-serendipitous) encounters.  Another earlier related
+example of this sort of system is {\sf Max}, created by Figueiredo and
+Campos \citeyear{Campos2002}.  The user emailed {\sf Max} with a list
+of interests and {\sf Max} would find a webpage that may be of
+interest to the user.  Similar systems with support for serendipitous
+discovery involve searching for analogies
+\cite{Donoghue2002,Donoghue2012}) and content \cite{Iaquinta2008}.
 
 In earlier joint work \cite{colton-assessingprogress}, we presented a
 diagrammatic formalism for evaluating progress in computational
 creativity.  It is useful to ask what serendipity would add to this
 formalism, and how the result compares with other attempts to
 formalise serendipity, notably Figueiredo and Campos's
-\citeyear{Figueiredo2001} `Serendipity Equations'.
-%
-In \cite{stakeholder-groups-bookchapter}, we advanced several
-hypotheses related to the development of the computational creativity
-field.  Again, we should ask here how serendipity contributes.  We
-discuss these points in the following section.
+\citeyear{Figueiredo2001} `Serendipity Equations'.  In this work,
+Figueiredo and Campos describe serendipitous ``moves'' from one
+problem to another, which transform a problem that cannot be solved
+into one that can.  In our diagrammatic formalism, we spoke about
+progress with \emph{systems} rather than with \emph{problems}.  It
+would be a useful generalisation of the formalism -- and not just a
+simple relabelling -- for it to be able to tackle problems as well.
+However, progress with problems does not always mean transforming a
+problem that cannot be solved into one that can.  Progress may also
+apply to growth in the ability to \emph{posit} problems.  In keeping
+track of progress, it would be useful for system designers to record
+(or get their systems to record) what problem a given system solves,
+and the degree to which the computer was responsible for coming up
+with this problem.  The relationship between serendipity and novel
+problems receives considerable attention here, since we want to
+increasingly turn over responsibility for creating and maintaining a
+prepared mind to the machine.
