@@ -1,11 +1,12 @@
 abstract.tex
 introduction.tex
+etymology.tex
 background.tex
 SPECS-begins.tex
 figures/schematic/schematic.png
 SPECS-continues.tex
+connections.tex
 related-work.tex
-literature.tex
 serendipity-in-computational-context.tex
 discussion.tex
 recommendations.tex
