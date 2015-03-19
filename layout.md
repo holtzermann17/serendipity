@@ -9,7 +9,6 @@ figures/schematic1/schematic1.png
 connections.tex
 SPECS-begins.tex
 SPECS-continues.tex
-connections.tex
 related-work.tex
 cc-intro.tex
 ww-intro.tex
