@@ -1,7 +1,11 @@
 abstract.tex
 introduction.tex
+literature.tex
 etymology.tex
+by-example.tex
+related-work.tex
 model.tex
+connections.tex
 SPECS-begins.tex
 figures/schematic/schematic.png
 SPECS-continues.tex
