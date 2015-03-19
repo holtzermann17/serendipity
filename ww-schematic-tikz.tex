@@ -12,10 +12,10 @@ pinstyle/.style = {pin edge={to-,thin,black}}
 \begin{tikzpicture}[auto, node distance=2cm,>=latex']
     \node [sum] (sum1) {};
     \node [input, name=pinput, above left=.7cm and .7cm of sum1] (pinput) {};
-    \node [input, name=tinput, left of=sum1] (tinput) {};
+    \node [input, name=tinput, left=2cm of sum1] (tinput) {};
     \node [input, name=minput, below left of=sum1] (minput) {};
     \node [input, name=minput, right of=sum1] (moutput) {};
-    \draw [->] (tinput) -- node{\vphantom{{\tiny g}}{\tiny \emph{text}}} (sum1);
+    \draw [->] (tinput) -- node{\vphantom{{\tiny g}}{\tiny \emph{presentation}}} (sum1);
     \draw [->] (pinput) -- node{{\tiny listening}} (sum1);
     \draw [->] (sum1) -- node{\vphantom{{\tiny g}}{\tiny feedback}}  (moutput);
 \end{tikzpicture}

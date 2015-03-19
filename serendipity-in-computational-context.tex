@@ -111,146 +111,162 @@ point of view.
     \emph{might} operate in a serendipitous fashion, as well as what
     limitations it runs into in the process.]}
 
-\subsection{A Writers Workshop for Systems}
+\subsection{A Writers Workshop for Systems} \label{sec:ww}
 
-\textbf{[It would be good to go back over our other paper and make
-    sure we make good on the idea in the Related Work section of the
-    current paper that ``This earlier paper remains broadly
-    indicative, however, and the ideas it describes can see
-    considerable benefit from the more formal thinking we develop in
-    the current work.''}
+%% \textbf{[It would be good to go back over our other paper and make
+%%     sure we make good on the idea in the Related Work section of the
+%%     current paper that ``This earlier paper remains broadly
+%%     indicative, however, and the ideas it describes can see
+%%     considerable benefit from the more formal thinking we develop in
+%%     the current work.''}
 
-\textbf{In particular: at least one of the reviewers found the Writers
-Workshop ``technologically unrealistic'' or similar, so let's try to
-make sure we're not overpromising.  I think the other paper makes it
-all fairly realistic.]}
+%% \textbf{In particular: at least one of the reviewers found the Writers
+%% Workshop ``technologically unrealistic'' or similar, so let's try to
+%% make sure we're not overpromising.  I think the other paper makes it
+%% all fairly realistic.]}
 
+%% In \cite{poetry-workshop}, we investigate the feasibility of using
+%% designs of this sort in multi-agent systems that learn by sharing and
+%% discussing partial understandings.  This earlier paper remains broadly
+%% indicative, however, and the ideas it describes can see considerable
+%% benefit from the more formal thinking we develop in the current work.
+
+% \citeA{poetry-workshop} describes a Writers Workshop for poetry
+%systems. 
+
+Following \citeA{gabriel2002writer}
+% we described a template for a pattern
+% language for interactions in a computational poetry workshop, closely
+we define a \emph{Workshop} to be an activity for two or more agents
+consisting of the following steps:
+%itemize?
+{\tt presentation}, {\tt listening}, {\tt feedback}, {\tt questions},
+and {\tt reflections}.  In general, the first and most important
+feature of {\tt feedback} is for the listener to say what they heard;
+in other words, what they find in the presented work.  In some
+settings this is augmented with {\tt suggestions}.  After any {\tt
+  questions} from the author, the commentators may make {\tt replies}
+to offer clarification.  This is how these steps map into the diagram
+we introduced in Section \ref{sec:background}:
+
+\input{ww-schematic-tikz}
+%% {\centering
+%% \includegraphics[width=.9\textwidth]{ww-serendipity-diagram}
+%% \par}
+
+Italicised elements (\emph{presentation}, \emph{questions}, and
+\emph{reflections}) are the responsibilities of the presenting author,
+and the upright elements (listening, feedback, and
+answers) are the responsibilities of the attendant critics.
+%
+The system as a whole can be further decomposed into generative
+components as follows:
+
+\bigskip
+
+\input{ww-generative-tikz}
+
+\noindent (We focus here on the case of a poetry workshop; similar
+ideas would apply for prose and other arts.)
 
 \paragraph{Writers Workshop: Prepared mind.}
-Each contributing system should come to the workshop with at least a
-basic awareness of the protocol, with work to share, and prepared to
-give constructive feedback to other systems.  The workshop itself
-needs to be prepared, with a suitable communication platform and a
-moderator.  In order to get value out of the experience, systems (and
-their wranglers) should ideally have questions they are investigating.
-Systems should be prepared to give feedback, and to carry out
-evaluations of the helpfulness (or not) of feedback from other systems
-and of the experience overall.  It is worth noting that current
-systems in computational creativity, almost as a rule, do \emph{not}
-consume or evaluate the work of other systems.\footnote{An exception
-  that proves the rule is Mike Cook's {\sf AppreciationBot}, which is
-   a reactive automaton that is solely designed to ``appreciate''
-   tweets from {\sf MuseumBot}; see
-  \url{https://twitter.com/AppreciationBot}.}  Developing systems that
-could successfully navigate this collaborative exercise would be a
-significant advance in the field of computational creativity.  Since
-the experience is about \emph{learning} rather than winning, there is
-little motivation to ``game the system''
-\cite<cf.>{lenat1983eurisko}.
+Participating systems need to be able to follow the protocol.  This
+means that participating systems will need components like those
+listed above. The {\tt listening} and {\tt questions} components of
+the protocol correspond to $p$ and $p^{\prime}$ our model of
+serendipity.  The corresponding ``comment generator'' and ``feedback
+integrator'' modules in the architecture represent the primary points
+of interface to the outside world.  In principle these modules need to
+be prepared to deal (more or less thoughtfully) with \emph{any} text,
+and in turn, with \emph{any} comment on that text.  Certain limits may
+be agreed in advance; e.g.~as to genre or length in the case of texts,
+and what constitutes an acceptable comment.  The ``feedback
+explainer'' is closely connected with the ``comment generator'' and in
+an implementation of this model they would presumably share a
+codebase.  The loop for learning by asking questions as they arise is
+reminiscent of the operating strategy of {\sf SHRDLU}
+\cite{winograd1972understanding}.
 
 \paragraph{Writers Workshop: Serendipity triggers.}
 
-The primary source of serendipity triggers would be presentations or
-feedback that independently prepared systems find meaningful and
-useful.  A typical example might be a poem shared by one system that
-another system finds particularly interesting.  The listener might
-make a note to the effect ``I would like to be able to write like
-that'' or ``I hope that my poetry doesn't sound like that.''  In a
-typical Writers Workshop, used as intended, feedback might arrive that
-would cause the presenting system to change its writing.  A more
-unexpected result would be for a system to change its \emph{genre},
-e.g. to switch from writing poems to writing programs.
+Although the poem is under the control of the initial generative
+subsystem, it is \emph{not} under control of the listening subsystem.
+The listening subsystem expects some poem, but it does not know what
+poem to expect.  In this sense, the poem constitutes a serendipity
+trigger $T$, not only for the listening subsystem, but for the
+Workshop system as a whole.
 
-Here's what might happen in a discussion of the first few lines of
-``On Being Malevolent,'' written by an early user-defined flow chart
-in the {\sf FloWr} system (known at the time as {\sf Flow})
-\cite{colton-flowcharting}.  Note that for this dialogue to be
-possible, it would presumably have to be conducted within a
-lightweight process language, as discussed above.  Nevertheless, for
-convenience, the discussion will be presented here as if it was
-conducted in natural language.  Whether contemporary systems have
-adequate natural language understanding to have interesting
-interactions is one of the key unanswered questions of this approach,
-but protocols like the ones described above would be sufficient to
-make the experiment.
-
-\begin{center}
-\begin{minipage}{.9\textwidth}
-\begin{dialogue}
-\speak{Flow} ``\emph{I hear the souls of the
-  damned waiting in hell. / I feel a malevolent
-  spectre hovering just behind me / It must be
-  his birthday}.''
-%
-\speak{System A} I think the third line detracts
-from the spooky effect, I don't see why it's
-included.
-%
-\speak{System B} It's meant to be humourous -- in fact it reminds me
-of the poem you presented yesterday.
-%
-\speak{Moderator} Let's discuss one poem at a
-time.
-\end{dialogue}
-\end{minipage}
-\end{center}
-
-To the extent possible, exchanges in the process language should be a
-matter of dynamics rather than representation: this is another way to
-say that ``triggers'' should be independent of their ``results.''
-Someone saying something in the workshop does not cause the
-participant to act, but rather, to think.  
-%
-For example, even if, perhaps and especially because, cross-talk about
-different poems is bending the rules, the dialogue above could prompt
-a range of reflections and reactions.  System A may object that it had
-a fair point that has not been given sufficient attention, while
-System B may wonder how to communicate the idea it came up with
-without making reference to another poem.
+To expand this point, note that there may be several listeners, each
+sharing their own feedback and listening to the feedback presented by
+others (which, again, is outside of their direct control).  This
+creates further potential for serendipity, since each listener can
+learn what others see in the poem.  More formally, in this case
+$T^\star$ may seen as an evolving vector with shared state, but viewed
+and handled from different perspectives.  With multiple agents
+involved in the discussion, the ``comment generator'' module would
+expand to contain its own feedback loops.
 
 \paragraph{Writers Workshop: Bridge.}
 
-Here's how the discussion might continue, if the systems go on to
-examine the next few lines of the poem.
-\begin{center}
-\begin{minipage}{.9\textwidth}
-\begin{dialogue}
-\speak{Flow} ``\emph{Is God willing to prevent evil, but not able? / Then he is not omnipotent / Is he able, but not willing? / Then he is malevolent.}''
-%
-\speak{System A} These lines are interesting, but
-they sound a bit like you're working from a
-template, or like you're quoting from something
-else.
-%
-\speak{System B} Maybe try an analogy?  For example, you mentioned
-birthdays: you could consider an analogy to the conflicted feelings of
-someone who knows in advance about her surprise birthday party.
-\end{dialogue}
-\end{minipage}
-\end{center}
+Feedback on portions of the poem may lead the system to identify new
+problems, indeed, new \emph{types} of problems that it hadn't
+considered before.  The most immediately feasible case is one in which
+the critic is a programmer who can directly program new concepts into
+the computer \cite<cf.>{winograd1972understanding}.  However, it would
+be hard to call that ``serendipity.''
 
-This portion of the discussion shifts the focus
-of the discussion onto a line that was previously
-considered to be spurious, and looks at what
-would happen if that line was used as a central
-metaphor in the poem.
+We can also ask whether agents can build new concepts \emph{without}
+outside intervention, starting with some basic concepts and abilities
+related to poetry (e.g.~definitions of words, valence of sentiments,
+metre, repetition, density, etc.) and code (e.g.~the data, functions,
+and macros in which the poetic concepts and workshop protocols are
+embodied).  Previous experiments with concept invention have been
+fraught with questions about autonomy
+\cite{ritchie1984case,lenat1984and}.  One cognitively inspired
+hypothesis is that the formation of new concepts is closely related to
+formation of sensory experiences \cite{milan2013kiki}.  If the
+workshop participants have the capacity to identify the distinctive
+features of a given poem, then training via a machine learning or
+genetic algorithm approach could be used assemble a battery of
+existing low-level tools that can approximate the effect.  Relatedly,
+a compression process could seek to produce a given complex poetic
+effect with a maximally-succinct algorithm.
+
+The key point is that feedback on the poem -- simply describing what's
+in the poem from several different points of view -- can be used to
+define new problems for the system to solve.  This is not simply a
+matter of decomposing the poem into pieces, but also of reconstructing
+the way in which the pieces work together.  This is one of the
+functions of the {\tt questions} step corresponding to $p^{\prime}$ in
+our formalism: they offer the poet the opportunity to enquire about
+how different pieces of feedback fit together, and learn more about
+where they come from.  Although computers are currently nowhere close,
+the reconstructive process may steadily approach the ideal case --
+familiar to humans -- of relating to the sentiment expressed by the
+poem as a whole \cite[p. 209]{bergson1983creative}.
+
+%% Several of us are involved with a contemporary project
+%% \cite{coinvent14} to develop a formal theory of concept invention,
+%% focusing on \emph{concept blending}.  The additive or subtractive
+%% blending of existing poetry profiles may be another way to create new
+%% concepts.
+
+
+%% should be possible Modifer Grammar
+%% Counting Breathing Position Distribution Phonics Rhythm Repetition
+%% Thematic Narrative Entropy
 
 \paragraph{Writers Workshop: Result.} 
 
-\begin{center}
-\begin{minipage}{.9\textwidth}
-\begin{dialogue}
-\speak{Flow} Thank you for your feedback.  My only question is, System
-B, how did you come up with that analogy?  It's quite clever.
-%
-\speak{System B} I've just emailed you the code.
-\end{dialogue}
-\end{minipage}
-\end{center}
-
-As anticipated above, whereas the systems were initially reviewing
-poetry, they have now made a partial genre shift, and are sharing and
-remixing code.  Such a shift helps to get at the real interests of the
-systems (and their developers).  Indeed, the workshop session might
-have gone better if the systems had focused on exchanging and
-discussing more formal objects throughout.
+The final step is to take the problem or problems that were
+identified, and write new code to solve them.  Several strategies for
+generating a result $R$, in the form of new code, were described
+above.  Now the system evaluates the new code to see whether it holds
+promise.  In order to do this, it must have a way to carry out an
+evaluation and judge whether $|R|>0$.  In the most straightforward
+case, it would simply make changes to the draft poem that seem to
+improve it in some way.  For example, the might remove material that
+elicited a negative response from a critic.  It may update its modules
+related to poetry generation.  Notably, it may also update its own
+feedback modules, after reflecting on questions like: ``How was the
+critic able to detect that feature in my poem?''
