@@ -11,6 +11,7 @@ cc-intro.tex
 ww-intro.tex
 figures/ww-serendipity/ww-serendipity.png
 ww-design.tex
+figures/ww-schematic/ww-schematic.png
 ww-analysis.tex
 discussion.tex
 recommendations.tex
