@@ -1,7 +1,7 @@
 abstract.tex
 introduction.tex
 etymology.tex
-background.tex
+model.tex
 SPECS-begins.tex
 figures/schematic/schematic.png
 SPECS-continues.tex
