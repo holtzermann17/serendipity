@@ -7,7 +7,10 @@ figures/schematic/schematic.png
 SPECS-continues.tex
 connections.tex
 related-work.tex
-serendipity-in-computational-context.tex
+cc-intro.tex
+ww-intro.tex
+ww-design.tex
+ww-analysis.tex
 discussion.tex
 recommendations.tex
 future-work.tex
