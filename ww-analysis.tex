@@ -1,0 +1,106 @@
+\bigskip
+
+\noindent (We focus here on the case of a poetry workshop; similar
+ideas would apply for prose and, with further adaptation, other arts.)
+
+\paragraph{Writers Workshop: Prepared mind.}
+Participating systems need to be able to follow the protocol.  This
+means that participating systems will need components like those
+listed above. The {\tt listening} and {\tt questions} components of
+the protocol correspond to $p$ and $p^{\prime}$ our model of
+serendipity.  The corresponding ``comment generator'' and ``feedback
+integrator'' modules in the architecture represent the primary points
+of interface to the outside world.  In principle these modules need to
+be prepared to deal (more or less thoughtfully) with \emph{any} text,
+and in turn, with \emph{any} comment on that text.  Certain limits may
+be agreed in advance; e.g.~as to genre or length in the case of texts,
+and what constitutes an acceptable comment.  The ``feedback
+explainer'' is closely connected with the ``comment generator'' and in
+an implementation of this model they would presumably share a
+codebase.  The loop for learning by asking questions as they arise is
+reminiscent of the operating strategy of {\sf SHRDLU}
+\cite{winograd1972understanding}.
+
+\paragraph{Writers Workshop: Serendipity triggers.}
+
+Although the poem is under the control of the initial generative
+subsystem, it is \emph{not} under control of the listening subsystem.
+The listening subsystem expects some poem, but it does not know what
+poem to expect.  In this sense, the poem constitutes a serendipity
+trigger $T$, not only for the listening subsystem, but for the
+Workshop system as a whole.
+
+To expand this point, note that there may be several listeners, each
+sharing their own feedback and listening to the feedback presented by
+others (which, again, is outside of their direct control).  This
+creates further potential for serendipity, since each listener can
+learn what others see in the poem.  More formally, in this case
+$T^\star$ may seen as an evolving vector with shared state, but viewed
+and handled from different perspectives.  With multiple agents
+involved in the discussion, the ``comment generator'' module would
+expand to contain its own feedback loops.
+
+\paragraph{Writers Workshop: Bridge.}
+
+Feedback on portions of the poem may lead the system to identify new
+problems, indeed, new \emph{types} of problems that it hadn't
+considered before.  The most immediately feasible case is one in which
+the critic is a programmer who can directly program new concepts into
+the computer \cite<cf.>{winograd1972understanding}.  However, it would
+be hard to call that ``serendipity.''
+
+We can also ask whether agents can build new concepts \emph{without}
+outside intervention, starting with some basic concepts and abilities
+related to poetry (e.g.~definitions of words, valence of sentiments,
+metre, repetition, density, etc.) and code (e.g.~the data, functions,
+and macros in which the poetic concepts and workshop protocols are
+embodied).  Previous experiments with concept invention have been
+fraught with questions about autonomy
+\cite{ritchie1984case,lenat1984and}.  One cognitively inspired
+hypothesis is that the formation of new concepts is closely related to
+formation of sensory experiences \cite{milan2013kiki}.  If the
+workshop participants have the capacity to identify the distinctive
+features of a given poem, then training via a machine learning or
+genetic algorithm approach could be used assemble a battery of
+existing low-level tools that can approximate the effect.  Relatedly,
+a compression process could seek to produce a given complex poetic
+effect with a maximally-succinct algorithm.
+
+The key point is that feedback on the poem -- simply describing what's
+in the poem from several different points of view -- can be used to
+define new problems for the system to solve.  This is not simply a
+matter of decomposing the poem into pieces, but also of reconstructing
+the way in which the pieces work together.  This is one of the
+functions of the {\tt questions} step corresponding to $p^{\prime}$ in
+our formalism: they offer the poet the opportunity to enquire about
+how different pieces of feedback fit together, and learn more about
+where they come from.  Although computers are currently nowhere close,
+the reconstructive process may steadily approach the ideal case --
+familiar to humans -- of relating to the sentiment expressed by the
+poem as a whole \cite[p. 209]{bergson1983creative}.
+
+%% Several of us are involved with a contemporary project
+%% \cite{coinvent14} to develop a formal theory of concept invention,
+%% focusing on \emph{concept blending}.  The additive or subtractive
+%% blending of existing poetry profiles may be another way to create new
+%% concepts.
+
+
+%% should be possible Modifer Grammar
+%% Counting Breathing Position Distribution Phonics Rhythm Repetition
+%% Thematic Narrative Entropy
+
+\paragraph{Writers Workshop: Result.} 
+
+The final step is to take the problem or problems that were
+identified, and write new code to solve them.  Several strategies for
+generating a result $R$, in the form of new code, were described
+above.  Now the system evaluates the new code to see whether it holds
+promise.  In order to do this, it must have a way to carry out an
+evaluation and judge whether $|R|>0$.  In the most straightforward
+case, it would simply make changes to the draft poem that seem to
+improve it in some way.  For example, the poet might remove or alter material that
+elicited a negative response from a critic.  The system may proceed to
+update its modules related to poetry generation.  Notably, it may also update its own
+feedback modules, after reflecting on questions like: ``How might the
+critic have detected that feature in my poem?''
