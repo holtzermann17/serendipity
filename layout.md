@@ -5,6 +5,7 @@ etymology.tex
 by-example.tex
 related-work.tex
 model.tex
+figures/schematic1/schematic1.png
 connections.tex
 SPECS-begins.tex
 figures/schematic/schematic.png
