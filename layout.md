@@ -6,6 +6,7 @@ by-example.tex
 related-work.tex
 model.tex
 figures/schematic1/schematic1.png
+definition.tex
 connections.tex
 SPECS-begins.tex
 SPECS-continues.tex

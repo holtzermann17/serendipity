@@ -1,143 +1,8 @@
 \subsection{Future Work} \label{sec:futurework} \label{sec:hatching}
 
-Merton \citeyear{merton1948bearing} \cite<cited in>[pp. 195--196]{merton} refers to a generalised ``serendipity pattern''
-and its constituent parts:
-
-\begin{quote}
-\emph{The serendipity pattern refers to the fairly common experience of observing an \emph{unanticipated}, \emph{anomalous} \emph{and strategic} datum which becomes the occasion for developing a new theory or for extending an existing theory.}~\cite[p. 506]{merton1948bearing} (original emphasis)
-    %% The datum [that exerts a pressure for initiating theory] is, first of all, unanticipated. A research directed toward the test of one hypothesis yields a fortuitous by-product, an unexpected observation which bears upon theories not in question when the research was begun.
-    %% Secondly, the observation is anomalous, surprising, either because it seems inconsistent with prevailing theory or with other established facts. In either case, the seeming inconsistency provokes curiosity; it stimulates the investigator to "make sense of the datum," to fit it into a broader frame of knowledge....
-    %% And thirdly, in noting that the unexpected fact must be "strategic," i. e., that it must permit of implications which bear upon generalized theory, we are, of course, referring rather to what the observer brings to the datum than to the datum itself. For it obviously requires a theoretically sensitized observer to detect the universal in the particular. 
-\end{quote}
-
-These features match our earlier description quite well: $T$ is the
-unexpected observation; $T^\star$ singles out the interesting or
-anomalous features; and the result $R$ may include updates to $p$ or
-$p^{\prime}$ that inform further phases of research.
-%
-Van Andel's \citeyear{van1994anatomy} ``patterns of serendipity'' are
-often instances of this broader pattern.
-
-%% \begin{quote}
-%% ``Given research set up for a certain purpose, some unexpected, puzzling data, and a scientist capable of being puzzled -- given all of these, an accidental discovery will occur, because the relationship between fact and theory in science is such that it must occur.''
-%% \end{quote}
-
-
-In future work, we would like to explore the usefulness of the
-somewhat more formal theory of \emph{design patterns}
-\cite{alexander1999origins} for designing with serendipity in mind.
-Alexandrian design patterns are by no means limited to computing: the
-approach has its origins in architecture and urban planning
-\cite{alexander1979timeless,alexander1977pattern}.
-
-Design patterns prescribe and describe: they provide models \emph{for}
-as well as models \emph{of}
-\cite<cf.>[p. 93]{geertz1973interpretation}.  Thus, when Alexander
-describes the pattern \emph{A place to wait}, he is also telling
-readers that it may be a good idea to consider building a place to
-wait when designing a living environment.
-
-In connection with our understanding of serendipity as closely
-associated with deviations from familiar patterns (in the everyday
-sense of the word), it is interesting to ask how it can play a role in
-the creation of new design patterns and pattern languages.  Noticing
-and describing a new pattern is almost the antithesis of ``pattern
-recognition'' in the usual computing sense.
-
-As a beginning, we examined the 14 ``patterns of serendipity''
-selected and described by van Andel \citeyear{van1994anatomy}, using the criteria
-described in our Section \ref{sec:connections-to-formal-definition}.
-We found all of these patterns do indeed include a focus shift, a
-prepared mind, a serendipity trigger, a bridge, and a result, although
-two of the patterns raised questions:
-
-\begin{itemize}
-\item In the case of \emph{Testing popular belief}, van Andel focuses
-  on an account of a medical practise that originated in a folk claim,
-  namely cowpox-derived immunity to smallpox.  It is challenging in
-  this case to identify one specific serendipity trigger -- although a
-  curious chain of events connected Edward Jenner with the smallpox
-  vaccine.  It may be most appropriate to think of Jenner himself as
-  the serendipity trigger at the societal level: his ``relentless
-  promotion and devoted research of vaccination \ldots changed the way
-  medicine was practised'' \cite{riedel2005edward}.
-%% This effect, for milkmaids, might
-%% indeed be called serendipitous. Indeed, the medical use of cowpox has
-%% been described as ``widely know'' \cite{riedel2005edward} prior to its
-%% popularisation by Edward Jenner.  Nevertheless, Jenner's
-\item \emph{Inversion} is closer to what is called an
-  \emph{antipattern} in the design pattern literature
-  \cite{brown1998antipatterns}.  Van Andel describes the story of a
-  researcher observing an effect due to the anticoagulant heparine
-  which was precisely the opposite of the one sought -- factors that
-  \emph{cause} blood clotting -- and then failing to acknowledge that
-  this observation was important for over 40 years.  The result was
-  eventually seen to be of value, however, again, this may be a
-  pattern of \emph{antiserendipity}.
-\end{itemize}
-
-Among the 14 patterns, four are cases of ``perfect'' serendipity from
-the point of view of our extended set of criteria (i.e.~they included
-all of the 13 components, dimensions, and environmental factors) --
-these patterns were \emph{Successful error}, \emph{Side effect},
-\emph{Wrong hypothesis}, and \emph{Outsider}.
-%
-We wondered whether these were patterns might be used to support
-serendipity in other settings -- such as the Writers Workshop.  Table
-\ref{tab:reinterpret} gives an initial sketch, and initial experiments
-that will bring this material to computational life are underway.
-
-\begin{table}[p]
-\begin{tabular}{lp{.7\textwidth}}
-{\bf\emph{Successful error}} & \\
-\emph{Van Andel's example}: & Post-it\texttrademark\ notes \\[.2cm]
-{\tt presentation}& Systems should be prepared to share interesting ideas even if they don't know directly how they will be useful. \\
-{\tt listening} & Systems should listen with interest, too. \\
-{\tt feedback} & Even interesting ideas may not be ``marketable.''\\
-{\tt questions} & How is your suggestion useful? \\
-{\tt reflections} & New combinations of ideas take a long time to realise, and many different ideas may need to be combined in order to come up with something useful.\\
-\end{tabular}
-\bigskip
-
-\begin{tabular}{lp{.7\textwidth}}
-{\bf\emph{Side effect}} & \\
-\emph{Van Andel's example}: & Nicotinamide used to treat side-effects of radiation therapy proves efficacious against tuberculosis. \\[.2cm]
-{\tt presentation}& Systems should use their presentation as an experiment. \\
-{\tt listening} & Listeners should allow themselves to be affected by what they are hearing. \\
-{\tt feedback} & Feedback should convey the nature of the effect.\\
-{\tt questions} & The presenter may need to ask follow-up questions to gain insight. \\
-{\tt reflections} & Form a new hypothesis before seeking a new audience. \\
-\end{tabular}
-\bigskip
-
-\begin{tabular}{lp{.7\textwidth}}
-{\bf\emph{Wrong hypothesis}} & \\
-\emph{Van Andel's example}: & Lithium, used in a control study, had an unexpected calming effect. \\[.2cm]
-{\tt presentation}& How is this presentation interpretable as a (``natural'') control study? \\
-{\tt listening} & Listeners are ``guinea pigs''.\\
-{\tt feedback} & Discuss side-effects that do not necessarily correspond to the author's perceived intent. \\
-{\tt questions} & Zero in on the most interesting part of the conversation.\\
-{\tt reflections} & Revise hypotheses to correspond to the most surprising feedback. \\
-\end{tabular}
-\bigskip
-
-\begin{tabular}{lp{.7\textwidth}}
-{\bf\emph{Outsider}} & \\
-\emph{Van Andel's example}: & A mother suggests a new hypothesis to a doctor. \\[.2cm]
-{\tt presentation}& The presenter is here to learn from the audience. \\
-{\tt listening} & The audience is here to give help, but also to get help.\\
-{\tt feedback} & Feedback will inevitably draw on previous experiences and ideas.\\
-{\tt questions} & What is the basis for that remark?\\
-{\tt reflections} & How can I implement the suggestions?\\
-\end{tabular}
-
-\caption{Reinterpreting patterns of serendipity for use in a computational poetry workshop\label{tab:reinterpret}}
-\end{table}
-
 Within the context of the ongoing COINVENT project \cite{coinvent14},
-we are interested in using design patterns together with computational
-blending theory to realise certain aspects of this model in a
-stand-alone architecture.
+we are interested in using computational blending theory to realise
+certain aspects of this model in a stand-alone architecture.
 %
 It will be useful to consider how we can take both the \emph{discovery
   step}, which combines a serendipity trigger $T$, and prior
@@ -151,11 +16,25 @@ The epistemological framework of discovery gives some important clues
 about how to compute a common base between $T$ and $p$.  Although $T$
 was previously uninteresting, it will have attributes or
 attribute-types that match the patterns recognised by $p$ (e.g. van
-Andel's ``\emph{One surprising observation}'').  In the invention
-step, reasoning, experimentation, social interaction strategies rely
-on $p^{\prime}$, which might draw on patterns like \emph{Successful
-  error}, in order to extract a fruitful result from $T^{\star}$.
-Here, an important guidepost for implementation is that many outcomes
-will result in new patterns of behaviour that the system can draw on
-in subsequent interactions.
+Andel's  \citeyear{van1994anatomy} ``\emph{One surprising observation}'').
+%
+In the invention step, reasoning, experimentation, social interaction
+strategies rely on $p^{\prime}$, which might draw on patterns like van
+Andel's \emph{Successful error} in order to extract a fruitful result
+from $T^{\star}$.  Here, an important guidepost for implementation is
+that many outcomes will result in new patterns of behaviour that the
+system can draw on in subsequent interactions.
+
+What is particularly needed is an approach to encoding patterns of
+serendipity in a computationally accessible manner.  Here we are drawn
+to the approach taken by the design pattern community, although we
+recognize that we would be using design patterns in a very different
+way from the standard: 
+\begin{itemize}
+\item[(1)] We want to encode our ``design patterns'' directly in
+  runnable programs, not just give them to programmers as heuristic
+  guidance.
+\item[(2)] We want the automated programming system to generate new
+  patterns, not just apply or adapt old ones.
+\end{itemize}
 
