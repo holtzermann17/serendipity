@@ -7,7 +7,6 @@ related-work.tex
 model.tex
 connections.tex
 SPECS-begins.tex
-figures/schematic/schematic.png
 SPECS-continues.tex
 connections.tex
 related-work.tex
