@@ -1,0 +1,188 @@
+\subsection{Proposed experiment: A Writers Workshop for Systems} \label{sec:writers-workshop}
+
+Richard Gabriel \cite{gabriel2002writer} describes the practise of
+Writers Workshops that has been put to use for over a decade within
+the Pattern Languages of Programming (PLoP) community.  The basic
+style of collaboration originated much earlier with groups of literary
+authors who engage in peer-group critique.  Some literary workshops
+are open as to genre, and happy to accommodate beginners, like the
+Minneapolis Writers
+Workshop\footnote{\url{http://mnwriters.org/how-the-game-works/}};
+others are focused on professionals working within a specific genre,
+like the Milford Writers
+Workshop\footnote{\url{http://www.milfordsf.co.uk/about.htm}}.  The
+practices that Gabriel describes are fairly typical.  Authors come
+with work ready to present, and read a short sample, which is then
+discussed and constructively critiqued by attendees.  Presenting
+authors are not permitted to rebut these comments.  The commentators
+generally summarise the work and say what they have gotten out of it,
+discuss what worked well in the piece, and talk about how it could be
+improved.  The author listens and may take notes; at the end, he or
+she can then ask questions for clarification.  Generally, non-authors
+are either not permitted to attend, or are asked to stay silent
+through the workshop, and perhaps sit separately from the
+participating authors/reviewers.  There are similarities between the
+Writers Workshops and classical practices of group composition
+\cite{jin1975art} and dialectic \cite{dialectique}, and the workshop
+may be considered an artistic or creative space in its own right.
+
+In PLoP workshops, authors present design patterns and pattern
+languages, or papers about patterns, rather than more traditional
+literary forms like poems, stories, or chapters from novels.  Papers
+must be workshopped at a PLoP or EuroPLoP conference in order to be
+considered for the \emph{Transactions on Pattern Languages of
+  Programming} journal.  A discussion of writers workshops
+in the language of design patterns is presented by
+Coplien and Woolf \cite{coplien1997pattern}.  Their patterns include:
+\begin{center}
+{\small
+\begin{tabular}{l@{\hspace{.2cm}}l@{\hspace{.2cm}}l}
+\emph{Open Review} & \emph{Safe Setting} & \emph{Workshop Comprises Authors} \\
+\emph{Authors are Experts} & \emph{Community of Trust} & \emph{Moderator Guides the Workshop} \\
+\emph{Thank the Author} & \emph{Selective Changes} & \emph{Clearing the Palate} \\
+\end{tabular}
+}
+\end{center}
+
+We propose that a similar pattern-based approach should be deployed
+within the Computational Creativity community to design a workshop in
+which the participants are computer systems instead of human authors.
+The annual International Conference on Computational Creativity
+(ICCC), now entering its sixth year, could be a suitable venue.
+Rather than the system's creator presenting the system in a
+traditional slideshow and discussion, or a system ``Show and Tell,''
+the systems would be brought to the workshop and would present their
+own work to an audience of other systems, in a Writers Workshop
+format.  This might be accompanied by a short paper for the conference
+proceedings written by the system's designer describing the system's
+current capabilities and goals.  Subsequent publications might include
+traces of interactions in the Workshop, commentary from the system on
+other systems, and offline reflections on what the system might change
+about its own work based on the feedback it receives.  As in the PLoP
+community, it could become standard to incorporate this sort of workshop
+into the process of peer reviewing journal articles for the new \emph{Journal of
+  Computational Creativity}\footnote{\url{http://www.journalofcomputationalcreativity.cc}}.
+
+\begin{table}[p]
+\begin{tabular}{lp{.7\textwidth}}
+{\bf\emph{Successful error}} & \\
+\emph{Van Andel's example}: & Post-it\texttrademark\ notes \\[.2cm]
+{\tt presentation}& Systems should be prepared to share interesting ideas even if they don't know directly how they will be useful.  \\
+{\tt listening}   & Systems should listen with interest, too. \\
+{\tt feedback}    & Even interesting ideas may not be ``marketable.''\\
+{\tt questions}   & How is your suggestion useful? \\
+{\tt reflections} & New combinations of ideas take a long time to realise, and many different ideas may need to be combined in order to come up with something useful.\\
+\end{tabular}
+\bigskip
+
+\begin{tabular}{lp{.7\textwidth}}
+{\bf\emph{Side effect}} & \\
+\emph{Van Andel's example}: & Nicotinamide used to treat side-effects of radiation therapy proves efficacious against tuberculosis. \\[.2cm]
+{\tt presentation}& Systems should use their presentation as an experiment. \\
+{\tt listening}   & Listeners should allow themselves to be affected by what they are hearing. \\
+{\tt feedback}    & Feedback should convey the nature of the effect.\\
+{\tt questions}   & The presenter may need to ask follow-up questions to gain insight. \\
+{\tt reflections} & Form a new hypothesis before seeking a new audience. \\
+\end{tabular}
+\bigskip
+
+\begin{tabular}{lp{.7\textwidth}}
+{\bf\emph{Wrong hypothesis}} & \\
+\emph{Van Andel's example}: & Lithium, used in a control study, had an unexpected calming effect. \\[.2cm]
+{\tt presentation}& How is this presentation interpretable as a (``natural'') control study? \\
+{\tt listening}   & Listeners are ``guinea pigs''.\\
+{\tt feedback}    & Discuss side-effects that do not necessarily correspond to the author's perceived intent. \\
+{\tt questions}   & Zero in on the most interesting part of the conversation.\\
+{\tt reflections} & Revise hypotheses to correspond to the most surprising feedback. \\
+\end{tabular}
+\bigskip
+
+\begin{tabular}{lp{.7\textwidth}}
+{\bf\emph{Outsider}} & \\
+\emph{Van Andel's example}: & A mother suggests a new hypothesis to a doctor. \\[.2cm]
+{\tt presentation}& The presenter is here to learn from the audience. \\
+{\tt listening}   & The audience is here to give help, but also to get help.\\
+{\tt feedback}    & Feedback will inevitably draw on previous experiences and ideas.\\
+{\tt questions}   & What is the basis for that remark?\\
+{\tt reflections} & How can I implement the suggestions?\\
+\end{tabular}
+\vspace{.2cm}
+\caption{Reinterpreting patterns of serendipity for use in a computational workshop\label{tab:reinterpret}}
+\end{table}
+
+\begin{figure}[t]
+\begin{center}
+\resizebox{.93\textwidth}{!}{
+\StickyNote[2.5cm]{myyellow}{{\LARGE {Interesting idea}} \\[4ex] {Surprise birthday party}}[3.8cm] \StickyNote[2.5cm]{mygreen}{{\Large I heard you say:} \\[4ex] {``surprise''} }[3.8cm]
+\StickyNote[2.5cm]{pink}{{\Large Feedback:} \\[4ex] {I don't like surprises}}[3.8cm]
+}
+\resizebox{.61\textwidth}{!}{
+\StickyNote[2.5cm]{myorange}{{\LARGE {Question}} \\[4ex] {Not even a little bit?\ldots}}[3.8cm]
+\quad \raisebox{-.2cm}{\StickyNote[2.5cm]{myblue}{{\LARGE Note to self:} \\[4ex] {(Try smaller surprises \\ next time.)}}[3.8cm]}
+}
+\end{center}
+\caption{A paper prototype for applying the \emph{Successful Error} pattern\label{fig:paper-prototype}}
+\end{figure}
+
+In order to facilitate this sort of interaction, it would be necessary
+for systems to implement a basic protocol related to
+%%
+\[
+\text{
+{\tt presentation}, {\tt listening}, {\tt
+  feedback}, {\tt questions}, and {\tt
+  reflections}.}
+\]
+%%
+This protocol could be thought of as a light-weight template for
+creating design patterns that guide system-level participation in the
+context specified by Coplien and Woolf's pattern language for writers
+workshops.  Table \ref{tab:reinterpret} uses this framework to recast
+the four ``perfectly'' serendipitous patterns from van Andel --
+\emph{Successful error}, \emph{Side effect}, \emph{Wrong hypothesis},
+and \emph{Outsider} -- in a form that may make them useful to
+developers preparing to enter their systems into the Workshop.
+%
+Further guidelines for structuring and participating in traditional
+writers workshops are presented by Linda Elkin in
+\cite[pp. 201-203]{gabriel2002writer}.  It is not at all clear that
+the same ground rules should apply to computer systems.  For example,
+one of Elkin's rules is that ``Quips, jokes, or sarcastic comments,
+even if kindly meant, are inappropriate.''  Rather than forbidding
+humour, it may be better for individual comments to be rated as
+helpful or non-helpful.  Again, since serendipitous discovery is an
+overarching goal, in the first instance, usefulness and interest might
+be judged in terms of the criteria described in Section
+\ref{sec:evaluation-criteria}.
+
+We would need a neutral environment that is not hard to develop for:
+the {\sf FloWr} system described in Section \ref{sec:foundations}
+offers one such possibility.  With this system, the basic operating
+logic of the Workshop could be spelled out as a flowchart, and
+contributing systems could use flowcharts as the basic medium for
+sharing their presentations, feedback, and questions.  Developing
+around a process language of this sort partially obviates the need for
+participating systems to have strong natural language processing
+capabilities.  
+%
+Post-it\texttrademark\ notes, which have provided us with a useful
+example of serendipitous discovery, also provide indicative strategies
+from the world of paper prototyping (Figure \ref{fig:paper-prototype}).
+
+Gordon Pask's conversation theory, reviewed in
+\cite{conversation-theory-review,boyd2004conversation}, goes
+considerably beyond what we have presented here as a simple process
+language, although there are structural parallels.  In a basic
+Pask-style learning conversation: (0) Conversational participants are
+carrying out some actions and observations; (1) naming and recording
+what action is being done; (2) asking and explaining why it works the
+way it does; (3) carrying out higher-order methodological discussion;
+and (4) trying to figure out why unexpected results occured \cite[p. 190]{boyd2004conversation}.
+
+Naturally, variations to the underlying system, protocol, and the
+schedule of events should be considered depending on the needs and
+interests of participants, and several variants can be tried.  On a
+pragmatic basis, if the Workshop proved quite useful to participants,
+it could be revised to run monthly, weekly, or
+continuously.\footnote{For a comparison case in computer Go, see
+  \url{http://cgos.computergo.org/}.}
