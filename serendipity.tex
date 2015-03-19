@@ -2,6 +2,14 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
+\usepackage[framemethod=tikz]{mdframed}
+\mdfsetup{
+skipabove=\baselineskip,
+skipbelow=0\baselineskip,
+innertopmargin=3pt,
+innerbottommargin=3pt
+}
+
 %% \usepackage{fontspec}
 %% \newfontfamily{\tam}[Script=Tamil]{Lohit Tamil}
 %% \defaultfontfeatures{Scale=MatchLowercase}
@@ -90,12 +98,32 @@ inner ysep=10pt
 \newpage
 
 \input{introduction.tex}
-\input{etymology.tex}
+
+%% The literature review
+\input{literature.tex}
+% \input{etymology.tex}
+% \input{by-example.tex}
+% \input{related-work.tex}
+
+%% Our core definition
 \input{model.tex}
-\input{related-work.tex}
 \input{connections.tex}
-\input{related-work.tex}
+\input{SPECS-begins.tex}
+\input{SPECS-continues.tex}
+
+% SPECS-begins.tex
+% figures/schematic/schematic.png
+% SPECS-continues.tex
+
+%% Development of the idea with examples
 \input{serendipity-in-computational-context}
+% cc-intro.tex
+% ww-intro.tex
+% figures/ww-serendipity/ww-serendipity.png
+% ww-design.tex
+% figures/ww-schematic/ww-schematic.png
+% ww-analysis.tex
+
 \input{discussion}
 \input{conclusion}
 
