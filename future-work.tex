@@ -1,39 +1,39 @@
 \subsection{Future Work} \label{sec:futurework} \label{sec:hatching}
 
 Within the context of the ongoing COINVENT project \cite{coinvent14},
-we are interested in using computational blending theory to realise
+we are interested in using computational theory blending to realise
 certain aspects of this model in a stand-alone architecture.
 %
 It will be useful to consider how we can take both the \emph{discovery
   step}, which combines a serendipity trigger $T$, and prior
-preparation $p$ and produces a classification $T^{\star}$ -- and the
+preparation $p$, to produce a classification $T^{\star}$ -- and the
 \emph{invention step}, which combines the classified trigger
 $T^{\star}$, and preparations $p^{\prime}$, and produces a novel
 result $R$ -- to be \emph{blends} in the sense of Joseph Goguen
 \citeyear{goguen1999introduction}.  
 
 The epistemological framework of discovery gives some important clues
-about how to compute a common base between $T$ and $p$.  Although $T$
-was previously uninteresting, it will have attributes or
-attribute-types that match the patterns recognised by $p$ (e.g. van
-Andel's  \citeyear{van1994anatomy} ``\emph{One surprising observation}'').
+about how to compute a common base between $T$ and $p$, a key step for
+blending.  Although $T$ was previously uninteresting, it will have
+attributes or attribute-types that match the patterns recognised by
+$p$ (e.g. van Andel's \citeyear{van1994anatomy} ``\emph{One surprising
+  observation}'').
 %
 In the invention step, reasoning, experimentation, social interaction
 strategies rely on $p^{\prime}$, which might draw on patterns like van
-Andel's \emph{Successful error} in order to extract a fruitful result
-from $T^{\star}$.  Here, an important guidepost for implementation is
-that many outcomes will result in new patterns of behaviour that the
-system can draw on in subsequent interactions.
+Andel's \emph{Successful error} in order to pinpoint the seeds of useful result
+inside $T^{\star}$.  One important guidepost for implementation is
+the theory-building orientation that says that outcomes should result in
+new patterns of behaviour that the system can draw on in subsequent interactions.
 
-What is particularly needed is an approach to encoding patterns of
-serendipity in a computationally accessible manner.  Here we are drawn
-to the approach taken by the design pattern community, although we
-recognize that we would be using design patterns in a very different
-way from the standard: 
+What is particularly needed is an approach to encoding patterns and
+methods for pattern discovery in a computationally accessible manner.
+Here we are drawn to the approach taken by the \emph{design pattern}
+community \cite{alexander1999origins}, although we recognize that we
+would be using design patterns in rather nonstandard way:
 \begin{itemize}
-\item[(1)] We want to encode our ``design patterns'' directly in
-  runnable programs, not just give them to programmers as heuristic
-  guidance.
+\item[(1)] We want to encode our design patterns directly in runnable
+  programs, not just give them to programmers as heuristic guidance.
 \item[(2)] We want the automated programming system to generate new
   patterns, not just apply or adapt old ones.
 \end{itemize}
