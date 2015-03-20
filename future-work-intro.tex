@@ -1,62 +1,37 @@
 \subsection{Future Work} \label{sec:futurework} \label{sec:hatching}
 
-Within the context of the ongoing COINVENT project \cite{coinvent14},
-we are interested in using computational theory blending to realise
-certain aspects of this model in a stand-alone architecture.
-%
-It will be useful to consider how we can take both the \emph{discovery
-  step}, which combines a serendipity trigger $T$, and prior
-preparation $p$, to produce a classification $T^{\star}$ -- and the
-\emph{invention step}, which combines the classified trigger
-$T^{\star}$, and preparations $p^{\prime}$, and produces a novel
-result $R$ -- to be \emph{blends} in the sense of Joseph Goguen
-\citeyear{goguen1999introduction}.
-
-The epistemological framework of discovery gives some important clues
-about how to compute a common base between $T$ and $p$, a key step for
-blending, since these common features will typically be preserved in
-the blend.  Although $T$ was previously uninteresting, it will have
-attributes or attribute-types that match the patterns recognised by
-$p$ (e.g. van Andel's \citeyear{van1994anatomy} \emph{One surprising
-  observation}).
-%
-In the invention step, reasoning, experimentation, social interaction
-strategies rely on $p^{\prime}$, which might draw on patterns like van
-Andel's \emph{Successful error} in order to pinpoint the seeds of a useful result
-within $T^{\star}$.  One important guidepost for implementation is
-the theory-building orientation that says that outcomes may include
-new patterns of behaviour that the system can draw on in subsequent interactions.
-
-What is particularly needed is an approach to encoding patterns and
-methods for pattern discovery in a computationally accessible manner.
-Here we are drawn to the approach taken by the \emph{design pattern}
-community \cite{alexander1999origins}, although we recognize that we
-would be using design patterns in rather nonstandard way:
+As a framework for managing the processes of discovery and invention,
+we are drawn to the approach taken by the \emph{design pattern}
+community \cite{alexander1999origins}, although we
+propose to use design patterns in rather nonstandard way:
 \begin{itemize}
 \item[(1)] We want to encode our design patterns directly in runnable
   programs, not just give them to programmers as heuristic guidance.
 \item[(2)] We want the (automated) programmer to generate new design
   patterns, not just apply or adapt old ones.
-\item[(3)] We want our design patterns to help describe new problems,
-  not just capture the solutions to existing problems.
+\item[(3)] We want our design patterns to help find new problems,
+  not just capture the solutions to existing ones.
 \end{itemize}
 
 \citeA{meszaros1998pattern} describe the typical scenario for design
 pattern writers: ``You are an experienced practitioner in your
 field. You have noticed that you keep using a certain solution to a
 commonly occurring problem. You would like to share your experience
-with others.''  They also remark that ``What sets patterns apart is
-their ability to explain the rationale for using the solution (the
-`why') in addition describing the solution (the `how').''  Regarding
-the criteria that pattern writers seek to address, they write: ``The
-most appropriate solution to a problem in a context is the one that
-best resolves the highest priority forces as determined by the
-particular context.''  Their article describes a number of criteria
-relevant at the meta-level of pattern writing, e.g. \emph{Clear target
-  audience}, \emph{Visible forces}, and \emph{Relationship to other
-  patterns}.  A good pattern describes the resolution of forces, but
-it also resolves certain forces itself.  In terms of our now-familiar
-diagram:
+with others.''  They remark, ``What sets patterns apart is their
+ability to explain the rationale for using the solution (the `why') in
+addition describing the solution (the `how').''  Regarding the
+criteria that pattern writers seek to address: ``The most
+appropriate solution to a problem in a context is the one that best
+resolves the highest priority forces as determined by the particular
+context.''  %% Their article describes a number of criteria
+%% relevant to writing good design patterns, e.g. \emph{Clear target
+%%   audience}, \emph{Visible forces}, and \emph{Relationship to other
+%%   patterns}.
+
+A good design pattern \emph{describes} the resolution of forces in the
+target domain; in the setting we're interested in, creating a new
+design pattern also \emph{effects} a resolution of forces directly.
+This use case maps into our diagram of the basic features of serendipity as follows:
 
 \input{pattern-schematic-tikz.tex}
 
