@@ -1,0 +1,36 @@
+\begin{center}
+\begingroup
+\tikzset{
+block/.style = {draw, fill=white, rectangle, minimum height=3em, minimum width=3em},
+tmp/.style  = {coordinate}, 
+sum/.style= {draw, fill=white, circle, node distance=1cm},
+input/.style = {coordinate},
+output/.style= {coordinate},
+pinstyle/.style = {pin edge={to-,thin,black}}
+}
+
+\begin{tikzpicture}[auto, node distance=2cm,>=latex']
+    \node [sum] (sum1) {};
+    \node [input, name=pinput, above left=.7cm and .7cm of sum1] (pinput) {};
+    \node [input, name=tinput, left=2cm of sum1] (tinput) {};
+    \node [input, name=minput, below left of=sum1] (minput) {};
+    \node [input, name=minput, right of=sum1] (moutput) {};
+    \draw [->] (tinput) -- node{\vphantom{{\tiny g}}{\tiny context}} (sum1);
+    \draw [->] (pinput) -- node{{\tiny problem}} (sum1);
+    \draw [->] (sum1) -- node{\vphantom{{\tiny g}}{\tiny solution}}  (moutput);
+\end{tikzpicture}
+\hspace{1cm}
+\begin{tikzpicture}[auto, node distance=2cm,>=latex']
+    \node [sum] (sum1) {};
+    \node [input, name=pinput, above left=.7cm and .7cm of sum1] (pinput) {};
+    \node [input, name=tinput, left of=sum1] (tinput) {};
+    \node [input, name=minput, below left of=sum1] (minput) {};
+    \node [sum, right=1.5cm of sum1] (sum2) {};
+    \node [input, name=minput, right of=sum2] (moutput) {};
+    \draw [->] (tinput) -- node{\vphantom{{\tiny g}}{\tiny solution}} (sum1);
+    \draw [->] (pinput) -- node{{\tiny rationale}} (sum1);
+    \draw [->] (sum1) -- node{\vphantom{{\tiny g}}{\tiny pattern}} (sum2);
+    \draw [->] (sum2) -- node[text width=1.5cm,execute at begin node=\setlength{\baselineskip}{.3ex}]{\tiny \emph{resolution\\~of forces}}  (moutput);
+\end{tikzpicture}
+\endgroup
+\end{center}
