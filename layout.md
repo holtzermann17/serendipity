@@ -20,5 +20,6 @@ ww-analysis.tex
 discussion.tex
 recommendations.tex
 future-work-intro.tex
+figures/patterns-schematic/patterns-schematic.png
 future-work-conclusion.tex
 conclusion.tex
