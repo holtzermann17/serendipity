@@ -19,5 +19,6 @@ figures/ww-schematic/ww-schematic.png
 ww-analysis.tex
 discussion.tex
 recommendations.tex
-future-work.tex
+future-work-intro.tex
+future-work-conclusion.tex
 conclusion.tex
