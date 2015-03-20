@@ -10,20 +10,21 @@ preparation $p$, to produce a classification $T^{\star}$ -- and the
 \emph{invention step}, which combines the classified trigger
 $T^{\star}$, and preparations $p^{\prime}$, and produces a novel
 result $R$ -- to be \emph{blends} in the sense of Joseph Goguen
-\citeyear{goguen1999introduction}.  
+\citeyear{goguen1999introduction}.
 
 The epistemological framework of discovery gives some important clues
 about how to compute a common base between $T$ and $p$, a key step for
-blending.  Although $T$ was previously uninteresting, it will have
+blending, since these common features will typically be preserved in
+the blend.  Although $T$ was previously uninteresting, it will have
 attributes or attribute-types that match the patterns recognised by
-$p$ (e.g. van Andel's \citeyear{van1994anatomy} ``\emph{One surprising
-  observation}'').
+$p$ (e.g. van Andel's \citeyear{van1994anatomy} \emph{One surprising
+  observation}).
 %
 In the invention step, reasoning, experimentation, social interaction
 strategies rely on $p^{\prime}$, which might draw on patterns like van
 Andel's \emph{Successful error} in order to pinpoint the seeds of a useful result
 within $T^{\star}$.  One important guidepost for implementation is
-the theory-building orientation that says that outcomes should sometimes result in
+the theory-building orientation that says that outcomes may include
 new patterns of behaviour that the system can draw on in subsequent interactions.
 
 What is particularly needed is an approach to encoding patterns and
@@ -34,7 +35,58 @@ would be using design patterns in rather nonstandard way:
 \begin{itemize}
 \item[(1)] We want to encode our design patterns directly in runnable
   programs, not just give them to programmers as heuristic guidance.
-\item[(2)] We want the automated programming system to generate new
+\item[(2)] We want the (automated) programmer to generate new design
   patterns, not just apply or adapt old ones.
+\item[(3)] We want our design patterns to help describe new problems,
+  not just capture the solutions to existing problems.
 \end{itemize}
 
+\citeA{meszaros1998pattern} describe the typical scenario for design
+pattern writers: ``You are an experienced practitioner in your
+field. You have noticed that you keep using a certain solution to a
+commonly occurring problem. You would like to share your experience
+with others.''  They also remark that ``What sets patterns apart is
+their ability to explain the rationale for using the solution (the
+`why') in addition describing the solution (the `how').''  Regarding
+the criteria that pattern writers seek to address, they write: ``The
+most appropriate solution to a problem in a context is the one that
+best resolves the highest priority forces as determined by the
+particular context.''  Their article describes a number of criteria
+relevant at the meta-level of pattern writing, e.g. \emph{Clear target
+  audience}, \emph{Visible forces}, and \emph{Relationship to other
+  patterns}.  A good pattern describes the resolution of forces, but
+it also resolves certain forces itself.  In terms of our now-familiar
+diagram:
+
+\input{pattern-schematic-tikz.tex}
+
+This diagram does not suggest that every instance of ``a solution to a
+problem in a context'' is serendipity -- on the contrary, that is just
+the discovery step.  To van Andel's assertion that ``The very moment I
+can plan or programme `serendipity' it cannot be called serendipity
+anymore'' -- of course, if the context is fully determined in advance,
+and if the solution is completely replicable, then some of the
+fundamental conditions for serendipity are not met.  However, we can
+also describe patterns with built-in indeterminacy:
+
+\begin{mdframed}
+\vspace{-.35cm}
+\paragraph{Successful error}
+\emph{Van Andel's example} -- Post-it\texttrademark\ Notes\\[.05cm]
+\begin{description}
+\item[{\tt context}] -- You run a creative organisation with several different divisions and many contributors with different expertise.  Unexpected discoveries are often made.
+\item[{\tt problem}] -- One of the members of your organisation
+  discovers something with interesting properties, but that no one
+  knows how to turn into a product with industrial or commercial application.
+\item[{\tt solution}] -- You create a space for sharing and discussing
+  interesting ideas on an ongoing basis (perhaps a Writers Workshop).
+\item[{\tt rationale}] -- You suspect it's possible that one of the
+  other members of the firm will come up with an idea about an
+  application; you know that if a potential application is found, it
+  may not be directly marketable, but at least there will be a
+  prototype that can be concretely discussed.
+\item[{\tt resolution}] -- Writing down and promulgating the
+  \emph{Successful error} pattern using this template gives one such
+  prototype.
+\end{description}
+\end{mdframed}
