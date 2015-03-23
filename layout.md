@@ -10,7 +10,6 @@ definition.tex
 connections.tex
 SPECS-begins.tex
 SPECS-continues.tex
-related-work.tex
 cc-intro.tex
 ww-intro.tex
 figures/ww-serendipity/ww-serendipity.png
