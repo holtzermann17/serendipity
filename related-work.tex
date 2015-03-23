@@ -1,8 +1,8 @@
 \subsection{Related work} \label{sec:related}
 
-An active research community investigating computational models of serendipity exists in the field of information retrieval, and specifically, in recommender systems \cite{Toms2000}. In this domain, \citeA{Herlocker2004} and \citeA{McNee2006} view serendipity as an important factor for user satisfaction, next to accuracy and diversity.  Serendipity in recommendations variously require the system to deliver an unexpected and useful \cite{Lu2012}, interesting \cite{Herlocker2004}, attractive or relevant item \cite{Ge2010}. 
+An active research community investigating computational models of serendipity exists in the field of information retrieval, and specifically, in recommender systems \cite{Toms2000}. In this domain, \citeA{Herlocker2004} and \citeA{McNee2006} view serendipity as an important factor for user satisfaction, next to accuracy and diversity.  Serendipity in recommendations variously require the system to deliver an \emph{unexpected} and \emph{useful} \cite{Lu2012}, \emph{interesting} \cite{Herlocker2004}, \emph{attractive} or \emph{relevant} item \cite{Ge2010}. 
 %% Recommendations are typically meant to help address the user's difficulty in finding items that meet his or her interests or demands within a large and potentially unobservable search space. The end user can also be passive, and items are suggested to support other stakeholder's goals, e.g. to increase sells. 
-Definitions differ as to the requirement of novelty; \citeA{Adamopoulos2011}, for example, describe systems that suggest items that may already be known, but are still unexpected in the current context.  In terms of our model, these systems focus mainly on producing a serendipity trigger, but they include aspects of user modeling which could bring other elements into play.
+Definitions differ as to the requirement of \emph{novelty}; \citeA{Adamopoulos2011}, for example, describe systems that suggest items that may already be known, but are still unexpected in the current context.  In terms of our model, these systems focus mainly on producing a serendipity trigger, but they include aspects of user modeling which could bring other elements into play.
 
 Paul Andr{\'e} et al.~\citeyear{andre2009discovery} have examined
 serendipity from a design perspective.  These authors also propose a
@@ -30,19 +30,21 @@ such misunderstandings elucidate poor communication choices!).
 Various social strategies, ranging from Writers Workshops to open
 source software, pair programming, and design charettes
 \cite[p. 11]{gabriel2002writer} have been developed to exploit similar
-emergent effects to develop new insights, and to develop \emph{new}
-shared language.  In \cite{poetry-workshop}, we investigate the
-feasibility of using designs of this sort in multi-agent systems that
-learn by sharing and discussing partial understandings.  This earlier
-paper remains broadly indicative, however, and the ideas it describes
-can see considerable benefit from the more formal thinking we develop
-in the current work.  
+emergent effects and to develop \emph{new} shared language.  In
+\cite{poetry-workshop}, we investigate the feasibility of using
+designs of this sort in multi-agent systems that learn by sharing and
+discussing partial understandings.  This earlier paper remains broadly
+indicative, however, and the ideas it describes can see considerable
+benefit from the more formal thinking we develop in the current work.
 
 \citeA{robot-rendezvous} develop a discussion of serendipitous
 rendezvous in a multi-agent system for a graph exploration problem, in
 which ``[h]aving more data about their colleagues, better decisions
 are made about the potential serendipity path.''  This has some
-similarity to the discursive scenario described above.
+similarity to the discursive scenario described above, and shows that
+\emph{asymmetric partial knowledge} can support serendipitious
+findings.  The distinction between knowledge of other actors and
+knowledge about an underlying domain is useful.
 
 The issue of designing for serendipity has been taken up recently by
 Deborah Maxwell et al.~\citeyear{maxwell2012designing}, in their
@@ -63,13 +65,14 @@ potential value of the result.
 Although this description touches on all of the features of our model, {\sf
   SerenA} largely matches the description offered by Andr{\'e} et
 al.~\citeyear{andre2009discovery} of discovery-focused systems, and a
-case study of a recommender system focused on serendipity.  Here, the
-user is the primary agent with a prepared mind.  Accordingly it is the
-user that undergoes an ``aha'' moment and takes the creative steps to
-realise the result; the computer is mainly used to facilitate this.
-{\sf SerenA}'s primary computational method is to search outside of
-the normal search parameters in order to engineer potentially
-serendipitous (or at least pseudo-serendipitous) encounters. 
+case study of a recommender system focused on serendipity, in which
+%%   Here, the
+%% user is the primary agent with a prepared mind.  Accordingly it 
+is user experiences an ``aha'' moment and takes the
+creative steps to realise the result.  {\sf SerenA}'s primary computational method is to
+search outside of the normal search parameters in order to engineer
+potentially serendipitous (or at least pseudo-serendipitous)
+encounters.
 %% Another
 %% earlier related example of this sort of system is {\sf Max}, created
 %% by Figueiredo and Campos \citeyear{Campos2002}.  The user emailed {\sf
@@ -111,10 +114,9 @@ analogies.  New patterns and higher-order analogies were considered in
 Hofstadter and Mitchell's {\sf Copycat} and the subsequent {\sf
   Metacat}, but these systems operated in a simple and fairly abstract
 ``microdomain''
-\cite{hofstadter1994copycat,DBLP:journals/jetai/Marshall06}.
-%% More
-%% recently, similar architectures have been used in music
-%% \cite{eric-nichols-thesis}.
+\cite{hofstadter1994copycat,DBLP:journals/jetai/Marshall06}.  More
+recent work in this tradition is surveyed in
+\cite{eric-nichols-thesis}.
 
 The relationship between serendipity and novel problems receives
 considerable attention in the current work, since we want to
