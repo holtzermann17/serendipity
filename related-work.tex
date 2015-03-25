@@ -1,9 +1,9 @@
 \subsection{Related work} \label{sec:related}
 
-An active research community investigating computational models of serendipity exists in the field of information retrieval, and specifically, in recommender systems \cite{Toms2000}. In this domain, \citeA{Herlocker2004} and \citeA{McNee2006} view serendipity as an important factor for user satisfaction, next to accuracy and diversity.  Serendipity in recommendations variously require the system to deliver an \emph{unexpected} and \emph{useful} \cite{Lu2012}, \emph{interesting} \cite{Herlocker2004}, \emph{attractive} or \emph{relevant} item \cite{Ge2010}. 
-%% Recommendations are typically meant to help address the user's difficulty in finding items that meet his or her interests or demands within a large and potentially unobservable search space. The end user can also be passive, and items are suggested to support other stakeholder's goals, e.g. to increase sells. 
+An active research community investigating computational models of serendipity exists in the field of information retrieval, and specifically, in recommender systems \cite{Toms2000}. In this domain, \citeA{Herlocker2004} and \citeA{McNee2006} view serendipity as an important factor for user satisfaction, alongside accuracy and diversity.  Serendipity in recommendations variously require the system to deliver an \emph{unexpected} and \emph{useful}, \emph{interesting}, \emph{attractive} or \emph{relevant} item. 
+% \cite{Herlocker2004} \cite{Lu2012},\cite{Ge2010}.  
 Definitions differ as to the requirement of \emph{novelty}; \citeA{Adamopoulos2011}, for example, describe systems that suggest items that may already be known, but are still unexpected in the current context.  While standardized measures such as the $F_1$-score or the (R)MSE are used to determine the \emph{accuracy} of an evaluation in terms of preferred items in the user's history, there is no common agreement on a measure for serendipity yet, although there are several proposals \cite{Murakami2008, Adamopoulos2011, McCay-Peet2011,iaquinta2010can}.
-  In terms of our model, these systems focus mainly on producing a \emph{serendipity trigger} for the user, but they include aspects of user modeling which could bring other elements into play.  
+  In terms of our model, these systems focus mainly on producing a \emph{serendipity trigger} for the user, but they include aspects of user modeling which could bring other elements into play, as we will discuss in Section \ref{sec:computational-serendipity}.
 
 Paul Andr{\'e} et al.~\citeyear{andre2009discovery} have examined
 serendipity from a design perspective.  These authors also propose a
@@ -48,10 +48,10 @@ findings.  These examples suggest that a distinction between emergent
 knowledge of other actors and knowledge about an underlying domain may
 be useful -- although the distinction would somewhat less relevant if
 the underlying domain itself has dynamic and emergent features.
-Social coordination among human users of information systems is a
-current research topic \cite{lscitter}.  \citeA{rubin2010everyday}
-point out that naive end users often \emph{talk about} serendiptious
-occurrences, which presents another route for research and evaluation.
+\emph{Social coordination} among human users of information systems is
+a current research topic. \citeA{rubin2010everyday} point out that
+naive end users often \emph{talk about} serendiptious occurrences,
+which presents another route for research and evaluation.
 
 The {\sf SerenA} system developed by Deborah Maxwell et al.~\citeyear{maxwell2012designing} offers a case study of several of the points discussed above.
 This system is designed to support serendipitous discovery for its (human) users
@@ -109,16 +109,16 @@ but recognising \emph{new} patterns and defining \emph{new} problems
 is more ambitious.  Complex analogies between evolving problems and
 solutions form one of the key strategies for teams of human designers
 \cite{Analogical-problem-evolution-DCC}.  Kazjon Grace
-\citeyear{kaz-thesis} presents a computational model of the creation
+\citeyear{kaz-thesis} presents one computational model of the creation
 of new concepts and interpretations, but this work did include the
 ability to create new higher order relationships necessary for complex
 analogies.  New patterns and higher-order analogies were considered in
 Hofstadter and Mitchell's {\sf Copycat} and the subsequent {\sf
   Metacat}, but these systems operated in a simple and fairly abstract
 ``microdomain''
-\cite{hofstadter1994copycat,DBLP:journals/jetai/Marshall06}.  More
-recent work in this tradition is surveyed in
-\cite{eric-nichols-thesis}.
+\cite{hofstadter1994copycat,DBLP:journals/jetai/Marshall06}.  %% More
+%% recent work in this tradition is surveyed in
+%% \cite{eric-nichols-thesis}.
 
 The relationship between serendipity and novel problems receives
 considerable attention in the current work, since we want to
