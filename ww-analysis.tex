@@ -39,7 +39,7 @@ The listening subsystem expects some poem, but it does not know what
 poem to expect.  In this sense, the poem constitutes a serendipity
 trigger $T$, not only for the listening subsystem, but for the
 Workshop system as a whole.
-
+%
 To expand this point, note that there may be several listeners, each
 sharing their own feedback and listening to the feedback presented by
 others (which, again, is outside of their direct control).  This
@@ -124,3 +124,36 @@ elicited a negative response from a critic.  The system may proceed to
 update its modules related to poetry generation.  Notably, it may also update its own
 feedback modules, after reflecting on questions like: ``How might the
 critic have detected that feature in my poem?''
+
+\paragraph{Thought Experiment: Likelihood scores and potential value.}
+Given most statements in natural language are new, we can assume that
+(after a more predictable training course, say, reading the English
+language poetry canon), most poems consumed by the system would never
+have been seen before, and the chance of observing a given serendipity
+trigger would be very small.  While the likelihood of detecting an
+already-known poetic feature in a given poem where it is present is
+presumably fairly high, we are particularly interested in the cases of
+where a novel and interesting poetic feature can be found and attended
+to, and this would remain an infrequent occurrence (on a population
+basis, among {\tt listening} subsystems), at least until the system as
+a whole became very good at reading poems.  Indeed, a sophisticated
+system would already have an extensive catalogue of poetic features,
+and the chance of detecting a new and valuable feature might be low
+for other reasons.  The chance that a newly-observed feature will
+result in usable code seems relatively high, although this remains to
+be shown in practice.  New poetic ideas would presumably be seen as
+high-value at first, although only some of the ideas will prove to be
+of lasting value.  Our likelihood score would be
+$\mathit{low}\times\mathit{low}\times\mathit{high}$, or low overall,
+and value would be varied, with at least some high-valued cases
+deserving the description ``highly serendipitous.''
+
+\paragraph{Thought Experiment: Environmental factors.}
+The system would set up its own internal dynamics, but it could also
+provide an interface for human poets to share their poetry and their
+critical remarks.  There is one primary context, the Workshop, shared
+by all participants.  The primary tasks envisaged in the system design
+are \emph{poetry generation} and \emph{code generation}.  Although
+these are different tasks, they may have similar features (i.e.~both may present opportunities to learn from feedback).
+Influences could be highly multiple, including many very different kinds of poems
+and various approaches from NLP.
