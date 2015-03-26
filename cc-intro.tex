@@ -19,7 +19,10 @@ these ideas in the course of developing a new system design.
 
 \subsection{Case Studies: Prior art}
 
-\paragraph{{[}To add: Jazz.{]}}
+\paragraph{Evolutionary music improvisation systems.}
+
+\citeA{jordanous10} reported a computational jazz improvisation system using genetic algorithms. Genetic algorithms, and evolutionary computing more generally, could encourage computational serendipity. We examine Jordanous's system (later given the name {\em GAmprovising} \cite{jordanous:12}) as a case study for evolutionary computing in the context of our model of computational serendipity: to what extent does GAmprovising model serendipity?
+
 
 % \paragraph{{[}To add: HR.{]}}
 
@@ -88,3 +91,42 @@ psychology, and domain understanding.
 % As a general comment, we would say that this is largely how
 % \emph{research and development} of recommender systems works, but
 % without the same levels of system automony envisioned here.
+\small
+\begin{table}[ht]%dp]
+\caption{Summary of case studies as viewed with our computational serendipity model}
+\begin{center}
+\begin{tabular}{|c|l|l|}
+\hline
+{\textbf Model part}  & Evolutionary music systems & Recommender systems \\
+\hline
+%{\em Key Condition}  && \\
+%* Focus shift && \\
+%\hline
+{\em Components} && \\
+* Serendipity trigger && Input from user behaviour \\
+* Prepared mind  & & Through user model/domain model \\
+* Bridge  & & Elements identified outside clusters \\
+* Result & & Dependent on organisation goals \\
+\hline
+{\em Dimensions} && \\
+* Chance & & If learning from user behaviour \\
+* Curiosity & & Making unusual recommendations \\
+* Sagacity & & Updating models from user behaviour \\
+* Value & & As per business metrics/objectives \\
+\hline
+{\em Environmental} && \\
+{\em Factors} && \\
+* Dynamic world && As precondition for testing system's \\
+ world && \hspace{3mm} influences on user behaviour\\
+* Multiple && User model and domain model\\
+contexts && \\
+* Multiple && Making recommendations, learning\\
+* tasks && \hspace{3mm}from users, updating models \\
+* Multiple && Experimental design, psychology, \\
+influences && \hspace{3mm} domain understanding\\
+\hline
+\end{tabular}
+\end{center}
+\label{caseStudies}
+\end{table}%
+\normalsize
