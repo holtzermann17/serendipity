@@ -31,15 +31,6 @@ The likelihood of serendipitous evolution is greatly enhanced by the use of muta
 
 Evolutionary systems such as GAmprovising necessarily operate in a \textbf{dynamic world} which is evolving continuously and may also be affected by changes in user tastes as they evaluate musical output from Improvisors. The \textbf{multiple contexts} arise from the possibility of having multiple users evaluate the musical output (though this is as yet not implemented formally) or through the user changing their preferences over time. \textbf{Multiple tasks} are carried out by the system including evolution of Improvisors, generation of music by individual Improvisors, capturing of user ratings of a sample of the Improvisors' output, and fitness calculations. \textbf{Multiple influences} are captured through the various combinations of parameters that could be set and the potential range of values for each parameter.
 
-\paragraph{Minimally serendipitous systems}
-
-If applied to a system which could be described as minimally serendipitous at best, and perhaps not at all serendipitous, does our model identify the lack of serendipity?
-
-As example, a spellchecker program identifies spelling errors in text input and optionally can correct spelling automatically. The only situation we can conceive of where serendipity could possibly occur is tenuous; perhaps a suggested correction may be incorrect, but may lead the user to interpret the correction in an unexpected way. In all other aspects that we have considered, spellchecker software would be a decidedly unlikely candidate for harbouring serendipitous opportunities.
-
-The system *** %AARGH how do we begin to do this...! to try and apply our model to a spell checker?Giving up for now. I do think it's worth it, perhaps I'm just a bit tired at this point! Feel free to have a go if you fancy the challenge! AJ
-
-% \paragraph{{[}To add: HR.{]}}
 
 \paragraph{Recommender systems.} 
 
@@ -163,3 +154,14 @@ influences &\hspace{3mm}parameter combinations& \hspace{3mm} domain understandin
 \label{caseStudies}
 \end{table}%
 \normalsize
+
+
+\paragraph{Minimally serendipitous systems}
+
+If applied to a system which could be described as minimally serendipitous at best, and perhaps not at all serendipitous, does our model identify the lack of serendipity?
+
+As example, a spellchecker program identifies spelling errors in text input and optionally can correct spelling automatically. The only situation we can conceive of where serendipity could possibly occur is tenuous; perhaps a suggested correction may be incorrect, but may lead the user to interpret the correction in an unexpected way. In all other aspects that we have considered, spellchecker software would be a decidedly unlikely candidate for harbouring serendipitous opportunities.
+
+Spellchecker programs could indeed be said to have a \textbf{prepared mind}, in that they are constructed with internal dictionaries with which to check spelling and ways of calculating what a misspelled word might be. Given our above discussion of how the system might be serendipitous, the \textbf{serendipity trigger} could be seen as the user misspelling a word and the system suggesting a correction (which might cause the user to think of alternative possibilities for their text that they had not previously conceived). The \textbf{result} of this serendipity would be new text typed in by the user in response to the serendipity trigger, but the \textbf{bridge} from trigger to result would have been built by the user, not the system. So all components in our model are not present in spellchecker software, as the ability to create a bridge from trigger to result is absent in the system. At this point we do not need to look further at the dimensions, or attributes of these components, because not all components are present in spellchecker software. 
+
+% \paragraph{{[}To add: HR.{]}} *** AJ PERHAPS WE DON'T NEED TO?
