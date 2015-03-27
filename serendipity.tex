@@ -2,6 +2,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 
+\usepackage{textcomp} 
 \usepackage{setspace}
 
 \usepackage[framemethod=tikz]{mdframed}
@@ -65,6 +66,13 @@ inner ysep=10pt
 
 \newcommand{\keywords}[1]{\par\addvspace\baselineskip
 \noindent\keywordname\enspace\ignorespaces#1}
+
+\usepackage{array,booktabs}
+\newcommand{\tcap}[1]{
+\begin{minipage}{.7in}
+{\centering #1 \par}
+\end{minipage}
+}
 
 \newcommand{\inlineitem}[1]{%
 \begingroup%
