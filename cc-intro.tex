@@ -18,22 +18,23 @@ bracketing remark.
 
 \paragraph{Minimally serendipitous systems.}
 According to our standards, there are various ways to achieve a result
-with \emph{low} serendipity: if the outcome was likely to happen, if
-it happened by chance with little skill, or if the the value of the
+with \emph{low} serendipity: if the observation was likely, if further
+developments happened with little skill, and if the the value of the
 result was low, then we would not say the outcome was serendipitous.
-Campbell \citeyear{campbell} describes serendipity as ``the rational
-exploitation of chance observation, especially in the discovery of
-something useful or beneficial.''  We would be prepared to attribute
+In Campbell's \citeyear{campbell} description of serendipity as ``the
+rational exploitation of chance observation, especially in the
+discovery of something useful or beneficial'' one can see all the
+components of our definition.  We would be prepared to attribute
 ``minimal serendipity'' to cases where the observation was
 \emph{moderately} likely, \emph{some} skill or effort was involved,
-and the result was \emph{fairly good}.  For computational systems, if
-most of the skill involved lies with the user, then there is little
-reason to call the system's operation serendipitous -- even if it
-consistently does its job very well.  For example, machines can
+and the result was only \emph{fairly good}.  For computational
+systems, if most of the skill involved lies with the user, then there
+is little reason to call the system's operation serendipitous -- even
+if it consistently does its job very well.  For example, machines can
 ``learn'' to recognise instances of a given pattern quite
-consistently, but it is typically an interesting surprise if a
-computational system independently finds an entirely new kind of
-pattern.  Furthermore, the position of the evaluator is important: A
+consistently, but it is an interesting surprise if a computational
+system independently finds an entirely new kind of pattern.
+Furthermore, the position of the evaluator is important: a
 spell-checking system might suggest a particularly fortuitous
 substitution, but we would not expect the spell-checker to know when
 it was being clever.  In such a case, we may say serendipity has
@@ -90,62 +91,64 @@ Evolutionary systems such as GAmprovising necessarily operate in a \textbf{dynam
 As discussed in Section \ref{sec:related}, recommender systems are one
 of the primary contexts in computing where serendipity is seen to play
 a role.  As we noted, these systems mostly focus on discovery.
-Nevertheless, certain architectures that also take account of
-invention would match all of criteria described by our model.  Here we
-draw on the observation that recommender systems not \emph{stimulate}
-serendipitous discovery for the user: they also have the task of
-\emph{simulating} when this is likely to occur.
+Although this describes the mainstream of recommender system
+development, it seems that there are some architectures that also take
+account of invention.  We have in mind Bayesian methods (surveyed in
+Chapter 3 of \citeNP{shengbo-guo-thesis}).  The current discussion
+focuses on possibilities for serendipity on the system side, drawing
+on the observation that recommender systems not \emph{stimulate}
+serendipitous discovery: they also have the task of \emph{simulating}
+when this is likely to occur.
 
 A recommendation is typically provided if the system suspects that the
 item will be likely to introduce ideas that are close to what the user
-knows, but that will be unexpected.  In other words, the system aims
-to stimulate serendipity for the user. For example, a museum
-recommender service might suggest a colourful medieval painting to a
-user who seems to like colourful paintings by the modern artist Keith
-Haring.  User behaviour (e.g.~following up on these recommendations)
-is outside of the direct control of the system and may serve as a
-\textbf{serendipity trigger}, and change the way it makes
-recommendations in the future.  The system has a \textbf{prepared
-  mind}, including both a \emph{user model} and a \emph{domain model},
-both of which can be updated dynamically.  The connections through
-which recommendations are made usually happen when the system notices
-that elements of the domain have something in common via clustering or
-faceting.  A \textbf{bridge} to a new kind of recommendation may be
-found if new elements are introduced into the domain which do not
-cluster well, or if the user appears to know about different clusters
-that do not have obvious connections between them.  The intended
-outcome of recommendations depend on the organisational mission
-e.g.~to make money, to provide a good user experience, etc.; at the
-system level, the serendiptious \textbf{result} would be learning a
-new approach that helps to address these goals better.
+knows, but that will be unexpected.  Typical discussions of
+serendipity in recommender systems focus on this.  However, user
+behaviour (e.g.~following up on these recommendations) may also serve
+as a \textbf{serendipity trigger} for the system, and change the way
+it makes recommendations in the future.  Note that it is typically the
+system's \emph{developers} who adapt the system; even in the Bayesian
+case, the system has limited responsibilities.  Nevertheless, the
+impetus to develop increasingly autonomous systems is present,
+especially in complex domains where hand-tuning reaches its limits.
+Current systems have at least the makings of a \textbf{prepared mind},
+including both a \emph{user model} and a \emph{domain model}, both of
+which can be updated dynamically.  A \textbf{bridge} to a new kind of
+recommendation may be found by pattern matching, and especially by
+looking for exceptional cases: new elements are introduced into the
+domain which do not cluster well, or different clusters appear in the
+user model that do not have obvious connections between them.  The
+intended outcome of recommendations depends on the organisational
+mission: to make money, to provide a good user experience, etc.  The
+serendiptious \textbf{result} would be learning a new approach that
+helps to address these goals.
 
-From the perspective of our model, \textbf{chance} will only have a
-significant role when the system has the capacity to learn from user
-behaviour.  In fact, Bayesian methods are used in contemporary
-recommender systems (surveyed in Chapter 3 of
-\citeNP{shengbo-guo-thesis}).  The typical commercial perspective on
-recommendations is related to the process of ``conversion'' -- turning
-recommendations into clicks and clicks into purchases.  Combined with
-the ability to learn, \textbf{curiosity} could be described as the
-urge to make ``outside-the-box''\footnote{\citeA{abbassi2009getting}.}
+\textbf{Chance} will only have a significant role in the system if it
+has the capacity to learn from user behaviour.
+%% The typical commercial perspective on recommendations is related to
+%% the process of ``conversion'' -- turning recommendations into
+%% clicks and clicks into purchases.
+Combined with the ability to learn, \textbf{curiosity} could be
+described as the urge to make
+``outside-the-box''\footnote{\citeA{abbassi2009getting}.}
 recommendations specifically for the purposes of learning more about
-users, possibly to the detriment of other goals over the short term.
+users, possibly to the detriment of other metrics over the short term.
 Measures of \textbf{sagacity} would relate to the system's ability to
-draw inferences from user behaviour that would update the
-recommendation model.  For example, the system might do A/B testing to
-decide how novel recommendation strategies influence conversion.  The
-\textbf{value} of recommendation strategies can be measured in terms
-of traditional business metrics or other organisational objectives.
+draw inferences from user behaviour.  For example, the system might do
+A/B testing to decide how novel recommendation strategies influence
+conversion.  Again, currently this would typically be organised by the
+system's developers.  The \textbf{value} of recommendation strategies
+can be measured in terms of traditional business metrics or other
+organisational objectives.
 
 A \textbf{dynamic world} which nevertheless exhibits some regularity
 is a precondition for useful A/B testing.  As mentioned above the
 primary \textbf{(multiple) contexts} are the user model and the domain
 model.  A system matching the description here would have
 \textbf{multiple tasks}: making useful recommendations, generating new
-experiments to learn about users, and building new models based on the
-results of these experiments.  Such a system could avail itself of
-\textbf{multiple influences} related to experimental design,
-psychology, and domain understanding.
+experiments to learn about users, and building new models.  Such a
+system could avail itself of \textbf{multiple influences} related to
+experimental design, psychology, and domain understanding.
 
 % As a general comment, we would say that this is largely how
 % \emph{research and development} of recommender systems works, but
