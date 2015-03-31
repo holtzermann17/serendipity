@@ -3,25 +3,32 @@
 An active research community investigating computational models of serendipity exists in the field of information retrieval, and specifically, in recommender systems \cite{Toms2000}. In this domain, \citeA{Herlocker2004} and \citeA{McNee2006} view serendipity as an important factor for user satisfaction, alongside accuracy and diversity.  Serendipity in recommendations variously require the system to deliver an \emph{unexpected} and \emph{useful}, \emph{interesting}, \emph{attractive} or \emph{relevant} item. 
 % \cite{Herlocker2004} \cite{Lu2012},\cite{Ge2010}.  
 Definitions differ as to the requirement of \emph{novelty}; \citeA{Adamopoulos2011}, for example, describe systems that suggest items that may already be known, but are still unexpected in the current context.  While standardized measures such as the $F_1$-score or the (R)MSE are used to determine the \emph{accuracy} of a recommendation (as very close to what the user is known to prefer), there is no common agreement on a measure for serendipity yet, although there are several proposals \cite{Murakami2008, Adamopoulos2011, McCay-Peet2011,iaquinta2010can}.
-  In terms of our model, these systems focus mainly on producing a \emph{serendipity trigger} for the user, but they include aspects of user modeling which could bring other elements into play, as we will discuss in Section \ref{sec:computational-serendipity}.
+  In terms of our model, these systems focus mainly on producing a \emph{serendipity trigger} for the user and in support of discovery, but they include aspects of user modeling which could bring other elements into play, as we will discuss in Section \ref{sec:computational-serendipity}.
+
+Recent work has examined related topics of \emph{curiosity}
+\cite{wu2013curiosity} and \emph{surprise} \cite{grace2014using} in
+computing.  This latter work seeks to ``adopt methods from the field
+of computational creativity [$\ldots$] to the generation of scientific
+hypotheses.''  In contrast to the typical application of recommender
+systems, this is an example of an effort focused on computational
+invention.
 
 Paul Andr{\'e} et al.~\citeyear{andre2009discovery} have examined
-serendipity from a design perspective.  These authors also propose a
-two-part model, in which what we have called \emph{discovery} above
-exposes the unexpected, while \emph{invention} is the responsibility
-another subsystem that finds applications.  According to Andr\'e et
-al., the first phase is the one that has most frequently been
-automated -- but they suggest that computational systems should be
-developed that support both aspects.  Their specific suggestions focus
-on representational features: \emph{domain expertise} and a
-\emph{common language model}.
+serendipity from a design perspective.  Like us, these authors
+proposed a two-part model encompassing ``the chance encountering of
+information, and the sagacity to derive insight from the encounter.''
+According to Andr\'e et al., the first phase is the one that has most
+frequently been automated -- but they suggest that computational
+systems should be developed that support both aspects.  They
+specifically suggest to focus on representational features:
+\emph{domain expertise} and a \emph{common language model}.
 
 Although tremendously useful when they are available, these features
 are not always enough to account for serendipitious events.  Using the
 terminology we introduced earlier, these features seem to exemplify
 aspects of the \emph{prepared mind}.  However, as we mentioned above,
 the \emph{bridge} is a distinct process that mental preparation can
-support, but not always fully determine.  For example, participants in
+support, but that it does not necessarily fully determine.  For example, participants in
 a poetry workshop may possess a very limited understanding of each
 other's aims or of the work they are critiquing, and may as a
 consequence talk past one another to a greater or lesser degree --
@@ -46,7 +53,7 @@ similarity to the discursive scenario described above, and shows that
 \emph{asymmetric partial knowledge} can support serendipitious
 findings.  These examples suggest that a distinction between emergent
 knowledge of other actors and knowledge about an underlying domain may
-be useful -- although the distinction would somewhat less relevant if
+be useful -- although the distinction may be less relevant if
 the underlying domain itself has dynamic and emergent features.
 \emph{Social coordination} among human users of information systems is
 a current research topic. \citeA{rubin2010everyday} point out that
