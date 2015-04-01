@@ -82,30 +82,14 @@ Evolutionary systems such as GAmprovising necessarily operate in a \textbf{dynam
 \paragraph{Recommender systems.} 
 % Stress distinction between serendipity on the system- vs. serendipity on the user's side.
 As discussed in Section \ref{sec:related}, recommender systems are one
-of the primary contexts in computing where serendipity is seen to play
-a role.  As we noted, these systems mostly focus on discovery.
-Although this describes the mainstream of recommender system
-development, it seems that there are some architectures that also take
-account of invention such as the Bayesian methods surveyed in
-Chapter 3 of \citeNP{shengbo-guo-thesis}.  The current discussion
-focuses on possibilities for serendipity on the system side, drawing
-on the observation that recommender systems do not only \emph{stimulate}
-serendipitous discovery, but also \emph{simulate}
-when this is likely to occur.
+of the primary contexts in computing where serendipity is addressed. Most discussions of serendipity in recommender systems focus on suggesting items to a user that will be likely to introduce new ideas that are unexpected, but close to what the user is already interested in. If the latter connection exists, such a system must be called pseudoserendipitous. As we noted, these systems mostly focus on discovery, but some architectures also seem to take account of invention, such as the Bayesian methods surveyed in Chapter 3 of \citeNP{shengbo-guo-thesis}. Recommender systems \emph{stimulate} serendipitous discovery, by \emph{simulating} when this is likely to occur. In respect to related work, we therefore have to distinguish serendipity on the side of the user from serendipity in the system. 
 
-Most discussions of serendipity in recommender systems focus on suggesting items to a user that will be likely to introduce new ideas that are unexpected, but close to what the user is already interested in. If the latter connection exists, such a system must be called pseudoserendipitous. Current systems have at least the makings of a \textbf{prepared mind}, including both a \emph{user model} and a \emph{domain model}, both of which can be updated dynamically.  A \textbf{bridge} to a new kind of recommendation may be found by pattern matching, and especially by looking for exceptional cases: new elements are introduced into the domain which do not cluster well, or different clusters appear in the user model that do not have obvious connections between them.  The intended outcome of recommendations depends on the organisational mission, and can in most cases be situated between making money and empowering the user. The serendiptious \textbf{result} would be learning a new approach that helps to address these goals.
+Current research mainly focusses on the first aspect. The present approaches focus on finding and assessing \textbf{serendipity triggers} by exploiting patterns in the search space. For example, \cite{Herlocker2004} as well as \cite{Lu2012} associate less popular items with a higher unexpectedness. Clustering was also frequently used to discover latent structures in the search space. For example, \cite{Kamahara2005} partition users into clusters of common interest, while \cite{Onuma2009} as well as \cite{Zhang2011} perform clustering on both users and items. In the work by \cite{Oku2011}, the user is allowed to select two items in order to mix their features in some sort of conceptual blending.
 
-\textbf{Chance} will only have a significant role in the system if it
-has the capacity to learn from user behaviour.
-%% The typical commercial perspective on recommendations is related to
-%% the process of ``conversion'' -- turning recommendations into
-%% clicks and clicks into purchases.
-Note that it is typically the system's \emph{developers} who adapt the system; even in the Bayesian case, the system has limited autonomy. Nevertheless, the impetus to develop increasingly autonomous systems is present, especially in complex domains where hand-tuning is either very cost-intensive or infeasible. As an approach towards more autonomy, user behaviour (e.g.~following up on these recommendations) may serve as a \textbf{serendipity trigger} for the system, and change the way it makes recommendations in the future. Combined with the ability to learn, \textbf{curiosity} could be described as the urge to make recommendations specifically for the purposes of learning more about users, possibly to the detriment of other metrics over the short term. Measures of \textbf{sagacity} would relate to the system's ability to
-draw inferences from user behaviour.  For example, the system might do A/B testing to decide how novel recommendation strategies influence conversion.  Again, currently this would typically be organised by the system's developers.  The \textbf{value} of recommendation strategies
-can be measured in terms of traditional business metrics or other organisational objectives.
+Note that it is typically the system's \emph{developers} who adapt the system; even in the Bayesian case, the system has limited autonomy. Nevertheless, the impetus to develop increasingly autonomous systems is present, especially in complex domains where hand-tuning is either very cost-intensive or infeasible. In the context of this paper, we therefore want to investigate how serendipity could be achieved on the system side, and potentially be reflected back to the user. In terms of our model, current systems have at least the makings of a \textbf{prepared mind}, comprising both a user- and a domain model, both of which can be updated dynamically. User behaviour (e.g.~following up on these recommendations) may serve as a \textbf{serendipity trigger} for the system, and change the way it makes recommendations in the future. A \textbf{bridge} to a new kind of recommendation may be found by pattern matching, and especially by looking for exceptional cases: new elements are introduced into the domain which do not cluster well, or different clusters appear in the user model that do not have obvious connections between them. The intended outcome of recommendations depends on the organisational mission, and can in most cases be situated between making money and empowering the user. The serendipitous \textbf{result} on the system side would resemble a novel learnt approach that helps to address these goals.
 
 %%%
-\begin{table}[ht!]
+\begin{table}[Ht!]
 {\centering \renewcommand{\arraystretch}{1.5}
 \footnotesize
 \begin{tabular}{p{.7in}@{\hspace{.1in}}p{1.9in}@{\hspace{.1in}}p{1.9in}}
@@ -147,13 +131,9 @@ can be measured in terms of traditional business metrics or other organisational
 \normalsize
 %%%
 
-A \textbf{dynamic world} which nevertheless exhibits some regularity
-is a precondition for useful A/B testing.  As mentioned above the
-primary \textbf{(multiple) contexts} are the user model and the domain
-model.  A system matching the description here would have
-\textbf{multiple tasks}: making useful recommendations, generating new
-experiments to learn about users, and building new models.  Such a
-system could avail itself of \textbf{multiple influences} related to
+The imperfect knowledge about the user's preferences and interests represents a main component of \emph{chance}. Furthermore, chance can play an important role if a system had the capacity to learn from user behaviour. Combined with the ability to learn, \textbf{curiosity} could be described as the urge to make recommendations specifically for the purposes of learning more about users, possibly to the detriment of other metrics over the short term. Measures of \textbf{sagacity} would relate to the system's ability to draw inferences from user behaviour.  For example, the system might do A/B testing to decide how novel recommendation strategies influence conversion.  Again, currently this would typically be organised by the system's developers.  The \textbf{value} of recommendation strategies can be measured in terms of traditional business metrics or other organisational objectives.
+
+Recommender systems have to cope with a \textbf{dynamic world} of changing user preference ratings and new items in the system. At the same time, such a dynamic environment which nevertheless exhibits some regularity represents a precondition for useful A/B testing.  As mentioned above the primary \textbf{(multiple) contexts} are the user model and the domain model. A system matching the description here would have \textbf{multiple tasks}: making useful recommendations, generating new experiments to learn about users, and building new models. Such a system could avail itself of \textbf{multiple influences} related to
 experimental design, psychology, and domain understanding.
 
 % As a general comment, we would say that this is largely how
