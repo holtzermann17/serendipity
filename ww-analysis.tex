@@ -18,9 +18,10 @@ be agreed in advance; e.g.~as to genre or length in the case of texts,
 and what constitutes an acceptable comment.  The ``feedback
 explainer'' is closely connected with the ``comment generator'' and in
 an implementation of this model they would presumably share a
-codebase.  The loop for learning by asking questions as they arise is
-reminiscent of the operating strategy of {\sf SHRDLU}
-\cite{winograd1972understanding}.
+codebase.
+%%   The loop for learning by asking questions as they arise is
+%% reminiscent of the operating strategy of {\sf SHRDLU}
+%% \cite{winograd1972understanding}.
 
 Importantly, one of the most relevant preparations would be prior
 participation in Workshop dialogues.  A system with prior experience
@@ -50,25 +51,26 @@ expand to contain its own feedback loops.\\
 \noindent \textbf{Bridge.}
 Feedback on portions of the poem may lead the system to identify new
 problems and possibly new \emph{types} of problems that it hadn't
-considered before.  The most immediately feasible case is one in which
-the critic is a programmer who can directly program new concepts into
-the computer \cite<cf.>{winograd1972understanding}.  However, it would
-be hard to call that ``serendipity.''
-
-We can also ask whether agents can build new concepts \emph{without}
-outside intervention, starting with some basic concepts and abilities
-related to poetry (e.g.~definitions of words, valence of sentiments,
-metre, repetition, density, etc.) and code (e.g.~the data, functions,
-and macros in which the poetic concepts and workshop protocols are
-embodied).  Some notable early experiments with concept invention have been
-fraught with questions about autonomy
+considered before.  %% The most immediately feasible case is one in which
+%% the critic is a programmer who can directly program new concepts into
+%% the computer \cite<cf.>{winograd1972understanding}.  However, it would
+%% be hard to call that ``serendipity.''
+This sort of system extension is quite typical when a human programmer
+is involved.  Hoever, here we are interested in the possibility of
+agents building new poetic concepts \emph{without} outside
+intervention, starting with some basic concepts and abilities related
+to poetry (e.g.~definitions of words, valence of sentiments, metre,
+repetition, density, etc.) and code (e.g.~the data, functions, and
+macros in which the poetic concepts and workshop protocols are
+embodied).  Some notable early experiments with concept invention have
+been fraught with questions about autonomy
 \cite{ritchie1984case,lenat1984and}. \citeA{colton2002automated}
-presented a system that was convincingly autonomous -- the system was
-able to generate interesting novel conjectures that surprised its author.
+presented a system that was convincingly autonomous: it was able to
+generate interesting novel conjectures that surprised its author.
 However, \citeA{pease2013discussion} note that this system was not
 convincingly serendipitous: ``we had to willingly make the system less
-effective to encourage incidents onto which we might project the
-word serendipity.''
+effective to encourage incidents onto which we might project the word
+serendipity.''
 
 One cognitively inspired hypothesis that could describe the
 serendipitous formation of new concepts is the notion that the
@@ -121,20 +123,16 @@ feedback modules, after reflecting on questions like: ``How might the
 critic have detected that feature in my poem?''
 
 \paragraph{Likelihood scores and potential value.}
-Given most statements in natural language are new, we can assume that
-most poems consumed by the system would never have been seen before,
-and the chance of observing a given serendipity trigger would be very
-small.  While the likelihood of detecting an \emph{already-known}
-poetic feature (e.g.~rhyming, alliteration) in a given poem where it
-is present is presumably fairly high, we are particularly interested
-in the cases of where a \emph{novel} poetic feature can be discovered (e.g.~understanding Yeats's symbolic use of bird imagery), and this
-would remain an infrequent occurrence, at least until the system as a
-whole became very good at reading poems.  Indeed, a sophisticated
-system would already have an extensive catalogue of poetic features,
-and the chance of detecting a new and valuable feature might be low
-for other reasons.  The chance that a newly-observed feature will
-result in usable code seems relatively high, although this remains to
-be shown in practice.  Presumably many novel poetic ideas would be seen as
+We can assume that most poems consumed by the system would never have
+been seen before, and the chance of observing a given serendipity
+trigger would be very small.  While the likelihood of detecting
+an \emph{already-known} poetic feature (e.g.~rhyming, alliteration) in
+a given poem where it is present is presumably fairly high, we are
+particularly interested in the cases of where a \emph{novel} poetic
+feature can be discovered, and this would remain a relatively
+infrequent occurrence.  The chance that a newly-observed feature will result in
+usable code seems relatively high, although this remains to be shown
+in practice.  Presumably many novel poetic ideas would be seen as
 high-value at first, while only some of these ideas will prove to have
 lasting value.  Our likelihood score would be
 $\mathit{low}\times\mathit{low}\times\mathit{high}$, or low overall,

@@ -6,12 +6,29 @@ only happens when the solution is found to be explicable and useful.
 To van Andel's assertion that ``The very moment I can plan or
 programme `serendipity' it cannot be called serendipity anymore,'' we
 would reply that we can certainly describe patterns (and programs)
-with built-in indeterminacy.  As an example, we exhibit one of van
-Andel's patterns of serendipity rewritten as a design pattern using
-the template suggested by our model.
+with built-in indeterminacy.  Figure \ref{fig:va-pattern-figure}
+presents an example, showing how one of van Andel's patterns of
+serendipity can be rewritten as a design pattern using the template
+suggested by our model; in future work, we would aim to build a more
+complete pattern language along similar lines, working toward a a
+system with properties (1)-(4), above.
 
+The example pattern describes a scenarion that is quite close to the
+Pease et al.'s \citeyear{pease2013discussion} description of an online
+system that gathers new modules over time, and for which,
+periodically, new combinations of modules can yield new and
+interesting results.
+%
+Developing experiments along these lines may help prepare the
+groundwork for the more involved development projects discussed in the
+current paper.
+%
+Patterns of serendipity, like the one above, offer useful heuristic
+guidelines for human programmers and convey a sense of our long-term
+plans for serendipitous computing systems.
+
+\begin{figure}[t]
 \begin{mdframed}
-\vspace{-.35cm}
 \paragraph{\textbf{Successful error}}~
 \vskip -1\baselineskip
 \begin{flushright}\emph{Van Andel's example} -- Post-it\texttrademark\ Notes
@@ -35,22 +52,9 @@ the template suggested by our model.
   terms of design patterns.
 \end{description}
 \end{mdframed}
+\caption{Our design pattern template applied to van Andel's \emph{Successful error} pattern\label{fig:va-pattern-figure}}
+\end{figure}
 
-\bigskip
 
-Although at first glance this may seem too high-level to be
-computationally relevant, it is quite close to the example of an
-online system that gathers new modules over time, and for which,
-periodically, new combinations of modules can yield new and
-interesting results -- already described in outline form in
-\cite{pease2013discussion}.  
-%
-Developing experiments along these lines may help prepare the
-groundwork for the more involved designs discussed in the current
-paper.
-%
-Patterns of serendipity, like the one above, will offer useful
-heuristic guidelines for human programmers
-and convey a sense of our long-term plans.
 
 % Is ``having a stretch goal'' an example of a serendipity pattern?  I think so!
