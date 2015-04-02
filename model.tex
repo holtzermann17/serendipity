@@ -19,26 +19,43 @@ involved as well.
 {\centering
 \resizebox{1.02\textwidth}{!}{
 \begin{tikzonimage}[width=.45\textwidth,angle=270]{figures/model-diagram/serendipity-attractor-bw}%[tsx/show help lines]
-% \draw [orange, line width=5pt] (1,1) circle [radius=0.75cm];
-% \draw [orange, line width=5pt] (.5,.5) circle [radius=0.75cm];
 \node (dynamic) at (.1, .47) {\emph{dynamic world}};
-\node (trigger) at (.05, .26) {\textbf{trigger}};
+\node (trigger) at (.05, .255) {\textbf{trigger}};
 \node (chance) at (.045, .165) {chance};
 \node (bridge) at (.46, .84) {\textbf{bridge}};
-\node (result) at (.05, .67) {\textbf{result}};
+\node (result) at (.055, .665) {\textbf{result}};
 \node (result)[text width=2cm,align=center] at (.7, .71) {\textbf{prepared mind}};
 \node (focus) at (.93, .88) {{\bf \textsc{focus shift}}};
 \node (curiosity)[rotate=35] at (.44,.58) {curiousity};
 \node (sagacity)[rotate=-30] at (.72,.45) {sagacity};
-\node (value) at (.04, .75) {value};
+\node (value) at (.04, .755) {value};
 \node (influences)[text width=2cm,align=center,rotate=30] at (.99, .60) {{\small\baselineskip=2pt \emph{multiple influences}\par}};
 \node (tasks)[text width=1.5cm,align=center,rotate=30] at (.85, .39) {{\small\baselineskip=2pt \emph{multiple tasks}\par}};
 \node (contexts)[text width=1.5cm,align=center,rotate=30] at (.545, .47) {{\small\baselineskip=2pt \emph{multiple contexts}\par}};
+\draw[-latex] (.05,.03) -- (.15,.03) node [midway, above] {\itshape{\scshape{discovery}}};
+\draw[-latex] (.95,.03) -- (.85,.03) node [midway, above] {\itshape{\scshape{invention}}};
+%% Adding an arrowhead
+\draw[-{Latex[width=2mm]}] (-.001,.6265) -- (-.003,.6265);
+% \node (begin1) at (-.02,.303) {\handmark};
+\node (yes1) at (-.02,.6265) {\sunmark};
+\node (no1) at (1.005, .165) {\ymark};
+\node (no2) at (1.005, .3) {\ymark};
+\node (no3) at (.63, .32) {\ymark};
+% \node (no4) at (-0.02, .625) {\xmark};
 \end{tikzonimage}
 
 \par}}
 \vspace{-.5cm}
-\caption{A heuristic map of the features of serendipity introduced in Section \ref{sec:by-example}}
+\caption{A heuristic map of the features of serendipity introduced in
+  Section \ref{sec:by-example}.  The central black line traces first
+  the process of \emph{discovery} in which an initial trigger combines
+  with mounting curiousity to effect a focus shift; followed by a
+  process of \emph{invention} in which a prepared mind draws on
+  various resources and makes use of its sagacity to find a bridge to
+  a valuable result.  In a typical chaotic fashion, even paths with
+  nearby initial conditions can have very different outcomes: some end
+  in failure of one form or another, while others yield results of
+  differing value.}
 \label{model-diagram}
 \end{figure}
 
