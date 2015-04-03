@@ -3,35 +3,38 @@
 The 13 criteria from Section \ref{sec:literature-review} specify the
 conditions and preconditions that are conducive to serendipitous
 discovery.  These criteria have been further formalised
-in Section \ref{specs-overview}.
-% 
-\citeA{pease2013discussion} used a slightly different version of the
-SPECS criteria to discuss three examples of serendipitous behaviour:
-in dynamic investigation problems, model generation, and poetry
-flowcharts.  Two additional examples using the revised criteria are
-described below.  These example serve the purpose of illustrating our
-revised criteria, and also show forays of computational intelligence
-into domains known for serendipity in their everyday cultural context.
-We then turn to a more elaborated thought experiment that evaluates
-these ideas in the course of developing a new system design.  
+in Section \ref{specs-overview} using SPECS.
+%%
+\citeA{pease2013discussion} used a variant of these SPECS criteria to
+analyse three examples of potentially serendipitous behaviour: dynamic
+investigation problems, model generation, and poetry flowcharts.  Two
+additional examples are discussed below using our revised criteria.
+As Campbell \citeyear{campbell2005serendipity} writes, ``serendipity
+presupposes a smart mind,'' and these examples suggest potential
+directions for further work in computational intelligence.  We then
+turn to a more elaborated thought experiment that describes a new
+system designed with our criteria in mind.
 
-As a contrast, we introduce the notion of \emph{minimally serendipitous systems}: According to our standards, there are various ways to achieve a result with \emph{low} serendipity: if the observation was likely, if further
-developments happened with little skill, and if the the value of the
-result was low, then we would not say the outcome was serendipitous.
-We would be prepared to attribute ``minimal serendipity'' to cases
-where the observation was \emph{moderately} likely, \emph{some} skill
-or effort was involved, and the result was only \emph{fairly good}.
-For computational systems, if most of the skill involved lies with the
+Before describing these examples, as a baseline, we introduce the
+notion of \emph{minimally serendipitous systems}. According to our
+standards, there are various ways to achieve a result with \emph{low}
+serendipity: if the observation was likely, if further developments
+happened with little skill, and if the the value of the result was
+low, then we would not say the outcome was serendipitous.  We would be
+prepared to attribute ``minimal serendipity'' to cases where the
+observation was \emph{moderately} likely, \emph{some} skill or effort
+was involved, and the result was only \emph{fairly good}.  However,
+for computational systems, if most of the skill involved lies with the
 user, then there is little reason to call the system's operation
 serendipitous -- even if it consistently does its job very well.  For
-example, machines can learn to recognise instances of a given pattern
-quite consistently, but it is an interesting surprise if a
-computational system independently finds an entirely new kind of
-pattern.  Furthermore, the position of the evaluator is important: a
-spell-checking system might suggest a particularly fortuitous
-substitution, but we would not expect the spell-checker to know when
-it was being clever.  In such a case, we may say serendipity has
-occurred, but not that we have a serendipitous system.
+example, machines can learn to recognise or approximate certain types
+of patterns, but it is more surprising when a computational system
+independently finds an entirely new kind of pattern.  Furthermore, the
+position of the evaluator is important: a spell-checking system might
+suggest a particularly fortuitous substitution, but we would not
+expect the spell-checker to know when it was being clever.  In such a
+case, we may say serendipity has occurred, but not that we have a
+serendipitous system.
 
 %% If the system learns an $N$th fact or
 %% If applied to a system which could be described as minimally
@@ -61,33 +64,30 @@ occurred, but not that we have a serendipitous system.
 %% more for infelicities than for exceptional wit.
 
 
-
-
-
 \subsection{Case Studies: Prior art}
 \label{sec:priorart}
 
 \paragraph{Evolutionary music improvisation systems.}
 
-\citeA{jordanous10} reported a computational jazz improvisation system using genetic algorithms. Genetic algorithms, and evolutionary computing more generally, could encourage computational serendipity. We examine Jordanous's system (later given the name {\em GAmprovising} \cite{jordanous:12}) as a case study for evolutionary computing in the context of our model of computational serendipity: to what extent does GAmprovising model serendipity?
+\citeA{jordanous10} reported a computational jazz improvisation system using genetic algorithms. Genetic algorithms, and evolutionary computing more generally, could encourage computational serendipity. We examine Jordanous's system (later given the name {\sf GAmprovising} \cite{jordanous:12}) as a case study for evolutionary computing in the context of our model of computational serendipity: to what extent does {\sf GAmprovising} model serendipity?
 
-GAmprovising uses genetic algorithms to evolve a population of \emph{Improvisors}. Each Improvisor is able to randomly generate music based on various parameters such as range of notes to be used, preferred notes to be used, rhythmic implications around note lengths and other musical parameters \cite<see>{jordanous10}. These parameters are what defines the Improvisor at any point in evolution. After a cycle of evolution, each Improvisor is evaluated via a fitness function based on Ritchie's \citeyear{ritchie07} criteria of how creative the Improvisor is. Ritchie's criteria use user-supplied ratings of how novel and how appropriate the music produced by the Improvisor is, to calculate 18 criteria that collectively evaluate how creative a system is. The most successful Improvisors (as deemed by the fitness function) are used to seed a new generation of Improvisors, through crossover and mutation operations.
+{\sf GAmprovising} uses genetic algorithms to evolve a population of \emph{Improvisors}. Each Improvisor is able to randomly generate music based on various parameters such as the range of notes to be used, preferred notes to be used, rhythmic implications around note lengths and other musical parameters \cite<see>{jordanous10}. These parameters are what defines the Improvisor at any point in evolution. After a cycle of evolution, each Improvisor is evaluated via a fitness function based on Ritchie's \citeyear{ritchie07} criteria for creativity.  This model relies on user-supplied ratings of the novelty and appropriateness of the music produced by the Improvisor to calculate 18 criteria that collectively indicate how creative a system is.  The most successful Improvisors (according to this fitness function) are used to seed a new generation of Improvisors, through crossover and mutation operations.
 
-The GAmprovising system can be said to have a \textbf{prepared mind} through its background knowledge of what musical knowledge to embed in the Improvisors and the evolutionary abilities to evolve Improvisors. A \textbf{serendipity trigger} comes from the combination of the mutation and crossover operations employed in the genetic algorithm, and the user input feeding into the fitness function to evaluate produced music. A \textbf{bridge}, from the genetic algorithm operations and user input, to the result is built by the creation of new Improvisors. The \textbf{results} are the various musical improvisations produced by the fittest Improvisors (as well as, perhaps, the parameters that have been considered fittest).
-%
-The likelihood of serendipitous evolution is greatly enhanced by the use of mutation and crossover operations within the genetic algorithm, to increase the diversity of search space covered by the system during evolution. However the \textbf{chance} of any particular Improvisor being discovered is low, given the massive dimensions of the search space.  Interesting developments in evolution would be guided by \textbf{curiosity} through the particular human user identifying Improvisors as interesting at that time. \textbf{Sagacity} is determined by how likely the user is to appreciate the same Improvisor's music (or similar music) over time, as tastes of the user may change. The \textbf{value} of the results are maximised through employing a fitness function.
+The {\sf GAmprovising} system can be said to have a \textbf{prepared mind} through its background knowledge of what musical concepts to embed in the Improvisors and the evolutionary abilities to evolve Improvisors. A \textbf{serendipity trigger} comes from the combination of the mutation and crossover operations previously employed in the genetic algorithm, and the user input feeding into the fitness function to evaluate produced music. A \textbf{bridge} is built by through creation of new Improvisors. The \textbf{results} are the various musical improvisations produced by the fittest Improvisors (as well as, perhaps, the parameters that have been considered fittest).
 
-Evolutionary systems such as GAmprovising necessarily operate in a \textbf{dynamic world} which is evolving continuously and may also be affected by changes in user tastes as they evaluate musical output from Improvisors. The \textbf{multiple contexts} arise from the possibility of having multiple users evaluate the musical output (though this is as yet not implemented formally) or through the user changing their preferences over time. \textbf{Multiple tasks} are carried out by the system including evolution of Improvisors, generation of music by individual Improvisors, capturing of user ratings of a sample of the Improvisors' output, and fitness calculations. \textbf{Multiple influences} are captured through the various combinations of parameters that could be set and the potential range of values for each parameter. Table \ref{caseStudies} summarizes how serendipity in such a system can be described in terms of our model.
+The likelihood of serendipitous evolution is greatly enhanced by the use of random mutation and crossover operations within the genetic algorithm, which increase the diversity of search space covered by the system during evolution.  The \textbf{chance} of any particular pair of Improvisor and user evaluation is low, given the massive dimensions of the search space.  The evolution of the population of Improvisors could be described as \textbf{curiosity} about how to satisfy the musical tastes of a particular human user who identifies certain Improvisors as interesting.  The system's \textbf{sagacity} corresponds to the likelihood that the user will appreciate a given Improvisor's music (or similar music) over time.  One challenge here is that the tastes of the user may change.  The \textbf{value} of the results are maximised through employing a fitness function.
 
+Evolutionary systems such as {\sf GAmprovising} necessarily operate in a \textbf{dynamic world} which is evolving continuously and that must, in particular, take into account the evolution of the user's tastes. The \textbf{multiple contexts} arise from the possibility of having multiple users evaluate the musical output or through the user changing their preferences over time.  A variant of the system that would cater to multiple users is not yet implemented formally -- a revised system with these features would be curious about the more complex problem of satisfying multiple different users' preferences simultaneously.  \textbf{Multiple tasks} are carried out by the system including evolution of Improvisors, generation of music by individual Improvisors, capturing of user ratings of a sample of the Improvisors' output, and fitness calculations. \textbf{Multiple influences} are captured through the various combinations of parameters that could be set and the potential range of values for each parameter. 
+%% Table \ref{caseStudies} summarizes how serendipity in such a system can be described in terms of our model.
 
 \paragraph{Recommender systems.} 
 % Stress distinction between serendipity on the system- vs. serendipity on the user's side.
 As discussed in Section \ref{sec:related}, recommender systems are one
-of the primary contexts in computing where serendipity is addressed. Most discussions of serendipity in recommender systems focus on suggesting items to a user that will be likely to introduce new ideas that are unexpected, but close to what the user is already interested in. If the latter connection exists, such a system must be called pseudoserendipitous. As we noted, these systems mostly focus on discovery, but some architectures also seem to take account of invention, such as the Bayesian methods surveyed in Chapter 3 of \citeNP{shengbo-guo-thesis}. Recommender systems \emph{stimulate} serendipitous discovery, by \emph{simulating} when this is likely to occur. In respect to related work, we therefore have to distinguish serendipity on the side of the user from serendipity in the system. 
+of the primary contexts in computing where serendipity is considered. Most discussions of serendipity in recommender systems focus on suggesting items to a user that will be likely to introduce new ideas that are unexpected, but close to what the user is already interested in. A recommendation of this type will be called (possibly pseudo-)serendipitous. As we noted, these systems mostly focus on supporting discovery, but some architectures also seem to take account of invention, such as the Bayesian methods surveyed in Chapter 3 of \citeNP{shengbo-guo-thesis}. Recommender systems \emph{stimulate} serendipitous discovery, by \emph{simulating} when this is likely to occur. In respect to related work, we therefore have to distinguish serendipity on the the user side from serendipity in the system. 
 
-Current research mainly addresses the first aspect and tries to find and assess \textbf{serendipity triggers} by exploiting patterns in the search space. For example, \cite{Herlocker2004} as well as \cite{Lu2012} associate less popular items with a higher unexpectedness. Clustering was also frequently used to discover latent structures in the search space. For example, \cite{Kamahara2005} partition users into clusters of common interest, while \cite{Onuma2009} as well as \cite{Zhang2011} perform clustering on both users and items. In the work by \cite{Oku2011}, the user is allowed to select two items in order to mix their features in some sort of conceptual blending.
+As we have indicated, most current research in this area the first aspect and tries to find and assess \textbf{serendipity triggers} by exploiting patterns in the search space. For example, \citeA{Herlocker2004} as well as \citeA{Lu2012} associate less popular items with high unexpectedness. Clustering is also frequently used to discover latent structures in the search space. For example, \citeA{Kamahara2005} partition users into clusters of common interest, while \citeA{Onuma2009} as well as \citeA{Zhang2011} perform clustering on both users and items. In the work by \citeA{Oku2011}, the user is allowed to select two items in order to mix their features in a sort of conceptual blend.
 
-Note that it is typically the system's developers who adapt the system; even in the Bayesian case, the system has limited autonomy. Nevertheless, the impetus to develop increasingly autonomous systems is present, especially in complex domains where hand-tuning is either very cost-intensive or infeasible. In the context of this paper, we therefore want to investigate how serendipity could be achieved on the system side, and potentially be reflected back to the user. In terms of our model, current systems have at least the makings of a \textbf{prepared mind}, comprising both a user- and a domain model, both of which can be updated dynamically. User behaviour (e.g.~following up on these recommendations) may serve as a \textbf{serendipity trigger} for the system, and change the way it makes recommendations in the future. A \textbf{bridge} to a new kind of recommendation may be found by pattern matching, and especially by looking for exceptional cases: new elements are introduced into the domain which do not cluster well, or different clusters appear in the user model that do not have obvious connections between them. The intended outcome of recommendations depends on the organisational mission, and can in most cases be situated between making money and empowering the user. The serendipitous \textbf{result} on the system side would resemble a novel learnt approach that helps to address these goals.
+Note that in the course of evolution of these and other systems it is generally the system's developers who plan and perform adaptations; even in the Bayesian case, the system has limited autonomy. Nevertheless, the impetus to develop increasingly autonomous recommender systems is present, especially in complex domains where hand-tuning is either very cost-intensive or infeasible.  With this challenge in mind, we investigate how serendipity could be achieved on the system side, and potentially be reflected back to the user. In terms of our model, current systems have at least the makings of a \textbf{prepared mind}, comprising both a user- and a domain model, both of which can be updated dynamically. User behaviour (e.g.~following up on these recommendations) may serve as a \textbf{serendipity trigger} for the system, and change the way it makes recommendations in the future. A \textbf{bridge} to a new kind of recommendation may be found by pattern matching, and especially by looking for exceptional cases: when new elements are introduced into the domain which do not cluster well, or different clusters appear in the user model that do not have obvious connections between them. The intended outcome of recommendations depends on the organisational mission, and can in most cases be situated between making money and empowering the user. The serendipitous \textbf{result} on the system side would be learning a new approach that helps to address these goals.
 
 %%%
 \begin{table}[Ht!]
@@ -97,7 +97,7 @@ Note that it is typically the system's developers who adapt the system; even in 
 \multicolumn{1}{c}{} & \multicolumn{1}{c}{\textbf{Evolutionary music systems}} & \multicolumn{1}{c}{\textbf{Recommender systems}} \\[-.1in]
 \multicolumn{1}{l}{\em Components} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} \\
 \cline{2-3}
-\textbf{Serendipity trigger} & Evolutionary operations and user input & Input from user behaviour \\
+\textbf{Serendipity trigger} & Previous evolutionary operations together with user input & Input from user behaviour \\
 % \cline{2-3}
 \textbf{Prepared mind} & Musical knowledge, evolution mechanisms & Through user/domain model \\
 % \cline{2-3}
@@ -108,17 +108,17 @@ Note that it is typically the system's developers who adapt the system; even in 
 \cline{2-3}
 \textbf{Chance} & If discovered in huge search space & Through imperfect knowledge/if learning from user behaviour \\
 % \cline{2-3}
-\textbf{Curiosity} & If a particular user notes an Improvisor & Making unusual recommendations \\
+\textbf{Curiosity} & Aiming to have a particular user take note of an Improvisor & Making unusual recommendations \\
 % \cline{2-3}
-\textbf{Sagacity} & User appreciation of Improvisor over time & Updating models after user behaviour \\
+\textbf{Sagacity} & User appreciation of Improvisor over time & Updating recommendation model after user behaviour \\
 % \cline{2-3}
-\textbf{Value} & Via fitness function (proxy of creativity) & As per business metrics/objectives \\
+\textbf{Value} & Via fitness function (as a proxy measure of creativity) & As per business metrics/objectives \\
 \cline{2-3}
 \multicolumn{1}{l}{\em Factors} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} \\
 \cline{2-3}
 \textbf{Dynamic world}  & Continuous computational evolution and changes in user tastes& As precondition for testing system's influences on user behaviour\\
 %\cline{2-3}
-\textbf{Multiple contexts} & Multiple users opinions? & User model and domain model\\
+\textbf{Multiple contexts} & Multiple users opinions -- would change the curiousity profile & User model and domain model\\
 % \cline{2-3}
 \textbf{Multiple tasks} & Evolving Improvisors, generating music, collecting user input, fitness calculations & Making recommendations, learning from users, updating models \\
 % \cline{2-3}
@@ -127,15 +127,18 @@ Note that it is typically the system's developers who adapt the system; even in 
 \end{tabular}
 \par}
 \bigskip
-\caption{Summary: applying computational serendipity model to positive case studies\label{caseStudies}}
+\caption{Summary: applying our computational serendipity model to two case studies\label{caseStudies}}
 \end{table}%
 \normalsize
 %%%
 
-The imperfect knowledge about the user's preferences and interests represents a main component of \emph{chance}. Furthermore, chance can play an important role if a system had the capacity to learn from user behaviour. Combined with the ability to learn, \textbf{curiosity} could be described as the urge to make recommendations specifically for the purposes of finding out more about users, possibly to the detriment of other metrics over the short term. Measures of \textbf{sagacity} would relate to the system's ability to draw inferences from user behaviour.  For example, the system might do A/B testing to decide how novel recommendation strategies influence conversion.  The \textbf{value} of recommendation strategies can be measured in terms of traditional business metrics or other organisational objectives.
+The imperfect knowledge about the user's preferences and interests represents a main source of \textbf{chance}. Combined with the ability to learn, \textbf{curiosity} could be described as the urge to make recommendations specifically for the purposes of finding out more about users, possibly to the detriment of other metrics over the short term. Measures of \textbf{sagacity} would relate to the system's ability to draw inferences from user behaviour.  For example, the system might decide to initiate an A/B test to decide how a novel recommendation strategy influences conversion.  The \textbf{value} of recommendation strategies can be measured in terms of traditional business metrics or other organisational objectives.
 
-Recommender systems have to cope with a \textbf{dynamic world} of changing user preference ratings and new items in the system. At the same time, such a dynamic environment which nevertheless exhibits some regularity represents a precondition for useful A/B testing.  As mentioned above the primary \textbf{(multiple) contexts} are the user model and the domain model. A system matching the description here would have \textbf{multiple tasks}: making useful recommendations, generating new experiments to learn about users, and building new models. Such a system could avail itself of \textbf{multiple influences} related to
-experimental design, psychology, and domain understanding. Table \ref{caseStudies} summarizes how the components, dimensions and factors of our model could be mapped to recommender systems, in comparison to evolutionary music systems from computational creativity.
+Recommender systems have to cope with a \textbf{dynamic world} of changing user preferences and a changing collection of items to recommend.  A dynamic environment which nevertheless exhibits some degree of regularity represents a precondition for useful A/B testing.  As mentioned above the primary \textbf{(multiple) contexts} are the user model and the domain model. A system matching the description here would have \textbf{multiple tasks}: making useful recommendations, generating new experiments to learn about users, and building new models. Such a system could avail itself of \textbf{multiple influences} related to
+experimental design, psychology, and domain understanding.
+
+Table \ref{caseStudies} summarises how the components, dimensions and
+factors of our model of serendipity can be mapped to evolutionary music systems and the ``next-generation'' recommender systems discussed above.
 
 % As a general comment, we would say that this is largely how
 % \emph{research and development} of recommender systems works, but
