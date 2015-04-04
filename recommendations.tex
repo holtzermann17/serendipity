@@ -5,27 +5,28 @@ practice scenarios we have discussed, we can describe the following
 challenges for research in computational serendipity.
 
 \begin{itemize}
-\item \textbf{Autonomy}: Our case study on serendipity in recommender systems in Section \ref{sec:priorart} highlights the need for more autonomy on the system side. The thought experiment in Section
-  \ref{sec:ww} develops a design illustrating the relationship between
-  creativity at the level of artefacts (e.g.~new poems) and creativity
-  at the level of \emph{problem specification} (learning new poetic
-  concepts).  The search for connections that make raw data into
-  ``strategic data'' is an appropriate theme for research in
-  computational intelligence and machine learning to grapple with.  In
-  the standard cybernetic model, we control computers, and we also
-  control the computer's operating context.  There is little room for
-  serendipity if there is nothing outside of our direct control.  In
-  contrast with the mainstream model, von Foerster
-  \citeyear[p. 286]{von2003cybernetics} advocated a \emph{second-order
-    cybernetics} in which ``the observer who enters the system shall
-  be allowed to stipulate his own purpose.''  \emph{A primary
-    challenge to the serendipitous operation of computers is
-    developing computational agents that specify their own problems.}
+\item \textbf{Autonomy}: Our case studies in Section \ref{sec:priorart} highlight the potential value of increased autonomy on the system side.
+%% The thought experiment in Section
+%% \ref{sec:ww} develops a design illustrating the relationship between
+%% creativity at the level of artefacts (e.g.~new poems) and
+%% creativity at the level of \emph{problem specification} (learning
+%% new poetic concepts).
+The search for connections that make raw data into ``strategic data''
+is an appropriate theme for research in computational intelligence and
+machine learning to grapple with.  In the standard cybernetic model,
+we control computers, and we also control the computer's operating
+context.  There is little room for serendipity if there is nothing
+outside of our direct control.  In contrast with the mainstream model,
+von Foerster \citeyear[p. 286]{von2003cybernetics} advocated a
+\emph{second-order cybernetics} in which ``the observer who enters the
+system shall be allowed to stipulate his own purpose.''  \emph{A
+  primary challenge to the serendipitous operation of computers is
+  developing computational agents that specify their own problems.}
 \end{itemize}
 
 \begin{itemize}
 \item \textbf{Learning}: The Writers Workshop described in Section
-  \ref{sec:ww} is fundamentally a design sketch for a system
+  \ref{sec:ww} is one possible design for a system
   that can \emph{learn from experience}.  The Workshop model
   ``personifies'' the wider world in the form of one or several
   critics.  It is clearly also possible for a lone creative agent to
@@ -39,19 +40,19 @@ challenges for research in computational serendipity.
 \end{itemize}
 
 \begin{itemize}
-\item \textbf{Sociality}: We may be aided in our
-  pursuit of the ``smart mind'' required for serendipity by recalling Turing's proposal that computers should ``be
-  able to converse with each other to sharpen their wits''
-  \cite{turing-intelligent}.  Other fields, including computer Chess,
-  Go, and argumentation have achieved this, and to good effect.
-  Deleuze \citeyear[p. 26]{deleuze1994difference} wrote: ``We learn
-  nothing from those who say: `Do as I do'. Our only teachers are
-  those who tell us to `do with me'[.]''  Turing recognised that
-  computers would have to be coached in the direction of social
-  learning, but that once they attain that standard they will learn
-  much more quickly.  \emph{A third challenge is for computational
-    agents to interact in a recognisably social way with us and with
-    each other, resulting in emergent effects.}
+\item \textbf{Sociality}: We may be aided in our pursuit of the
+  ``smart mind'' required for serendipity by recalling Turing's
+  proposal that computers should ``be able to converse with each other
+  to sharpen their wits'' \cite{turing-intelligent}.  Other fields,
+  including computer Chess, Go, and argumentation have achieved this,
+  and to good effect.  Turing recognised that computers would have to
+  be coached in the direction of social learning, but that once they
+  attain that standard they will learn much more quickly.  Deleuze
+  \citeyear[p. 26]{deleuze1994difference} wrote: ``We learn nothing
+  from those who say: `Do as I do'. Our only teachers are those who
+  tell us to `do with me'[.]''  \emph{A third challenge is for
+    computational agents to interact in a recognisably social way with
+    us and with each other, resulting in emergent effects.}
 \end{itemize}
 
 \begin{itemize}
@@ -59,32 +60,32 @@ challenges for research in computational serendipity.
   \citeA{stakeholder-groups-bookchapter} outlined a general programme
   for computational creativity, and examined perceptions of creativity
   in computational systems found among members of the general public,
-  Computational Creativity researchers, and creative (human )communities.  We should now add a fourth
-  important ``stakeholder'' group in computational creativity
-  research: computer systems themselves.  Creativity may look very
-  different to this fourth stakeholder group than it looks to us.  We
-  should help computers evaluate their own results and creative
-  process.  \emph{A fourth challenge is for computational agents to
-    evaluate their own creative process and products.}
+  Computational Creativity researchers, and existing creative
+  communities.  We should now add a fourth important ``stakeholder''
+  group in computational creativity research: computer systems
+  themselves.  Creativity may look very different to this fourth
+  stakeholder group than it looks to us.  It is our responsibility as
+  system designers to teach our systems how to make
+  evaluations in way that is both reasonable and ethical.  This is
+  exemplified by the preference for a ``non-zero sum'' criterion for
+  value suggested in our discussion of the dimensions of serendipity
+  in Section \ref{sec:by-example}.  \emph{A fourth challenge is for
+    computational agents to evaluate their own creative process and
+    products.}
 \end{itemize}
 
-It is our responsibility as system designers to teach them how to make
-evaluations in way that is both reasonable and ethical.  This is
-exemplified by the preference for a ``non-zero sum'' criterion for
-value suggested in our discussion of the dimensions of serendipity in
-Section \ref{sec:by-example}.
 
 A survey of word occurrences from a recent special issue of
 \emph{Cognitive Computation} on ``Computational Creativity, Intelligence and Autonomy'' \cite{bishop-erden-special-issue} shows that related themes are broadly
-active in the research community.\footnote{Articles converted to text
+active in the research community.  Here
+\emph{italics} indicates that the word stem accounted for 0.1\% of the
+article or more; added \textbf{\emph{bold}} indicates that it
+accounted for 1\% or more.\footnote{Articles were converted to text
   via {\tt pdftotext -layout}, individual counts found via {\tt tr
     \textquotesingle~\textquotesingle~\textquotesingle\textbackslash
     n\textquotesingle~< file.txt | grep -c "stem*"}, and total word counts
   via {\tt wc -w}.  The corresponding counts for the \emph{current}
-  paper are 10, \emph{27}, \emph{16}, \emph{45} and 12.8K.}  Here
-\emph{italics} indicates that the word stem accounted for 0.1\% of the
-article or more; added \textbf{\emph{bold}} indicates that it
-accounted for 1\% or more.
+  paper are 12, \emph{25}, \emph{16}, \emph{46} and 12.5K.}
 
 \medskip
 

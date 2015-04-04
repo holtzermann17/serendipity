@@ -3,8 +3,8 @@ single/.style={draw, anchor=text, rectangle},
 ]
 \node (discovery) {\textbf{\emph{Discovery:}}};
 % poet generates poem
-\node[single, right=8mm of discovery.east,text width=1.5cm] (poet) {\emph{poetry generator}};
-\node[single, right=4mm of poet.east] (poem) {P};
+\node[single, right=8mm of discovery.east,text width=1.5cm] (poet) {\emph{text\\ generator}};
+\node[single, right=4mm of poet.east] (poem) {T};
 \draw [-latex] (poet.east) -- (poem.west);
 % critic listens to poem and offers feedback
 \node[single, right=4mm of poem.east,text width=1.5cm] (critic) {comment generator};

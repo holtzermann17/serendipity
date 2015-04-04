@@ -1,34 +1,24 @@
-In our thought experiment, we focus on the case of
-hypothetical discussions and exchange of views between computational
-poetry systems as our example of a situation where social
-circumstances could encourage serendipity. We note that similar ideas
-would apply for prose and, with further adaptation, other arts.\\
 
 \noindent \textbf{Prepared mind.}
-Participating systems need to be able to follow the protocol.  This
-means that participating systems will need components like those
-listed above. The {\tt listening} and {\tt questions} components of
-the protocol correspond to $p$ and $p^{\prime}$ our model of
-serendipity.  The corresponding ``comment generator'' and ``feedback
-integrator'' modules in the architecture represent the primary points
-of interface to the outside world.  In principle these modules need to
-be prepared to deal (more or less thoughtfully) with \emph{any} text,
-and in turn, with \emph{any} comment on that text.  Certain limits may
-be agreed in advance; e.g.~as to genre or length in the case of texts,
-and what constitutes an acceptable comment.  The ``feedback
-explainer'' is closely connected with the ``comment generator'' and in
-an implementation of this model they would presumably share a
-codebase.
+Participating systems need to be able to follow the Workshop protocol.
+The {\tt listening} and {\tt questions} stages of the protocol
+correspond to $p$ and $p^{\prime}$ our model of serendipity.  The
+corresponding ``comment generator'' and ``feedback integrator''
+modules in the architectural sketch represent the primary points of
+interface between author and critic. 
+In principle these modules need to be prepared to deal, more or less
+thoughtfully, with \emph{any} text, and in turn, with \emph{any}
+comment on that text.  Certain limits may be agreed in advance;
+e.g.~as to genre or length in the case of texts, and what constitutes
+an acceptable comment.
 %%   The loop for learning by asking questions as they arise is
 %% reminiscent of the operating strategy of {\sf SHRDLU}
 %% \cite{winograd1972understanding}.
-
-Importantly, one of the most relevant preparations would be prior
-participation in Workshop dialogues.  A system with prior experience
-in the Workshop may have a catalogue of outstanding unresolved, or
-partially resolved, problems (denoted ``X'' in the schematic above).
-Embodied in code, they may drive comments, questions, and other
-behaviour -- and they may be answered in unexpected ways.\\
+A participating system -- particularly one with prior experience in
+the Workshop -- will have a catalogue of outstanding unresolved, or
+partially resolved, problems (denoted ``X'' in Figure \ref{fig:generative-diagram}).
+Embodied in code, these drive comments, questions, and other
+behaviour -- and they may be addressed in unexpected ways.\par\medskip
 
 \noindent \textbf{Serendipity triggers.}
 Although the poem is under the control of the initial generative
@@ -36,17 +26,17 @@ subsystem, it is \emph{not} under control of the listening subsystem.
 The listening subsystem expects some poem, but it does not know what
 poem to expect.  In this sense, the poem constitutes a serendipity
 trigger $T$, not only for the listening subsystem, but for the
-Workshop system as a whole.
+Workshop as a whole.
 %
 To expand this point, note that there may be several listeners, each
 sharing their own feedback and listening to the feedback presented by
 others (which, again, is outside of their direct control).  This
 creates further potential for serendipity, since each listener can
 learn what others see in the poem.  More formally, in this case
-$T^\star$ may seen as an evolving vector with shared state, but viewed
+$T^\star$ may be seen as an evolving vector with shared state, but viewed
 and handled from different perspectives.  With multiple agents
 involved in the discussion, the ``comment generator'' module would
-expand to contain its own feedback loops.\\
+expand to contain its own feedback loops.\par\medskip
 
 \noindent \textbf{Bridge.}
 Feedback on portions of the poem may lead the system to identify new
@@ -56,7 +46,7 @@ considered before.  %% The most immediately feasible case is one in which
 %% the computer \cite<cf.>{winograd1972understanding}.  However, it would
 %% be hard to call that ``serendipity.''
 This sort of system extension is quite typical when a human programmer
-is involved.  Hoever, here we are interested in the possibility of
+is involved.  However, here we are interested in the possibility of
 agents building new poetic concepts \emph{without} outside
 intervention, starting with some basic concepts and abilities related
 to poetry (e.g.~definitions of words, valence of sentiments, metre,
@@ -72,79 +62,72 @@ convincingly serendipitous: ``we had to willingly make the system less
 effective to encourage incidents onto which we might project the word
 serendipity.''
 
-One cognitively inspired hypothesis that could describe the
-serendipitous formation of new concepts is the notion that the
-development of new concepts is closely related to formation of new
-sensory experiences \cite{milan2013kiki}.  If the workshop
-participants have the capacity to identify the distinctive features of
-a given poem, then training via a machine learning or genetic
-algorithm approach could be used to assemble a battery of existing
-low-level tools that can approximate the effect.  Relatedly, a
-compression process could seek to produce a given complex poetic
-effect with a maximally-succinct
-algorithm \cite<cf.>{schmidhuber2007simple}.
+One cognitively inspired hypothesis is that 
+the development of new concepts is closely related to development of new
+sensory experiences \cite{milan2013kiki}.  
+%% If the workshop
+%% participants have the capacity to identify the distinctive features of
+%% a given poem, then training via a machine learning or genetic
+%% algorithm approach could be used to assemble a battery of existing
+%% low-level tools that can approximate the effect.  Relatedly, a
+%% compression process could seek to produce a given complex poetic
+%% effect with a maximally-succinct
+%% algorithm \cite<cf.>{schmidhuber2007simple}.
 %
-The key point is that feedback on the poem -- simply describing what
+Feedback on the poem -- simply describing what
 is in the poem from several different points of view -- can be used to
-define new problems for the system to solve.  This is not simply a
-matter of decomposing the poem into pieces, but also of reconstructing
-the way in which the pieces work together.  This is one of the
-functions of the {\tt questions} step corresponding to $p^{\prime}$ in
-our formalism: they offer the poet the opportunity to enquire about
+define new problems for the system to solve.
+%%   This is not simply a
+%% matter of decomposing the poem into pieces, but also of reconstructing
+%% the way in which the pieces work together.  This is
+One of the functions of the {\tt questions} step, corresponding to $p^{\prime}$ in
+our formalism, is to give the poet the opportunity to enquire about
 how different pieces of feedback fit together, and learn more about
-where they come from.  Although computers are currently nowhere close,
-the reconstructive process may steadily approach the ideal case --
+where they come from.  The reconstructive process may steadily approach the ideal case --
 familiar to humans -- of relating to the sentiment expressed by the
-poem as a whole \cite[p. 209]{bergson1983creative}.\\
+poem as a whole \cite[p. 209]{bergson1983creative}.\par\medskip
 
 %% Several of us are involved with a contemporary project
 %% \cite{coinvent14} to develop a formal theory of concept invention,
 %% focusing on \emph{concept blending}.  The additive or subtractive
 %% blending of existing poetry profiles may be another way to create new
 %% concepts.
-
-
 %% should be possible Modifer Grammar
 %% Counting Breathing Position Distribution Phonics Rhythm Repetition
 %% Thematic Narrative Entropy
 
 \noindent \textbf{Result.}
-The final step is to take the problem or problems that were
-identified, and write new code to solve them.  Several strategies for
-generating a result $R$, in the form of new code, were described
-above.  Now the system evaluates the new code to see whether it holds
-promise.  In order to do this, it must have a way to carry out an
-evaluation and judge whether $|R|>0$.  In the most straightforward
-case, it would simply make changes to the draft poem that seem to
-improve it in some way.  For example, the poet might remove or alter material that
-elicited a negative response from a critic.  The system may proceed to
-update its modules related to poetry generation.  Notably, it may also update its own
+In the most straightforward case, the poet would simply make changes
+to the draft poem that seem to improve it in some way.  For example,
+the poet might remove or alter material that elicited a negative
+response from a critic.  The system may then proceed to update its modules
+related to poetry generation.  It may also update its own
 feedback modules, after reflecting on questions like: ``How might the
-critic have detected that feature in my poem?''
+critic have noticed that feature in my poem?''\par\medskip
 
-\paragraph{Likelihood scores and potential value.}
-We can assume that most poems consumed by the system would never have
-been seen before, and the chance of observing a given serendipity
-trigger would be very small.  While the likelihood of detecting
-an \emph{already-known} poetic feature (e.g.~rhyming, alliteration) in
-a given poem where it is present is presumably fairly high, we are
-particularly interested in the cases of where a \emph{novel} poetic
-feature can be discovered, and this would remain a relatively
-infrequent occurrence.  The chance that a newly-observed feature will result in
-usable code seems relatively high, although this remains to be shown
-in practice.  Presumably many novel poetic ideas would be seen as
-high-value at first, while only some of these ideas will prove to have
-lasting value.  Our likelihood score would be
-$\mathit{low}\times\mathit{low}\times\mathit{high}$, or low overall,
-and value would be varied, with at least some high-valued cases
-deserving the description ``highly serendipitous.''\\
+\noindent \textbf{Likelihood scores and potential value.}
+Assuming the poems presented to the system are not too repetitive, the
+chance of encountering a given serendipity trigger would be small.  It
+should be straightforward for a critic to detect some known feature,
+like metre or rhyme, but at least moderately difficult to notice a
+novel poetic idea.  There is some nuance here, since whenever the
+system learns a new concept, the low-hanging fruit from the pool of
+new concepts is used up, and the system's perceptiveness
+simultaneously increases.  The chance that a newly-observed feature
+will result in usable code seems relatively high, but only some of
+these new ideas will prove to have lasting value.  Our likelihood
+score would be $\mathit{low}\times\mathit{medium}\times\mathit{high}$,
+or fairly low overall, and value would be varied, with at least some
+high-valued cases meriting the description ``highly
+serendipitous.''\par\medskip
 
-\paragraph{Environmental factors.}
+\noindent \textbf{Environmental factors.}
 The system would set up its own internal dynamics, but it could also
-provide an interface for human poets to share their poetry and their
+provide an interface for human poets to share their poetry and
 critical remarks.  There is one primary context, the Workshop, shared
 by all participants.  The primary tasks envisaged in the system design
-are \emph{poetry generation} and \emph{code generation}.  Although
-these are different tasks, they may have similar features (i.e.~both may present opportunities to learn from feedback).
-Influences could be highly multiple, including many very different kinds of poetry
-and various approaches from NLP.
+are \emph{poetry generation}, \emph{comment generation},
+and \emph{code generation}.  Although these are different tasks, they
+may have similar features (i.e.~they all may present opportunities to
+learn from feedback).  Influences could be highly multiple, including
+many very different kinds of poetry and various approaches from NLP.

@@ -12,17 +12,20 @@
 \newcommand{\sunmark}{\ding{106}}%
 \newcommand{\handmark}{\ding{43}}%
 
-\usepackage{lineno}
-\usepackage{pagecolor}
-\pagecolor{yellow!10!orange!5}
+% \usepackage{lineno}
+% \usepackage{pagecolor}
+% \pagecolor{yellow!10!orange!5}
 
 \usepackage[framemethod=tikz]{mdframed}
 \mdfsetup{
 skipabove=\baselineskip,
 skipbelow=0\baselineskip,
 innertopmargin=3pt,
-innerbottommargin=3pt
+innerbottommargin=3pt,
+apptotikzsetting={\tikzset{mdfbackground/.append style={fill=red,fill opacity=0}}}
 }
+
+
 
 %% \usepackage{fontspec}
 %% \newfontfamily{\tam}[Script=Tamil]{Lohit Tamil}
@@ -114,7 +117,7 @@ School of Computing, University of Kent}
 
 \maketitle
 
-\linenumbers
+% \linenumbers
 \input{abstract.tex}
 
 \setcounter{footnote}{0}
