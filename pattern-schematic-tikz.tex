@@ -10,27 +10,30 @@ pinstyle/.style = {pin edge={to-,thin,black}}
 }
 
 \begin{tikzpicture}[auto, node distance=2cm,>=latex']
-    \node [sum] (sum1) {};
-    \node [input, name=pinput, above left=.9cm and .9cm of sum1] (pinput) {};
-    \node [input, name=tinput, left=2cm of sum1] (tinput) {};
-    \node [input, name=minput, below left of=sum1] (minput) {};
-    \node [input, name=minput, right of=sum1] (moutput) {};
-    \draw [->] (tinput) -- node{\vphantom{{\footnotesize g}}{\footnotesize context~}} (sum1);
-    \draw [->] (pinput) -- node{{\footnotesize problem}} (sum1);
-    \draw [->] (sum1) -- node{\vphantom{{\footnotesize g}}{\footnotesize solution}}  (moutput);
+    \node [sum] (A-sum1) {};
+    \node [input, name=pinput, above left=.7cm and .7cm of A-sum1] (A-pinput) {};
+    \node [input, name=tinput, left=2.2cm of A-sum1] (A-tinput) {};
+    \node [input, name=minput, below left of=A-sum1] (A-minput) {};
+    \node [input, name=minput, right of=A-sum1] (A-moutput) {};
+
+    \draw [->] (A-pinput) -- node{{\footnotesize problem}} (A-sum1);
+    \draw [->] (A-tinput) -- node{\vphantom{{\footnotesize g}}{\footnotesize context~}} (A-sum1);
+%    \draw [->] (A-sum1) -- node{\vphantom{{\footnotesize g}}$T^{\star}$}  (A-moutput);
+
+    \node [sum, right=2.3cm of A-sum1] (B-sum1) {};
+    \node [input, name=pinput, above left=.7cm and .7cm of B-sum1] (B-pinput) {};
+    \node [input, name=tinput, left of=B-sum1] (B-tinput) {};
+    \node [input, name=minput, below left of=B-sum1] (B-minput) {};
+    \node [sum, right=2cm of B-sum1] (B-sum2) {};
+
+    \node [input, name=minput, right of=B-sum2] (B-moutput) {};
+    \draw [->] (B-pinput) -- node{{\footnotesize rationale}} (B-sum1);
+
+    \draw [->] (A-sum1) -- node{\vphantom{{\footnotesize g}}{\footnotesize solution}} (B-sum1);
+
+    \draw [->] (B-sum1) -- node{\vphantom{{\footnotesize g}}{\footnotesize pattern}} (B-sum2);
+    \draw [->] (B-sum2) -- node[text width=1.5cm,execute at begin node=\setlength{\baselineskip}{.9ex}]{\footnotesize \emph{resolution\\~of forces}} (B-moutput);
 \end{tikzpicture}
-\hspace{1cm}
-\begin{tikzpicture}[auto, node distance=2cm,>=latex']
-    \node [sum] (sum1) {};
-    \node [input, name=pinput, above left=.9cm and .9cm of sum1] (pinput) {};
-    \node [input, name=tinput, left of=sum1] (tinput) {};
-    \node [input, name=minput, below left of=sum1] (minput) {};
-    \node [sum, right=1.5cm of sum1] (sum2) {};
-    \node [input, name=minput, right of=sum2] (moutput) {};
-    \draw [->] (tinput) -- node{\vphantom{{\footnotesize g}}{\footnotesize solution}} (sum1);
-    \draw [->] (pinput) -- node{{\footnotesize rationale}} (sum1);
-    \draw [->] (sum1) -- node{\vphantom{{\footnotesize g}}{\footnotesize pattern}} (sum2);
-    \draw [->] (sum2) -- node[text width=1.5cm,execute at begin node=\setlength{\baselineskip}{.9ex}]{\footnotesize \emph{resolution\\~of forces}}  (moutput);
-\end{tikzpicture}
+
 \endgroup
 \end{center}
