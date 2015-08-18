@@ -10,9 +10,9 @@ single/.style={draw, anchor=text, rectangle},
 % ``critic listens to poem and offers feedback''
 \node[ellipse, draw, right=9mm of poem.east,text width=1.4cm] (critic) {\emph{feedback}};
 \draw [-latex] (poem.east) -- (critic.west);
-\node[single, above=8mm of critic.north,text width=1.5cm] (experience) {\emph{reflection\\ process}};
-\node[draw,diamond,inner sep =.3mm, above right=4mm and 3mm of critic] (comment) {\raisebox{1mm}{$p\vphantom{^{\prime}}_1$}} ;
-\node[draw,diamond,inner sep =.3mm, above left=4mm and 3mm of critic] (reflection) {\raisebox{1mm}{$p\vphantom{^{\prime}}_2$}} ;
+\node[single, above=8mm of critic.north,text width=1.4cm] (experience) {\emph{reflective\\ process}};
+\node[draw,diamond,inner sep =.3mm, above right=4mm and 3mm of critic] (comment) {\raisebox{2mm}{$p\vphantom{^{\prime}}_1$}} ;
+\node[draw,diamond,inner sep =.3mm, above left=4mm and 3mm of critic] (reflection) {\raisebox{2mm}{$p\vphantom{^{\prime}}_2$}} ;
 
 \draw[-latex,thick] ([yshift=1mm]critic.east) to [out=0,in=270] (comment.south) ;
 \draw[-latex,thick] (comment.north) to [out=90,in=0] (experience.east) ;
@@ -44,8 +44,8 @@ single/.style={draw, anchor=text, rectangle},
 
 \node[single, below=9mm of integrator.south,text width=2cm] (explainer) {\emph{experimental\\ process}};
 
-\node[draw,diamond,inner sep =.3mm, below right=4mm and 5mm of integrator] (question) {\raisebox{1mm}{$p^{\prime}_1$}};
-\node[draw,diamond, inner sep =.3mm, below left=4mm and 5mm of integrator] (answer) {\raisebox{1mm}{$p^{\prime}_2$}};
+\node[draw,diamond,inner sep =.3mm, below right=4mm and 5mm of integrator] (question) {\raisebox{2mm}{$p^{\prime}_1$}};
+\node[draw,diamond, inner sep =.3mm, below left=4mm and 5mm of integrator] (answer) {\raisebox{2mm}{$p^{\prime}_2$}};
 
 \draw[-latex,thick] ([yshift=-1mm]integrator.east) to [out=0,in=90] (question.north) ;
 \draw[-latex,thick] (question.south) to [out=270,in=0] (explainer.east) ;
