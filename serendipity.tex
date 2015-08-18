@@ -44,6 +44,17 @@ apptotikzsetting={\tikzset{mdfbackground/.append style={fill=red,fill opacity=0}
 \usepackage{amsmath,amssymb}	% math structures and symbols
 \usepackage{graphicx}		% including of graphics files in various formats
 \usepackage{amsfonts}
+
+\let\proof\relax
+\let\endproof\relax 
+\usepackage{amsthm}
+
+\newtheorem*{ndef}{Definition of serendipity}
+
+\newtheoremstyle{named}{.2\topsep}{}{\itshape}{}{\bfseries}{.}{}{}
+\theoremstyle{named}
+
+
 \usepackage{dialogue}
 \usepackage{placeins}
 \usepackage{tikz}
@@ -137,7 +148,7 @@ School of Computing, University of Kent}
 %\input{4definition.tex}
 % \input{5connections.tex}
 \input{6SPECS-begins.tex}
-\input{7SPECS-continues.tex}
+%\input{7SPECS-continues.tex}
 % SPECS-begins.tex
 % figures/schematic/schematic.png
 % SPECS-continues.tex
