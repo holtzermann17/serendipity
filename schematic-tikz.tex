@@ -9,27 +9,27 @@ pinstyle/.style = {pin edge={to-,thin,black}}
 }
 
 \begin{tikzpicture}[auto, node distance=2cm,>=latex']
-    \node [sum] (sum1) {};
-    \node [input, name=pinput, above left=.7cm and .7cm of sum1] (pinput) {};
-    \node [input, name=tinput, left of=sum1] (tinput) {};
-    \node [input, name=minput, below left of=sum1] (minput) {};
-    \node [input, name=minput, right of=sum1] (moutput) {};
-    \draw [->] (pinput) -- node{$p$} (sum1);
-    \draw [->] (tinput) -- node{\vphantom{{\tiny g}}$T$} (sum1);
-    \draw [->] (sum1) -- node{\vphantom{{\tiny g}}$T^{\star}$}  (moutput);
-\end{tikzpicture}
-\hspace{1cm}
-\begin{tikzpicture}[auto, node distance=2cm,>=latex']
-    \node [sum] (sum1) {};
-    \node [input, name=pinput, above left=.7cm and .7cm of sum1] (pinput) {};
-    \node [input, name=tinput, left of=sum1] (tinput) {};
-    \node [input, name=minput, below left of=sum1] (minput) {};
-    \node [sum, right of=sum1] (sum2) {};
-    \node [input, name=minput, right of=sum2] (moutput) {};
-    \draw [->] (pinput) -- node{$p^{\prime}$} (sum1);
-    \draw [->] (tinput) -- node{\vphantom{{\tiny g}}$T^{\star}$} (sum1);
-    \draw [->] (sum1) -- node{\vphantom{{\tiny g}}$R$} (sum2);
-    \draw [->] (sum2) -- node{$|R|>0$}  (moutput);
+    \node [sum] (A-sum1) {};
+    \node [input, name=pinput, above left=.7cm and .7cm of A-sum1] (A-pinput) {};
+    \node [input, name=tinput, left of=A-sum1] (A-tinput) {};
+    \node [input, name=minput, below left of=A-sum1] (A-minput) {};
+    \node [input, name=minput, right of=A-sum1] (A-moutput) {};
+    \draw [->] (A-pinput) -- node{$p$} (A-sum1);
+    \draw [->] (A-tinput) -- node{\vphantom{{\tiny g}}$T$} (A-sum1);
+%    \draw [->] (A-sum1) -- node{\vphantom{{\tiny g}}$T^{\star}$}  (A-moutput);
+
+    \node [sum, right=2cm of A-sum1] (B-sum1) {};
+    \node [input, name=pinput, above left=.7cm and .7cm of B-sum1] (B-pinput) {};
+    \node [input, name=tinput, left of=B-sum1] (B-tinput) {};
+    \node [input, name=minput, below left of=B-sum1] (B-minput) {};
+    \node [sum, right of=B-sum1] (B-sum2) {};
+    \node [input, name=minput, right of=B-sum2] (B-moutput) {};
+    \draw [->] (B-pinput) -- node{$p^{\prime}$} (B-sum1);
+
+    \draw [->] (A-sum1) -- node{\vphantom{{\tiny g}}$T^{\star}$} (B-sum1);
+
+    \draw [->] (B-sum1) -- node{\vphantom{{\tiny g}}$R$} (B-sum2);
+    \draw [->] (B-sum2) -- node{$|R|>0$}  (B-moutput);
 \end{tikzpicture}
 \endgroup
 

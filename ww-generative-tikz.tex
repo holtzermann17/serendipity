@@ -2,44 +2,64 @@
 single/.style={draw, anchor=text, rectangle},
 ]
 \node (discovery) {\textbf{\emph{Discovery:}}};
-% poet generates poem
-\node[single, right=8mm of discovery.east,text width=1.5cm] (poet) {\emph{text\\ generator}};
-\node[single, right=4mm of poet.east] (poem) {T};
+% ``poet generates poem''
+\node[single, right=8mm of discovery.east,text width=1.5cm] (poet) {\emph{generative\\ process}};
+\node[single, right=6mm of poet.east] (poem) {$T$};
 \draw [-latex] (poet.east) -- (poem.west);
-% critic listens to poem and offers feedback
-\node[single, right=4mm of poem.east,text width=1.5cm] (critic) {comment generator};
+
+% ``critic listens to poem and offers feedback''
+\node[ellipse, draw, right=9mm of poem.east,text width=1.4cm] (critic) {\emph{feedback}};
 \draw [-latex] (poem.east) -- (critic.west);
-\node[single, right=4mm of critic.east] (feedback) {F};
-\draw [-latex] (critic.east) -- (feedback.west);
+\node[single, above=8mm of critic.north,text width=1.5cm] (experience) {\emph{reflection\\ process}};
+\node[draw,diamond,inner sep =.3mm, above right=4mm and 3mm of critic] (comment) {\raisebox{1mm}{$p\vphantom{^{\prime}}_1$}} ;
+\node[draw,diamond,inner sep =.3mm, above left=4mm and 3mm of critic] (reflection) {\raisebox{1mm}{$p\vphantom{^{\prime}}_2$}} ;
+
+\draw[-latex,thick] ([yshift=1mm]critic.east) to [out=0,in=270] (comment.south) ;
+\draw[-latex,thick] (comment.north) to [out=90,in=0] (experience.east) ;
+\draw[-latex,thick] (experience.west) to [out=180,in=90] (reflection.north) ;
+\draw[-latex,thick] (reflection.south) to [out=270,in=140] ([yshift=1.5mm]critic.west) ;
+
+% nonprinting point to use to bend curve
+\coordinate[below right=3mm and 7mm of critic] (mid1);
+
+\node[single, below left=6mm and 4mm of critic] (feedback) {$T^{\star}$};
+\node[below=.65cm of discovery] (focusshift) {{\small \textbf{\emph{[focus shift]}}}};
+
+% draw the first curve into focus shift
+\draw [-latex] ([yshift=-1mm]critic.east) to[out=0,in=90] (mid1) to[out=270,in=0] (feedback.east);
 
 %%% Next phase
-\node[below=1cm of discovery] (invention) {\textbf{\emph{Invention:}}};
-% poet integrates feedback
-\node[single, right=8mm of invention.east] (feedbackcont) {F};
-\node[single, right=8mm of feedbackcont.east,text width=1.7cm] (integrator) {\emph{feedback integrator}};
-\draw [-latex] (feedbackcont.east) -- (integrator.west);
+\node[below=2cm of discovery] (invention) {\textbf{\emph{Invention:}}};
 
-\node[single, below=8mm of integrator.south,text width=1.5cm] (explainer) {feedback explainer};
+% ``poet integrates feedback''
+\node[ellipse, draw, right=12mm of invention.east,text width=2.2cm] (integrator) {\emph{understanding}};
 
-\node[single, below right=2mm and 2mm of integrator] (question) {Q};
-\node[single, below left=2mm and 2mm of integrator] (answer) {A};
+% nonprinting point to use to bend curve
+\coordinate[above left=2mm and 9mm of integrator] (mid2);
 
-\draw[-latex] ([yshift=-1.5mm]integrator.east) to [out=0,in=90] (question.north) ;
-\draw[-latex] (question.south) to [out=270,in=0] (explainer.east) ;
-\draw[-latex] (explainer.west) to [out=180,in=270] (answer.south) ;
-\draw[-latex] (answer.north) to [out=90,in=180] ([yshift=-1.5mm]integrator.west) ;
+% draw the second curve out from focus shift
+\draw [-latex] (feedback.west) to[out=180,in=90] (mid2) to[out=270,in=160] (integrator.west);
 
-\node[single, right=8mm of integrator.east] (problem) {X};
+% ``poet asks questions about the feedback''
 
-\draw [-latex] (integrator.east) -- (problem.west);
+\node[single, below=9mm of integrator.south,text width=2cm] (explainer) {\emph{experimental\\ process}};
 
-% poet reflects on feedback and updates codebase
+\node[draw,diamond,inner sep =.3mm, below right=4mm and 5mm of integrator] (question) {\raisebox{1mm}{$p^{\prime}_1$}};
+\node[draw,diamond, inner sep =.3mm, below left=4mm and 5mm of integrator] (answer) {\raisebox{1mm}{$p^{\prime}_2$}};
 
-\node[single, right=4mm of problem.east,text width=1.5cm] (pgrammer) {\emph{code}\\ \emph{generator}};
+\draw[-latex,thick] ([yshift=-1mm]integrator.east) to [out=0,in=90] (question.north) ;
+\draw[-latex,thick] (question.south) to [out=270,in=0] (explainer.east) ;
+\draw[-latex,thick] (explainer.west) to [out=180,in=270] (answer.south) ;
+\draw[-latex,thick] (answer.north) to [out=90,in=200] ([xshift=1mm,yshift=-1.8mm]integrator.west) ;
 
+\node[yshift=1mm,single, right=10mm of integrator.east] (problem) {$R$};
+
+\draw [-latex] ([yshift=1mm]integrator.east) -- (problem.west);
+
+% ``poet reflects on feedback and updates codebase''
+
+\node[single, right=6mm of problem.east,text width=1.6cm] (pgrammer) {\emph{evaluation}\\ \emph{process}};
 \draw [-latex] (problem.east) -- (pgrammer.west);
-
 \node[single, right=4mm of pgrammer.east,text width=.3cm] (etc) {...};
-
 \draw [-latex] (pgrammer.east) -- (etc.west);
 \end{tikzpicture}

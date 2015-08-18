@@ -1,81 +1,129 @@
 \section{Our computational model of serendipity} \label{sec:our-model}
 
-Figure \ref{model-diagram} recapitulates the ideas from the previous
-section.  Dashed paths show some of the things that could go wrong.
-The serendipity trigger might not arise, or might not attract
-interest.  If interest is aroused, a path to a useful result may not
-be sought, or if it is sought, may not be found.  If a result is
-developed, it may turn out not be of value.  Prior experience with
-related problems may help with the exploration, but may also restrict
-innovative thinking.  Multiple tasks, influences, and contexts can help to foster
-an inventive frame of mind, and send the investigator in a
-new and fruitful direction -- but they can also be distractions.
-Failures of curiosity or sagacity will undermine the process -- and
-although serendipity does not reduce to luck, there is some luck
-involved as well.
+Figure \ref{fig:model} recapitulates the ideas from the previous
+section.
 
-\begin{figure}[h!]
+Figure \ref{fig:1a} is a heuristic map of the features of serendipity
+introduced in Section \ref{sec:by-example}.
+%
+Dashed paths ending in X's show some of the things that can go wrong.
+A serendipity trigger might not arise, or might not attract interest.
+If interest is aroused, a path to a useful result may not be sought,
+or if it is sought, may not be found.  If a result is developed, it
+may turn out to be of little value.  Prior experience with a related
+problem could be informative, but could also restrict innovative
+thinking.  Similarly, multiple tasks, influences, and contexts can
+help to foster an inventive frame of mind, but they can also be
+distractions.
+
+Figure \ref{fig:1b} removes these unserendipitous paths to focus on
+the key features of the model.
+%
+The \textbf{serendipity trigger} is denoted here by $T$.  
+%
+The \textbf{prepared mind} corresponds to those preparations, labeled
+$p$ and $p^{\prime}$, that are relevant to the discovery and invention
+phases, respectively.  These preparations may include training,
+current phenomenal experience, access to relevant knowledge sources,
+and so on.
+%
+A \textbf{focus shift} takes place when the trigger is observed to be
+interesting.  The now-interesting trigger is denoted $T^\star$, and is
+common to both the discovery and the invention phases.
+%
+%
+The \textbf{bridge} is comprised of the actions based on $p^{\prime}$
+that are taken on $T^\star$ leading to the \textbf{result} $R$, which is ultimately given a positive evaluation.
+
+\afterpage{\clearpage}
+\begin{figure}[p]
+\begin{minipage}[b]{\textwidth}
 {\centering
-\resizebox{1.02\textwidth}{!}{
-\begin{tikzonimage}[width=.45\textwidth,angle=270]{figures/model-diagram/serendipity-attractor-bw}%[tsx/show help lines]
-\node (dynamic) at (.1, .47) {\emph{dynamic world}};
-\node (trigger) at (.05, .255) {\textbf{trigger}};
-\node (chance) at (.045, .165) {chance};
-\node (bridge) at (.46, .84) {\textbf{bridge}};
-\node (result) at (.055, .665) {\textbf{result}};
-\node (result)[text width=2cm,align=center] at (.7, .71) {\textbf{prepared mind}};
-\node (focus) at (.93, .88) {{\bf \textsc{focus shift}}};
-\node (curiosity)[rotate=35] at (.44,.58) {curiosity};
-\node (sagacity)[rotate=-30] at (.72,.45) {sagacity};
-\node (value) at (.04, .755) {value};
-\node (influences)[text width=2cm,align=center,rotate=30] at (.99, .60) {{\small\baselineskip=2pt \emph{multiple influences}\par}};
-\node (tasks)[text width=1.5cm,align=center,rotate=30] at (.85, .39) {{\small\baselineskip=2pt \emph{multiple tasks}\par}};
-\node (contexts)[text width=1.5cm,align=center,rotate=30] at (.545, .47) {{\small\baselineskip=2pt \emph{multiple contexts}\par}};
-\draw[-latex] (.05,.03) -- (.15,.03) node [midway, above] {\itshape{\scshape{discovery}}};
-\draw[-latex] (.95,.03) -- (.85,.03) node [midway, above] {\itshape{\scshape{invention}}};
-%% Adding an arrowhead
-\draw[-{Latex[width=2mm]}] (-.001,.6265) -- (-.003,.6265);
-% \node (begin1) at (-.02,.303) {\handmark};
-\node (yes1) at (-.02,.6265) {\sunmark};
-\node (no1) at (1.005, .165) {\ymark};
-\node (no2) at (1.005, .3) {\ymark};
-\node (no3) at (.63, .32) {\ymark};
-% \node (no4) at (-0.02, .625) {\xmark};
-\end{tikzonimage}
+\input{heuristic-map-tikz}
 
-\par}}
-\vspace{-.5cm}
-\caption{A heuristic map of the features of serendipity introduced in
-  Section \ref{sec:by-example}.  The central black line traces first
-  the process of \emph{discovery} in which an initial trigger combines
-  with mounting curiosity to effect a \emph{focus shift}, followed by a
-  process of \emph{invention} in which a prepared mind draws on
-  various resources and makes use of its powers of sagacity to find a bridge to
-  a valuable result.  In a typical chaotic fashion, paths that are initially nearby  can have very different outcomes: some end
-  in failure of one form or another, while others yield results of
-  differing value.}
-\label{model-diagram}
+\par}
+\subcaption{A heuristic map, showing serendipitous and unserendipitous outcomes}\label{fig:1a}
+\end{minipage}
+\medskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}[b]{\textwidth}
+{\centering
+\input{schematic-tikz}
+%\includegraphics[width=.8\textwidth]{schematic}
+\par}
+\subcaption{A simplified process schematic, showing the key features of the model}\label{fig:1b}
+\end{minipage}
+\medskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{minipage}[b]{\textwidth}
+{\centering
+\input{ww-generative-tikz}
+%\includegraphics[width=.8\textwidth]{schematic}
+
+\par}
+\smallskip
+
+\subcaption{A boxes-and-arrows diagram, showing one possible implementation architecture}\label{fig:1c}
+\end{minipage}
+\bigskip
+
+\caption{Three representations of the elements of serendipity}\label{fig:model}
 \end{figure}
 
+Figure \ref{fig:1c} expands this schematic into a sketch of the
+components of one possible idealised implementation of a serendipitous
+system.  An initial \emph{generative process} is assumed at the start.
+This may be based on observations of the outside world, or it may be a
+computational process.  In any case, elements from a data stream are
+passed on to the next stage of the process.  After running a feedback
+loop, some of this data is singled out, and perhaps further marked up,
+so that it becomes ``interesting.''  Note that this designation need
+not arise all at once: rather, it the outcome of a \emph{reflective
+  process}.  In the implementation envisioned here, this process makes
+use of two primary functions: $p_1$, which notices aspects of the
+data, and $p_2$, which offers additional reflections.  Together, these
+functions produce a ``feedback object,'' $T^{\star}$, which consists
+of the original data and added metadata.  This is passed on to an
+\emph{experimental process}, which has the task of understanding what
+makes the data interesting and what it may be useful for.  This is
+again an iterative process.  Once sufficient understanding of the data
+and its potential implications has been reached, a result is
+generated, which is passed to a final \emph{evaluation process}, and,
+from there, to applications.  
+
+The ellipses in the final step are meant to suggest that applications
+are open-ended; however, an important class of applications will
+result in changes to one or more of the system's modules, for example
+by expanding the knowledge base used by one or more of the components.
+Note that earlier components of the workflow cannot, in general,
+anticipate what the subsequent phases will produce or achieve.  If
+these operations could be anticipated, we would not say that the
+system was serendipitous.  Another way to put this is that serendipity
+does not adhere to one specific part of the system, but to its
+operations as a whole.  Furthermore, a machine could be built that
+implements all of the steps depicted in this diagram, and yet, if it
+only generated uninteresting results it would not be called
+``serendipitous.''
+
 Summarising, we propose the following definition for serendipity,
-expressed in two phases: discovery and invention.  The definition
-centres on the four components of serendipity that were outlined
-above.  These can be made sense of and evaluated with reference to the
-four dimensions of serendipity.  These, in turn, are understood to be
-embedded in an environment exhibiting many, but not necessarily all,
-of the environmental factors listed above.
+expressed in two phases.
 
 \begin{quote}
-\begin{enumerate}[itemsep=2pt,labelwidth=9em,leftmargin=9em,rightmargin=2em]
+\begin{enumerate}[itemsep=2pt,labelwidth=9em,leftmargin=7em,rightmargin=2em]
 \item[\emph{(\textbf{1 - Discovery})}] \emph{Within a system with a prepared mind, a previously uninteresting serendipity trigger arises due to circumstances that the system does not control, and is classified as interesting by the system; and,}
 \item[\emph{(\textbf{2 - Invention})}] \emph{The system, by subsequently processing this trigger and background information together with relevant reasoning, networking, or experimental techniques, obtains a novel result that is evaluated favourably by the system or by external sources.}
 \end{enumerate}
 \end{quote}
 
-\noindent This definition can be summarised schematically as follows, with letters referencing to the key condition and components introduced in the literature survey: 
-
-{\centering
-\input{schematic-tikz}
-%\includegraphics[width=.8\textwidth]{schematic}
-\par}
-
+The features of our model match and expand upon Merton's
+\citeyear{merton1948bearing} description of the ``serendipity
+pattern.'' $T$ is an unexpected observation; $T^\star$ highlights its
+interesting or anomalous features and recasts them as ``strategic
+data.''  Finally, the result $R$ and its evaluation may lead to
+updates to the system's operations that will inform further phases of
+research.  As we will show in the following section, the other
+elements of the conceptual framework described in Section
+\ref{sec:by-example} help to flesh out the model, to offer quite
+detailed evaluation criteria.

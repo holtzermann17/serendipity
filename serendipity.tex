@@ -5,6 +5,10 @@
 \usepackage{textcomp} 
 \usepackage{setspace}
 
+\usepackage{caption} 
+\usepackage{subcaption} 
+\usepackage{afterpage} 
+
 \usepackage{slantsc}
 \usepackage{pifont}
 \newcommand{\xmark}{\ding{54}}%
@@ -119,12 +123,9 @@ School of Computing, University of Kent}
 
 % \linenumbers
 \input{abstract.tex}
-
 \setcounter{footnote}{0}
-
 %\tableofcontents
 %\newpage
-
 \input{1introduction.tex}
 %% The literature review
 \input{2literature.tex}
@@ -133,8 +134,8 @@ School of Computing, University of Kent}
 % \input{related-work.tex}
 %% Our core definition
 \input{3model.tex}
-\input{4definition.tex}
-\input{5connections.tex}
+%\input{4definition.tex}
+% \input{5connections.tex}
 \input{6SPECS-begins.tex}
 \input{7SPECS-continues.tex}
 % SPECS-begins.tex
@@ -142,11 +143,11 @@ School of Computing, University of Kent}
 % SPECS-continues.tex
 %% Development of the idea with examples
 \input{8cc-intro.tex}
-\input{9ww-intro.tex}
+%\input{9ww-intro.tex}
 % figures/ww-serendipity/ww-serendipity.png
-\input{10ww-design.tex}
+%\input{10ww-design.tex}
 % figures/ww-schematic/ww-schematic.png
-\input{11ww-analysis.tex}
+%\input{11ww-analysis.tex}
 \input{12discussion}
 \input{13conclusion}
 
