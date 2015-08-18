@@ -92,28 +92,101 @@ experimental design, psychology, and domain understanding.
 
 \subsection{Case Study: Automated flowchart assembly}
 
-\textbf{serendipity triggers} ...
-\textbf{prepared mind} ...
-\textbf{bridge} ...
-\textbf{result} ...
+Here we examine the design of an ongoing experiment with the FloWr
+flowcharting framework \cite{colton-flowcharting}.  FloWr is a user
+interface for creating and runnable flowcharts, built of small modules
+called ProcessNodes.  Indeed, FloWr can be viewed as a visual
+programming environment.  However, it can also be used
+programmatically, on the JVM (with the legacy desktop version of the
+software) or with any language using a new web API.  FloWr aims to be
+user friendly aide for its user's creativity, as well as to be a
+(programmatic) \emph{Flowchart Writer}.  Our experiment targets the
+latter scenario, and look for ways to assemble flowcharts
+automatically.
 
-\textbf{chance} ...
-\textbf{curiosity} ...
-\textbf{sagacity} ...
-\textbf{value} ...
+In the backend, FloWr's flowcharts are stored as scripts that the
+names of nodes of different types as well as their (input) parameters
+and (output) variable settings.  Connections between nodes are established
+when one node's input parameter references the output variable of
+another node.
+%%   For example, in the following two-stanza flowchart,
+%% the {\tt WordSenseCategoriser}'s {\tt stringsToCategorise}
+%% parameter takes its setting from the {\tt Dictionary}'s {\tt \#dictionaryWords}
+%% output variable. 
+%% \begin{verbatim}
+%% text.retrievers.Dictionary.Dictionary_0
+%% lowerFrequencyPercent:90
+%% upperFrequencyPercent:95
+%% numberRequired:10000
+%% #dictionaryWords = words[*].text
+%%
+%% text.categorisers.WordSenseCategoriser.WordSenseCategoriser_0
+%% requiredSense:aj0
+%% stringsToCategorise:#dictionaryWords
+%% #adjectives = haveMainSense[*]
+%% \end{verbatim}
+%% The syntax of variable settings in these scripts is a Java ``pidgin.''
+Inputs and outputs have specific constraints, for instance, the {\tt
+  WordSenseCategoriser}'s {\tt stringsToCategorise} parameter needs to
+be seeded with an ArrayList of arbitrary strings, while its {\tt
+  requiredSense} parameter needs to be seeded with a string that
+represents one of the 57 British National Corpus Part of Speech tags.
+The first challenge in automated flowchart assembly is to match inputs
+to outputs correctly, and to make sure that all required inputs are
+satisfied.
 
-\textbf{dynamic world} ...
-\textbf{multiple contexts} ...
-\textbf{multiple tasks} ...
-\textbf{multiple influences} ...
+The system's \textbf{serendipity triggers} result from trial and error
+with flowchart assembly.  Some combinations of nodes will work, and
+some will not.  Due to the dynamically changing environment
+(e.g., updates to data sources like Twitter) some flowcharts that did
+not produce results earlier may unexpectedly begin to produce results.
+%
+The system's \textbf{prepared mind} lies in knowledge embedded in
+nodes that show the constraints on their inputs and outputs, and a
+history of successful and unsuccessful combinations.
+%
+The \textbf{bridge} is accordingly informed trial and error.  The
+system will not try combinations that it knows cannot produce results,
+but it will try novel combinations and may retry earlier flowchart
+specimens that could become viable.
+%
+The \textbf{result} that system is aiming for is to discover new
+combinations of nodes that can fit together and that generate
+non-empty output.
 
+There is a strong role for \textbf{chance}, in terms of output from
+some of the nodes, and in terms of the combinatorial search strategy
+itself.  The system's ongoing effort to discover new combinations that
+work could be interpreted as \textbf{curiosity}.  Similarly, the fact
+that it remembers viable combinations and doesn't try combinations
+that are known not to work could be thought of as \textbf{sagacity}.
+At the moment, the threshold for \textbf{value} is low, since we are
+only looking for non-empty output.  However, subsequent versions of
+the system may have other evaluation functions plugged in, setting a
+higher bar.  For example, a future version of the system could be
+tuned to search for flowcharts that generate meaningful poetry, as we
+discuss in \cite{corneli2015computational}.
+
+The \textbf{dynamic world} is thus dynamic in two ways: in the
+straightforward sense that some of the input sources, like Twitter,
+are changing, and also in the sense that the system's knowledge can
+change.  There is less to say about \textbf{multiple contexts}:
+although we have broken the experiment into separate sub-populations
+to constrain the search, these do not interact.  As more goals are
+added, the system could be seen to have \textbf{multiple tasks}, for
+instance the generation of new poems and the generation of new
+heuristics for assembling flowcharts.  The present version of the
+system does not seem to involve itself with \textbf{multiple
+  influences}, however the FloWr system can be extended modularly with
+new ProcessNodes.  This suggests that there will be more possible
+strategies for assembling flowcharts in the future.
 
 \afterpage{\clearpage}
 \begin{table}[p]
 {\centering \renewcommand{\arraystretch}{1.5}
 \footnotesize
 \begin{tabular}{p{.7in}@{\hspace{.1in}}p{1.9in}@{\hspace{.1in}}p{1.9in}}
-\multicolumn{1}{c}{} & \multicolumn{1}{c}{\textbf{Evolutionary music systems}} & \multicolumn{1}{c}{\textbf{Next Gen.~Recommender systems}} \\[-.1in]
+\multicolumn{1}{c}{} & \multicolumn{1}{c}{\textbf{EMS}} & \multicolumn{1}{c}{\textbf{RS++}} \\[-.1in]
 \multicolumn{1}{l}{\em Components} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} \\
 \cline{2-3}
 \textbf{Serendipity trigger} & Previous evolutionary operations together with user input & Input from user behaviour \\
@@ -159,7 +232,6 @@ music systems and the class of ``next-generation'' recommender systems
 discussed above.  These case studies have shown how our model can be
 used to highlight the aspects of existing systems that would need to
 be developed further to enhance measures of the system's serendipity.
-\clearpage
 
 %%%
 
