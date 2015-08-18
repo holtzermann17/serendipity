@@ -1,23 +1,25 @@
 \section{Our computational model of serendipity} \label{sec:our-model}
 
 Figure \ref{fig:model} recapitulates the ideas from the previous
-section.
+section, integrating them into a computationally meaningful model of
+process.  The model is summarised in text form at the end of this
+section, in a working definition of serendipity.
 
 Figure \ref{fig:1a} is a heuristic map of the features of serendipity
 introduced in Section \ref{sec:by-example}.
 %
-Dashed paths ending in X's show some of the things that can go wrong.
-A serendipity trigger might not arise, or might not attract interest.
-If interest is aroused, a path to a useful result may not be sought,
-or if it is sought, may not be found.  If a result is developed, it
-may turn out to be of little value.  Prior experience with a related
-problem could be informative, but could also restrict innovative
-thinking.  Similarly, multiple tasks, influences, and contexts can
-help to foster an inventive frame of mind, but they can also be
-distractions.
+Dashed paths ending in \ymark's show some of the things that can go
+wrong.  A serendipity trigger might not arise, or might not attract
+interest.  If interest is aroused, a path to a useful result may not
+be sought, or if it is sought, may not be found.  If a result is
+developed, it may turn out to be of little value.  Prior experience
+with a related problem could be informative, but could also restrict
+innovative thinking.  Similarly, multiple tasks, influences, and
+contexts can help to foster an inventive frame of mind, but they can
+also be distractions.
 
 Figure \ref{fig:1b} removes these unserendipitous paths to focus on
-the key features of the model.
+the key features of ``successful'' serendipity.
 %
 The \textbf{serendipity trigger} is denoted here by $T$.  
 %
@@ -42,6 +44,7 @@ that are taken on $T^\star$ leading to the \textbf{result} $R$, which is ultimat
 \input{heuristic-map-tikz}
 
 \par}
+\vspace{-4mm}
 \subcaption{A heuristic map, showing serendipitous and unserendipitous outcomes}\label{fig:1a}
 \end{minipage}
 \medskip
@@ -74,56 +77,42 @@ that are taken on $T^\star$ leading to the \textbf{result} $R$, which is ultimat
 
 Figure \ref{fig:1c} expands this schematic into a sketch of the
 components of one possible idealised implementation of a serendipitous
-system.  An initial \emph{generative process} is assumed at the start.
-This may be based on observations of the outside world, or it may be a
-computational process.  In any case, elements from a data stream are
-passed on to the next stage of the process.  After running a feedback
-loop, some of this data is singled out, and perhaps further marked up,
-so that it becomes ``interesting.''  Note that this designation need
-not arise all at once: rather, it the outcome of a \emph{reflective
-  process}.  In the implementation envisioned here, this process makes
-use of two primary functions: $p_1$, which notices aspects of the
-data, and $p_2$, which offers additional reflections.  Together, these
-functions produce a ``feedback object,'' $T^{\star}$, which consists
-of the original data and added metadata.  This is passed on to an
-\emph{experimental process}, which has the task of understanding what
-makes the data interesting and what it may be useful for.  This is
-again an iterative process.  Once sufficient understanding of the data
-and its potential implications has been reached, a result is
-generated, which is passed to a final \emph{evaluation process}, and,
-from there, to applications.  
+system.  An existing \emph{generative process} is assumed.  This may
+be based on observations of the outside world, or it may be a
+computational process.  In any case, its products are passed on to the
+next stage of the process.  After running this data through a feedback
+loop, some of the data is singled out, and perhaps further marked up,
+as ``interesting.''  Note that this designation need not arise all at
+once: rather, it the outcome of a \emph{reflective process}.  In the
+implementation envisioned here, this process makes use of two primary
+functions: $p_1$, which notices aspects of the data, and $p_2$, which
+offers additional reflections.  Together, these functions produce a
+``feedback object,'' $T^{\star}$, which consists of the original data
+and added metadata.  This is passed on to an \emph{experimental
+  process}, which has the task of understanding what makes the data
+interesting and what it may be useful for.  This is again an iterative
+process, relying on functions $p^{\prime}_1$ and $p^{\prime}_2$,
+which.  Once sufficient understanding of the data and its potential
+implications has been reached, a result is generated, which is passed
+to a final \emph{evaluation process}, and, from there, to
+applications.
 
-The ellipses in the final step are meant to suggest that applications
-are open-ended; however, an important class of applications will
-result in changes to one or more of the system's modules, for example
-by expanding the knowledge base used by one or more of the components.
-Note that earlier components of the workflow cannot, in general,
-anticipate what the subsequent phases will produce or achieve.  If
-these operations could be anticipated, we would not say that the
-system was serendipitous.  Another way to put this is that serendipity
-does not adhere to one specific part of the system, but to its
-operations as a whole.  Furthermore, a machine could be built that
-implements all of the steps depicted in this diagram, and yet, if it
-only generated uninteresting results it would not be called
-``serendipitous.''
+The ellipses at the end of the workflow in Figure \ref{fig:1c} are
+intended to suggest that applications are open-ended; however, an
+important class of applications will result in changes to one or more
+of the system's modules, for example by expanding the knowledge base
+available to them.  Note that earlier components of the workflow
+cannot, in general, anticipate what the subsequent phases will produce
+or achieve.  If the system's next steps could be anticipated, we would
+not say that the behaviour was serendipitous.  In other words,
+serendipity does not adhere to one specific part of the system, but to
+its operations as a whole.  Also note that a machine could be built
+that implements all of the steps depicted in this diagram, and yet, if
+it only generated uninteresting results it would not be called
+``serendipitous.''  Summarising, we propose the following:
+\begin{ndef}
+\emph{(1) Within a system with a prepared mind, a previously uninteresting serendipity trigger arises due to circumstances that the system does not control, and is classified as interesting by the system; and,}
+\emph{(2) The system, by subsequently processing this trigger and background information together with relevant reasoning, networking, or experimental techniques, obtains a novel result that is evaluated favourably by the system or by external sources.}
+\end{ndef}
 
-Summarising, we propose the following definition for serendipity,
-expressed in two phases.
 
-\begin{quote}
-\begin{enumerate}[itemsep=2pt,labelwidth=9em,leftmargin=7em,rightmargin=2em]
-\item[\emph{(\textbf{1 - Discovery})}] \emph{Within a system with a prepared mind, a previously uninteresting serendipity trigger arises due to circumstances that the system does not control, and is classified as interesting by the system; and,}
-\item[\emph{(\textbf{2 - Invention})}] \emph{The system, by subsequently processing this trigger and background information together with relevant reasoning, networking, or experimental techniques, obtains a novel result that is evaluated favourably by the system or by external sources.}
-\end{enumerate}
-\end{quote}
-
-The features of our model match and expand upon Merton's
-\citeyear{merton1948bearing} description of the ``serendipity
-pattern.'' $T$ is an unexpected observation; $T^\star$ highlights its
-interesting or anomalous features and recasts them as ``strategic
-data.''  Finally, the result $R$ and its evaluation may lead to
-updates to the system's operations that will inform further phases of
-research.  As we will show in the following section, the other
-elements of the conceptual framework described in Section
-\ref{sec:by-example} help to flesh out the model, to offer quite
-detailed evaluation criteria.
