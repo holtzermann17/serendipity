@@ -1,19 +1,88 @@
 \subsection{Using SPECS to evaluate computational serendipity}\label{specs-overview}
 
-In a 2012 special issue of the journal {\em Cognitive Computation}, on
-``Computational Creativity, Intelligence and Autonomy'', Jordanous
-analyses current evaluation procedures used in computational
-creativity, and provides a much-needed set of customisable evaluation
-guidelines, the \emph{Standardised Procedure for Evaluating Creative
-  Systems} (SPECS) \cite{jordanous:12}. Originally designed to evaluate the concept of creativity, the three step SPECS process firstly requires the evaluator to define the concept(s) on which they will evaluate the system. This definition is then converted into standards that can eventually be used to test and evaluate individual systems, or comparatively evaluate multiple systems.
+In this section, we use the elements of the conceptual framework
+described in Section \ref{sec:by-example} help to flesh out this
+definition, to develop quite detailed evaluation criteria.
+We adapt the \emph{Standardised Procedure for Evaluating Creative Systems} (SPECS)
+a high-level, customisable evaluation strategy devised for judging creativity \cite{jordanous:12}.  
+%
+In the three step SPECS process, the evaluator defines the concepts
+and behaviours that signal creativity, converts this definition into
+clear standards, and then applies them to evaluate the target systems.
 %
 We follow a slightly modified version of Jordanous's earlier evaluation
 guidelines, in that rather than attempt a definition and evaluation of
 {\em creativity}, we follow the three steps for \emph{serendipity}.
 
-\subsubsection*{Step 1: A computational definition of serendipity}
-\begin{quote} {\em Identify a definition of serendipity that your
-    system should satisfy to be considered serendipitous.}\end{quote}
+\vspace{-.3cm}
+\subsubsection*{Step 1: Identify a definition of serendipity that your system should satisfy to be considered serendipitous.}
+~\\
+\vspace{-.1cm}
 
-\noindent We adopt the definition of serendipity described above.
+\noindent We adopt the definition of serendipity from Section
+\ref{sec:our-model}.
+
+\vspace{-.3cm}
+\subsubsection*{Step 2: Using Step 1, clearly state what standards you use to evaluate the serendipity of your
+    system.}
+~\\
+\vspace{-.1cm}
+
+\noindent With our definition and other features of the model in mind, we propose the following standards for evaluating serendipity in computational systems. These criteria allow the evaluator to assess the degree of seredipity that is present in a given system's operation.
+
+%% Serendipity relies on a reassessment or reevaluation -- a \emph{focus shift} in which something that was previously uninteresting, of neutral, or even negative value, becomes interesting.
+
+\begin{description}[itemsep=4pt]
+\item[{(\textbf{A - Definitional characteristics})}] {The system can
+  be said to have a {\textbf{prepared mind}}, consisting of previous
+  experiences, background knowledge, a store of unsolved problems,
+  skills, expectations, readiness to learn, and (optionally) a current focus or goal.  It
+  then processes a {\textbf{serendipity trigger}} that is at least
+  partially the result of factors outside of its control, including
+  randomness or unexpected events.  The system then uses reasoning
+  techniques and/or social or otherwise externally enacted
+  alternatives to create a {\textbf{bridge}} from the trigger to a
+  result.  The {\textbf{result}} is evaluated as useful, by the system
+  and/or by an external source.}
+\item[{(\textbf{B - Dimensions})}] {Serendipity, and its
+  various dimensions, can be present to a greater or lesser degree.
+  If the criteria above have been met, we consider the system (and optionally, generate ratings as
+  estimated probabilities) along several dimensions:
+%
+{($\mathbf{a}$: \textbf{chance})} how likely was this trigger to appear to
+  the system?
+%
+{($\mathbf{b}$: \textbf{curiosity})} On a population basis, comparing
+  similar circumstances, how likely was the trigger to be identified
+  as interesting?
+%
+{($\mathbf{c}$: \textbf{sagacity})} On a population basis, comparing
+  similar circumstances, how likely was it that the trigger
+  would be turned into a result?
+%
+Finally, we ask, again, comparing similar results where possible:
+{($\mathbf{d}$: \textbf{value})} How valuable is the result that
+is ultimately produced?}
+%
+%Then combining $\mathbf{a}\times\mathbf{b}\times\mathbf{c}$ gives a
+ % likelihood score: 
+{Low likelihood $\mathbf{a}\times\mathbf{b}\times\mathbf{c}$ 
+ and high value $\mathbf{d}$ are the criteria we use to say that the event was ``highly serendipitous.''}
+
+\item[{(\textbf{C - Factors})}] {Finally, if the criteria
+  from Part A are met, and if the event is deemed ``highly
+  serendipitous'' according to the criteria in Part B, then in order
+  to deepen our qualitative understanding of the serendipitous
+  behaviour, we ask: To what extent does the system exist in a
+  {\textbf{dynamic world}}, spanning {\textbf{multiple
+      contexts}}, featuring {\textbf{multiple tasks}}, and
+  incorporating {\textbf{multiple influences}}?}
+\end{description}
+
+\vspace{-.3cm}
+\subsubsection*{Step 3: Test your serendipitous system against the standards stated in Step 2 and report the results.}
+~\\
+\vspace{-.1cm}
+
+\noindent In Section \ref{sec:computational-serendipity}, we will pilot our framework by examining the degree of serendipity of existing and hypothetical computational systems. 
 
