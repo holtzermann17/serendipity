@@ -5,34 +5,21 @@ conditions and preconditions that are conducive to serendipitous
 discovery.  Section \ref{sec:our-model} distilled these elements into a computational model,
 culminating in a method for evaluating computational serendipity in Section \ref{specs-overview}.
 
-\citeA{pease2013discussion} used an earlier variant these criteria to
-analyse three examples of potentially serendipitous behaviour: dynamic
-investigation problems, model generation, and poetry flowcharts.
-Three additional examples are discussed below using the revised
-criteria.  As Campbell \citeyear{campbell2005serendipity} writes,
-``serendipity presupposes a smart mind,'' and these examples suggest
-potential directions for further work in computational intelligence.
+In order to apply these criteria, it is important to clearly delineate
+the scope of the system being evaluated.  For example, a standard
+spell-checking system might suggest a substitution that the user deems
+especially fortuitous; we may agree that serendipity has occurred, but
+we would not attribute serendipity to the spell-checker.
 
-Before describing these examples, as a baseline, we introduce the
-notion of \emph{minimally serendipitous systems}.  According to our
-standards, there are various ways to achieve a result with little or
-no serendipity: if the observation was likely, if further developments
-happened with little skill, and if the the value of the result was
-low, then we would not say the outcome was serendipitous.  We would be
-prepared to attribute ``minimal serendipity'' to cases where the
-observation was \emph{moderately} likely, \emph{some} skill or effort
-was involved, and the result was only \emph{fairly good}.  However,
-for computational systems, if most of the skill involved lies with the
-user, then there is little reason to call the system's operation
-serendipitous -- even if it consistently does its job very well.  For
-example, machines can learn to recognise or approximate certain types
-of patterns, but it is surprising when a computational system
-independently finds an entirely new kind of pattern.  Furthermore, the
-position of the evaluator is important: a spell-checking system might
-suggest a particularly fortuitous substitution, but we would not
-expect the spell-checker to know when it was being clever.  In such a
-case, we may say serendipity has occurred, but not that we have a
-serendipitous system.
+\citeA{pease2013discussion} used an earlier variant the SPECS criteria
+to analyse three examples of potentially serendipitous behaviour:
+dynamic investigation problems, model generation, and poetry
+flowcharts.  Using our updated criteria, we discuss two new examples
+below, and revisit poetry flowcharts as a third example.  As Campbell
+\citeyear{campbell2005serendipity} writes, ``serendipity presupposes a
+smart mind,'' and these examples suggest potential directions for
+further work in computational intelligence.
+
 
 %% If the system learns an $N$th fact or
 %% If applied to a system which could be described as minimally
@@ -79,20 +66,21 @@ samples. \cite{jordanous10}
 \end{quote}
 In future versions of the system, autonomous evaluation could take over for the human evaluator.  Once the interesting samples have been found, a \textbf{bridge} is then built to new results through the creation of new Improvisors.  The \textbf{results} are the various musical improvisations produced by the fittest Improvisors (as well as, perhaps, the parameters that have been considered fittest).
 
-The likelihood of serendipitous evolution is greatly enhanced by the
-use of random mutation and crossover operations within the genetic
-algorithm, which increase the diversity of the search space covered by
-the system during evolution.  The probability of encountering any
+%% The likelihood of serendipitous evolution is greatly enhanced by the
+%% use of random mutation and crossover operations within the genetic
+%% algorithm, which increase the diversity of the search space covered by
+%% the system during evolution.  
+The probability of encountering any
 particular pair of Improvisor and user evaluation is vanishingly low,
-given the massive dimensions of this search space.  However, due to
-the way the system's evolution works, there will always be a
+given the massive dimensions of this search space.  However, 
+there will always be a
 highest-scoring Improviser, whose parameters will be used to seed the
 next round.  So, in fact, the \textbf{chance} of the system
-encountering a serendipity trigger is high.  The evolution of
+encountering a trigger is high.  The evolution of
 Improvisors captures a sense of \textbf{curiosity} about how to
 satisfy the musical tastes of a particular human user who identifies
 certain Improvisors as interesting.  The \textbf{sagacity} of the
-system's corresponds to its methods for enhancing the likelihood that
+system corresponds to its methods for enhancing the likelihood that
 the user will appreciate a given Improvisor's music (or similar music)
 over time.  However, with little basis for comparison, we can only say
 that these dimensions present to ``typical'' degree.  The aim of the
@@ -107,34 +95,34 @@ following Step 2, Part B of the SPECS procedure, we find a likelihood
 measure of
 $\mathit{high}\times\mathit{moderate}\times\mathit{moderate}$, with
 outcomes of moderate value, so that the system as a whole is ``not
-very serendipitous.''  If individual threads in the search process
-were given more independence, they could be evaluated separately, and
-some might prove to be more serendipitous than others.
+very serendipitous.''  However, if individual threads in the search
+process were given more independence, they could be evaluated
+separately, and some might prove to be more serendipitous than others.
 
-In the current case, we are not required to progress to Part C, but
-for completeness, we note the following.  The {\sf GAmprovising}
-system does operate in \textbf{dynamic world}, assuming that the
-user's tastes may change.  A more elaborate version of the system that
-could cater to multiple users is not yet implemented, but would be
-occupied with a considerably more complex problem, spanning and
-integrating \textbf{multiple contexts}.  The system clearly engages
-with \textbf{multiple tasks}, but these are largely separate, for
-instance, one global fitness function is used, rather than evolving a
-local fitness function for each user along with their ratings.
-\textbf{Multiple influences} are present but currently only at compile
-time, in the design of the fitness function, and the selection of
-musical parameters that can later be set.  Greater dynamism in future
-versions of the system would be likely to increase its potential for
-serendipity.
+According to the SPECS criteria, we are not required to progress to
+Part C here, but for completeness, we note the following.  The {\sf
+  GAmprovising} system does operate in \textbf{dynamic world},
+assuming that the user's tastes may change.  A more elaborate version
+of the system that could cater to multiple users is not yet
+implemented, but would be occupied with a considerably more complex
+problem, spanning and integrating \textbf{multiple contexts}.  The
+system clearly engages with \textbf{multiple tasks}, but these are
+largely separate, for instance, one global fitness function is used,
+rather than evolving a local fitness function for each user along with
+their ratings.  \textbf{Multiple influences} are present but currently
+only at compile time, in the design of the fitness function, and the
+selection of musical parameters that can later be set.  Greater
+dynamism in future versions of the system would be likely to increase
+its potential for serendipity.
 
 \subsection{Case Study: Next-generation recommender systems} \label{sec:nextgenrec}
 % Stress distinction between serendipity on the system- vs. serendipity on the user's side.
 As discussed in Section \ref{sec:related}, recommender systems are one
 of the primary contexts in computing where serendipity is currently discussed.  Serendipity, for current recommender systems, means suggesting items to a user that will be likely to introduce new ideas that are unexpected, but close to what the user is already interested in.  As we noted, these systems mostly focus on supporting \emph{discovery} for the user -- but some architectures also seem to take account of \emph{invention} of new methods for making recommendations, e.g.~using Bayesian methods, as surveyed in \citeNP{shengbo-guo-thesis}.  In light of our working definition of serendipity, we need distinguish serendipity on the user side from serendipity in the system itself.
 
-Current recommendation techniques associate less popular items with high unexpectedness \cite{Herlocker2004,Lu2012}, and use clustering to discover latent structures in the search space, e.g., partitioning users into clusters of common interests, or clustering users and domain objects \cite{Kamahara2005,Onuma2009,Zhang2011}.  But even in the Bayesian case, the system has limited autonomy.  Nevertheless, a case for developing more autonomous recommender systems can be made, especially in complex domains where hand-tuning is cost-intensive or infeasible.
+Current recommendation techniques associate less popular items with high unexpectedness \cite{Herlocker2004,Lu2012}, and use clustering to discover latent structures in the search space, e.g., partitioning users into clusters of common interests, or clustering users and domain objects \cite{Kamahara2005,Onuma2009,Zhang2011}.  But even in the Bayesian case, the system has limited autonomy.  A case for giving more autonomy to recommender systems can be made, especially in complex, rapidly evolving, domains where hand-tuning is cost-intensive or infeasible.
 
-With this challenge in mind, we investigate how serendipity could be achieved on the system side. In terms of our model, current systems have at least the makings of a \textbf{prepared mind}, comprising both a user- and a domain model, both of which can be updated dynamically.  User behaviour (e.g.~following certain recommendations) or changes to the domain (e.g.~adding a new product) may serve as a potential \textbf{trigger} that could ultimately cause the system to discover a new way to make recommendations in the future.  Note, however, that it is unexpected behaviour in aggregate, rather than a one-off event, that is most likely to provide grounds for a \textbf{focus shift}.   A \textbf{bridge} to a new kind of recommendation could be created by looking at exceptional patterns as they appear over time.  For instance, new elements may have been introduced into the domain that do not cluster well, and clusters may appear in the user model that do not have obvious connections between them.  A new approach that helps to address the organisational mission would constitute a serendipitous \textbf{result} on the system side.
+With this challenge in mind, we investigate how serendipity could be achieved on the system side. In terms of our model, current systems have at least the makings of a \textbf{prepared mind}, comprising both a user- and a domain model, both of which can be updated dynamically.  User behaviour (e.g.~following certain recommendations) or changes to the domain (e.g.~adding a new product) may serve as a potential \textbf{trigger} that could ultimately cause the system to discover a new way to make recommendations in the future.  Note, however, that it is unexpected behaviour in aggregate, rather than a one-off event, that is likely to provide grounds for a \textbf{focus shift}.   A \textbf{bridge} to a new kind of recommendation could be created by looking at exceptional patterns as they appear over time.  For instance, new elements may have been introduced into the domain that do not cluster well, and clusters may appear in the user model that do not have obvious connections between them.  A new approach that helps to address the organisational mission would constitute a serendipitous \textbf{result} on the system side.
 
 The system has only imperfect knowledge of user preferences and
 interests.  At least relative to current recommender systems, the
@@ -223,17 +211,20 @@ higher bar.  For example, a future version of the system could be
 tuned to search for flowcharts that generate poetry, as we discuss in
 \cite{corneli2015computational}.
 
-There is a strong role for \textbf{chance} even in the early
-prototype, regarding both the output from certain nodes, and in terms
-the combinatorial search strategy itself.  The chances of finding a
-novel successful combination of nodes is fairly low.  The system's
-ongoing effort to discover new combinations that work could be
-interpreted as \textbf{curiosity}.  The fact that it remembers viable
-combinations and doesn't try combinations that are known not to work
-could be thought of as moderate \textbf{sagacity}.  At the moment, the
-threshold for \textbf{value} is low, simply a new combination of nodes
-that produces non-empty output.  If this can be accompanied by an
-explanation, the value is higher.
+The \textbf{chance} of finding a novel successful combination of nodes
+is fairly low, as this depends on both the output from certain nodes,
+and in terms the combinatorial search strategy itself.  Compared to
+humans users of {\sf FloWr}, the seems exceptionally \textbf{curious}
+about finding novel combinations of nodes.  Remembering viable
+combinations and avoiding combinations that are known not to work
+presents only a modest degree of \textbf{sagacity}.  At the moment,
+the system's criterion for attributing \textbf{value} is simply that
+the combination of nodes generates non-empty output; however an
+external evaluator is not likely to judge these combinations as
+useful.  The associated ``likelihood score'' is
+$\mathit{low}\times\mathit{low}\times\mathit{high}$, but the system
+should be seen only as ``potentially serendipitous'' until there is a
+more discriminating way to judge value.
 
 The \textbf{dynamic world} the system operates in is dynamic in two
 ways: first, in the straightforward sense that some of the input
@@ -379,14 +370,16 @@ serendipity could be enhanced.
 \item The next-generation recommender systems we've envisioned need to
   be able to make inferences from aggregate user behaviour.  This
   points to long-term considerations that go beyond the unique
-  serendipitous event.  How much leeway should these system have to
-  experiment?  
+  serendipitous event.  How ``curious'' should these systems be?  One
+  obvious criterion is that short-term value should be allowed to
+  suffer as long as expected value is still higher.
 
 \item The clearest way to enhance the serendipity of results from the
   flowchart assembly process would be to impose more stringent, and
   more meaningful, criteria for value.  In addition to raising
   challenges for autonomous evaluation (as in the evolutionary music
   system case), this requirement would impose more sophisticated
-  constaints on processing in earlier steps.
+  constaints on processing in earlier steps, which would require the
+  system to become more sagacious.
 \end{enumerate}
 
