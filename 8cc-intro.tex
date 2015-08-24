@@ -2,15 +2,13 @@
 
 The 13 facets of serendipity from Section \ref{sec:literature-review} specify the
 conditions and preconditions that are conducive to serendipitous
-discovery.  Section \ref{sec:our-model}
-distilled these elements into a computational model,
-culminating in a method for evaluating computational
-serendipity in Section \ref{specs-overview}.
+discovery.  Section \ref{sec:our-model} distilled these elements into a computational model,
+culminating in a method for evaluating computational serendipity in Section \ref{specs-overview}.
 
 \citeA{pease2013discussion} used an earlier variant these criteria to
 analyse three examples of potentially serendipitous behaviour: dynamic
 investigation problems, model generation, and poetry flowcharts.
-Three additional examples are discussed below using our revised
+Three additional examples are discussed below using the revised
 criteria.  As Campbell \citeyear{campbell2005serendipity} writes,
 ``serendipity presupposes a smart mind,'' and these examples suggest
 potential directions for further work in computational intelligence.
@@ -63,184 +61,332 @@ serendipitous system.
 %% However, the current generation of text completion tools are known
 %% more for infelicities than for exceptional wit.
 
-\subsection{Case Study: Evolutionary music improvisation} \label{sec:priorart}
+\subsection{Case Study: Evolutionary music improvisation} \label{sec:evomusic}
 
 \citeA{jordanous10} reported a computational jazz improvisation system using genetic algorithms. Genetic algorithms, and evolutionary computing more generally, could encourage computational serendipity. We examine Jordanous's system (later given the name {\sf GAmprovising} \cite{jordanous:12}) as a case study for evolutionary computing in the context of our model of computational serendipity: to what extent does {\sf GAmprovising} model serendipity?
 
-{\sf GAmprovising} uses genetic algorithms to evolve a population of \emph{Improvisors}. Each Improvisor is able to randomly generate music based on various parameters such as the range of notes to be used, preferred notes, rhythmic implications around note lengths and other musical parameters \cite<see>{jordanous10}. These parameters are what defines the Improvisor at any point in the system's evolution. After a cycle of evolution, each Improvisor is evaluated via a fitness function based on Ritchie's \citeyear{ritchie07} criteria for creativity.  This model relies on user-supplied ratings of the novelty and appropriateness of the music produced by the Improvisor to calculate 18 criteria that collectively indicate how creative the system is.  The most successful Improvisors (according to this fitness function) are used to seed a new generation of Improvisors, through crossover and mutation operations.
+{\sf GAmprovising} uses genetic algorithms to evolve a population of \emph{Improvisors}. Each Improvisor is able to randomly generate music based on various parameters such as the range of notes to be used, preferred notes, rhythmic implications around note lengths and other musical parameters \cite<see>{jordanous10}. These parameters are what defines the Improvisor at any point in the system's evolution. After a cycle of evolution, each Improvisor is evaluated via a fitness function based on Ritchie's \citeyear{ritchie07} formal criteria for creativity.  This model relies on user-supplied ratings of the novelty and appropriateness of the music produced by the Improvisor to calculate 18 criteria that collectively indicate how creative the system is.  The most successful Improvisors (according to this fitness function) are used to seed a new generation of Improvisors, through crossover and mutation operations.
 
-The {\sf GAmprovising} system can be said to have a \textbf{prepared mind} through its background knowledge of what musical concepts to embed in the Improvisors and the evolutionary abilities to evolve Improvisors. A potential \textbf{serendipity trigger} comes from the combination of the mutation and crossover operations previously employed in the genetic algorithm, and the user input feeding into the fitness function to evaluate produced music. A \textbf{bridge} is built to new results through the creation of new Improvisors. The \textbf{results} are the various musical improvisations produced by the fittest Improvisors (as well as, perhaps, the parameters that have been considered fittest).
+The {\sf GAmprovising} system can be said to have a \textbf{prepared mind} through its background knowledge of what musical concepts to embed in the Improvisors and the evolutionary abilities to evolve Improvisors. A potential \textbf{serendipity trigger} comes from the combination of previous mutation and crossover operations with current user input.  To be clear, in the current version of the system it is a human evaluator is largely responsible for the system's \textbf{focus shift}, since the user tells the system which improvisations are most valuable.
+\begin{quote}
+Using a human evaluator as a ``rating scheme'' is easy for the system
+implementor but causes problems at run time. Even with restrictions
+placed on how many products the human must evaluate, any reliance on
+human intervention introduces a fitness bottleneck into the system,
+such that the progress of evolution is significantly slowed down by
+having to wait for the evaluator to listen to and rate the music
+samples. \cite{jordanous10}
+\end{quote}
+In future versions of the system, autonomous evaluation could take over for the human evaluator.  Once the interesting samples have been found, a \textbf{bridge} is then built to new results through the creation of new Improvisors.  The \textbf{results} are the various musical improvisations produced by the fittest Improvisors (as well as, perhaps, the parameters that have been considered fittest).
 
-The likelihood of serendipitous evolution is greatly enhanced by the use of random mutation and crossover operations within the genetic algorithm, which increase the diversity of the search space covered by the system during evolution.  The \textbf{chance} of encountering any particular pair of Improvisor and user evaluation is vanishingly low, given the massive dimensions of this search space.  The evolution of the population of Improvisors could be described as \textbf{curiosity} about how to satisfy the musical tastes of a particular human user who identifies certain Improvisors as interesting.  The system's \textbf{sagacity} corresponds to the likelihood that the user will appreciate a given Improvisor's music (or similar music) over time.  One challenge here is that the tastes of the user may change.  The \textbf{value} of the generated results is maximised by employing a fitness function.
+The likelihood of serendipitous evolution is greatly enhanced by the
+use of random mutation and crossover operations within the genetic
+algorithm, which increase the diversity of the search space covered by
+the system during evolution.  The probability of encountering any
+particular pair of Improvisor and user evaluation is vanishingly low,
+given the massive dimensions of this search space.  However, due to
+the way the system's evolution works, there will always be a
+highest-scoring Improviser, whose parameters will be used to seed the
+next round.  So, in fact, the \textbf{chance} of the system
+encountering a serendipity trigger is high.  The evolution of
+Improvisors captures a sense of \textbf{curiosity} about how to
+satisfy the musical tastes of a particular human user who identifies
+certain Improvisors as interesting.  The \textbf{sagacity} of the
+system's corresponds to its methods for enhancing the likelihood that
+the user will appreciate a given Improvisor's music (or similar music)
+over time.  However, with little basis for comparison, we can only say
+that these dimensions present to ``typical'' degree.  The aim of the
+system is to maximise the \textbf{value} of the generated results by
+employing a fitness function, and indeed, the system ``was able to
+produce jazz improvisations which slowly evolved from what was
+essentially random noise, to become more pleasing and sound more like
+jazz to the human evaluator's ears'' \cite{jordanous10}.  However, the
+fact that the system as a whole could predictably produce good results
+ultimately bears against its overall measure of serendipity, which
+following Step 2, Part B of the SPECS procedure, we find a likelihood
+measure of
+$\mathit{high}\times\mathit{moderate}\times\mathit{moderate}$, with
+outcomes of moderate value, so that the system as a whole is ``not
+very serendipitous.''  If individual threads in the search process
+were given more independence, they could be evaluated separately, and
+some might prove to be more serendipitous than others.
 
-Evolutionary systems such as {\sf GAmprovising} necessarily operate in a \textbf{dynamic world} which is evolving continuously and that must, in particular, take into account the evolution of the user's tastes. \textbf{Multiple contexts} arise from  the user changing their preferences over time and through the possibility of having multiple users evaluate the musical output.  This variant version of the system is not yet implemented, but would be occupied with the more complex problem of satisfying multiple different users' preferences simultaneously.  Moving to a more complex problem domain would require the system to be curious about more than one user at a time, and require greater sagacity if the system is to successfully satisfy multiple tastes.  \textbf{Multiple tasks} are carried out by the system including evolution of Improvisors, generation of music by individual Improvisors, capturing of user ratings of a sample of the Improvisors' output, and fitness calculations.  \textbf{Multiple influences} are captured through the various combinations of parameters that could be set and the potential range of values for each parameter. 
-%% Table \ref{caseStudies} summarizes how serendipity in such a system can be described in terms of our model.
+In the current case, we are not required to progress to Part C, but
+for completeness, we note the following.  The {\sf GAmprovising}
+system does operate in \textbf{dynamic world}, assuming that the
+user's tastes may change.  A more elaborate version of the system that
+could cater to multiple users is not yet implemented, but would be
+occupied with a considerably more complex problem, spanning and
+integrating \textbf{multiple contexts}.  The system clearly engages
+with \textbf{multiple tasks}, but these are largely separate, for
+instance, one global fitness function is used, rather than evolving a
+local fitness function for each user along with their ratings.
+\textbf{Multiple influences} are present but currently only at compile
+time, in the design of the fitness function, and the selection of
+musical parameters that can later be set.  Greater dynamism in future
+versions of the system would be likely to increase its potential for
+serendipity.
 
-\subsection{Case Study: Next-generation recommender systems}
+\subsection{Case Study: Next-generation recommender systems} \label{sec:nextgenrec}
 % Stress distinction between serendipity on the system- vs. serendipity on the user's side.
 As discussed in Section \ref{sec:related}, recommender systems are one
-of the primary contexts in computing where serendipity is considered. Most discussions of serendipity in recommender systems focus on suggesting items to a user that will be likely to introduce new ideas that are unexpected, but close to what the user is already interested in. A recommendation of this type will be called (possibly \mbox{pseudo-)serendipitous}. As we noted, these systems mostly focus on supporting discovery, but some architectures also seem to take account of invention, such as the Bayesian methods surveyed in Chapter 3 of \citeNP{shengbo-guo-thesis}. Recommender systems \emph{stimulate} serendipitous discovery, by \emph{simulating} when this is likely to occur. In respect to related work, we therefore have to distinguish serendipity on the the user side from serendipity in the system. 
+of the primary contexts in computing where serendipity is currently discussed.  Serendipity, for current recommender systems, means suggesting items to a user that will be likely to introduce new ideas that are unexpected, but close to what the user is already interested in.  As we noted, these systems mostly focus on supporting \emph{discovery} for the user -- but some architectures also seem to take account of \emph{invention} of new methods for making recommendations, e.g.~using Bayesian methods, as surveyed in \citeNP{shengbo-guo-thesis}.  In light of our working definition of serendipity, we need distinguish serendipity on the user side from serendipity in the system itself.
 
-Current research in this area focuses on the first aspect and tries to find and assess \textbf{serendipity triggers} by exploiting patterns in the search space. For example, \citeA{Herlocker2004} as well as \citeA{Lu2012} associate less popular items with high unexpectedness. Clustering is also frequently used to discover latent structures in the search space. For example, \citeA{Kamahara2005} partition users into clusters of common interest, while \citeA{Onuma2009} as well as \citeA{Zhang2011} perform clustering on both users and items. %\citeA{Oku2011} allow the user to select two items in order to mix their features. in a sort of conceptual blend.
+Current recommendation techniques associate less popular items with high unexpectedness \cite{Herlocker2004,Lu2012}, and use clustering to discover latent structures in the search space, e.g., partitioning users into clusters of common interests, or clustering users and domain objects \cite{Kamahara2005,Onuma2009,Zhang2011}.  But even in the Bayesian case, the system has limited autonomy.  Nevertheless, a case for developing more autonomous recommender systems can be made, especially in complex domains where hand-tuning is cost-intensive or infeasible.
 
-Note that in the course of evolution of these and other systems it is generally the system's developers who plan and perform adaptations: even in the Bayesian case, the system has limited autonomy. Nevertheless, the impetus to develop increasingly autonomous recommender systems is present, especially in complex domains where hand-tuning is either very cost-intensive or infeasible.  With this challenge in mind, we investigate how serendipity could be achieved on the system side, and potentially be reflected back to the user. In terms of our model, current systems have at least the makings of a \textbf{prepared mind}, comprising both a user- and a domain model, both of which can be updated dynamically. User behaviour (e.g.~following up on certain recommendations) may serve as a \textbf{serendipity trigger} for the system, and change the way it makes recommendations in the future. A \textbf{bridge} to a new kind of recommendation may be found by pattern matching, and especially by looking for exceptional cases: when new elements are introduced into the domain which do not cluster well, or different clusters appear in the user model that do not have obvious connections between them. The intended outcome of recommendations depends on the organisational mission, and can in most cases be situated between making money and empowering the user. The serendipitous \textbf{result} on the system side would be learning a new approach that helps to address these goals.
+With this challenge in mind, we investigate how serendipity could be achieved on the system side. In terms of our model, current systems have at least the makings of a \textbf{prepared mind}, comprising both a user- and a domain model, both of which can be updated dynamically.  User behaviour (e.g.~following certain recommendations) or changes to the domain (e.g.~adding a new product) may serve as a potential \textbf{trigger} that could ultimately cause the system to discover a new way to make recommendations in the future.  Note, however, that it is unexpected behaviour in aggregate, rather than a one-off event, that is most likely to provide grounds for a \textbf{focus shift}.   A \textbf{bridge} to a new kind of recommendation could be created by looking at exceptional patterns as they appear over time.  For instance, new elements may have been introduced into the domain that do not cluster well, and clusters may appear in the user model that do not have obvious connections between them.  A new approach that helps to address the organisational mission would constitute a serendipitous \textbf{result} on the system side.
 
-The imperfect knowledge about the user's preferences and interests represents a main source of \textbf{chance}. Combined with the ability to learn, \textbf{curiosity} could be described as the urge to make recommendations specifically for the purposes of finding out more about users, possibly to the detriment of other metrics over the short term. Measures of \textbf{sagacity} would relate to the system's ability to draw useful inferences from user behaviour.  For example, the system might decide to initiate an A/B test to decide how a novel recommendation strategy influences conversion.  The \textbf{value} of recommendation strategies can be measured in terms of traditional business metrics or other organisational objectives.
+The system has only imperfect knowledge of user preferences and
+interests.  At least relative to current recommender systems, the
+\textbf{chance} of noticing some particular pattern in user behaviour
+seems quite low.  The urge to make recommendations specifically for
+the purposes of finding out more about users could be described as
+\textbf{curiosity}.  Such recommendations may work to the detriment of
+other metrics over the short term.  In principle, the system's
+curiosity could be set as a parameter, depending on how much coherence
+is permitted to suffer for the sake of gaining new knowledge.
+Measures of \textbf{sagacity} would relate to the system's ability to
+develop useful experiments and draw sensible inferences from user
+behaviour.  For example, the system would have to select the best time
+to initiate an A/B test.  A significant amount programming would have
+to be invested in order to make this sort of judgement call
+autonomously, so such systems are understandably rare.  The
+\textbf{value} of recommendation strategies can be measured in terms
+of traditional business metrics or other organisational objectives.
+In this case, we compute a likelihood measure of
+$\mathit{low}\times\mathit{variable}\times\mathit{low}$, with outcomes
+of potentially high value, so that such a system is ``potentially
+highly serendipitous.''
 
-Recommender systems have to cope with a \textbf{dynamic world} of changing user preferences and a changing collection of items to recommend.  A dynamic environment which nevertheless exhibits some degree of regularity represents a precondition for useful A/B testing.  As mentioned above the primary \textbf{(multiple) contexts} are the user model and the domain model. A system matching the description here would have \textbf{multiple tasks}: making useful recommendations, generating new experiments to learn about users, and building new models. Such a system could avail itself of \textbf{multiple influences} related to
-experimental design, psychology, and domain understanding.
+Recommender systems have to cope with a \textbf{dynamic world} of changing user preferences and a changing collection of items to recommend.  A dynamic environment which exhibits some degree of regularity represents a precondition for useful A/B testing.  The system's \textbf{multiple contexts} include the user model, the domain model, as well as an evolving model of its own organisation.  A system matching the description here would have \textbf{multiple tasks}: making useful recommendations, generating new experiments to learn about users, and improving its models.  In order to make effective decisions, a system would have to avail itself of \textbf{multiple influences} related to experimental design, psychology, and domain understanding.
 
-\subsection{Case Study: Automated flowchart assembly}
+\subsection{Case Study: Automated flowchart assembly} \label{sec:flowchartassembly}
 
-Here we examine the design of an ongoing experiment with the FloWr
-flowcharting framework \cite{colton-flowcharting}.  FloWr is a user
-interface for creating and runnable flowcharts, built of small modules
-called ProcessNodes.  Indeed, FloWr can be viewed as a visual
-programming environment.  However, it can also be used
-programmatically, on the JVM (with the legacy desktop version of the
-software) or with any language using a new web API.  FloWr aims to be
-user friendly aide for its user's creativity, as well as to be a
-(programmatic) \emph{Flowchart Writer}.  Our experiment targets the
-latter scenario, and look for ways to assemble flowcharts
-automatically.
+Here we consider the design of a contemporary experiment with the
+{\sf FloWr} flowcharting framework \cite{colton-flowcharting}.  {\sf FloWr} is a
+user interface for creating and runnable flowcharts, built of small
+modules called ProcessNodes.  In day-to-day use, {\sf FloWr} can be viewed
+as a visual programming environment.  However, it can also be invoked
+programmatically, on the Java Virtual Machine, or with any language
+using a new web API.  The goals of {\sf FloWr} are both to be a user
+friendly tool for co-creativity, and to be an autonomous
+\emph{Flowchart Writer}.  Our experiment targets the latter scenario,
+assembling available ProcessNodes into flowcharts automatically.
 
-In the backend, FloWr's flowcharts are stored as scripts that the
-names of nodes of different types as well as their (input) parameters
-and (output) variable settings.  Connections between nodes are established
-when one node's input parameter references the output variable of
-another node.
-%%   For example, in the following two-stanza flowchart,
-%% the {\tt WordSenseCategoriser}'s {\tt stringsToCategorise}
-%% parameter takes its setting from the {\tt Dictionary}'s {\tt \#dictionaryWords}
-%% output variable. 
-%% \begin{verbatim}
-%% text.retrievers.Dictionary.Dictionary_0
-%% lowerFrequencyPercent:90
-%% upperFrequencyPercent:95
-%% numberRequired:10000
-%% #dictionaryWords = words[*].text
-%%
-%% text.categorisers.WordSenseCategoriser.WordSenseCategoriser_0
-%% requiredSense:aj0
-%% stringsToCategorise:#dictionaryWords
-%% #adjectives = haveMainSense[*]
-%% \end{verbatim}
-%% The syntax of variable settings in these scripts is a Java ``pidgin.''
-Inputs and outputs have specific constraints, for instance, the {\tt
-  WordSenseCategoriser}'s {\tt stringsToCategorise} parameter needs to
-be seeded with an ArrayList of arbitrary strings, while its {\tt
-  requiredSense} parameter needs to be seeded with a string that
-represents one of the 57 British National Corpus Part of Speech tags.
-The first challenge in automated flowchart assembly is to match inputs
-to outputs correctly, and to make sure that all required inputs are
-satisfied.
-
-The system's \textbf{serendipity triggers} result from trial and error
-with flowchart assembly.  Some combinations of nodes will work, and
-some will not.  Due to the dynamically changing environment
-(e.g., updates to data sources like Twitter) some flowcharts that did
-not produce results earlier may unexpectedly begin to produce results.
+In the backend, {\sf FloWr}'s flowcharts are stored as scripts.  These
+detail the names of the involved nodes together with their (input)
+parameters and (output) variable settings.  Connections between nodes
+are established when one node's input parameter references the output
+variable of another node.
 %
-The system's \textbf{prepared mind} lies in knowledge embedded in
-nodes that show the constraints on their inputs and outputs, and a
-history of successful and unsuccessful combinations.
-%
-The \textbf{bridge} is accordingly informed trial and error.  The
-system will not try combinations that it knows cannot produce results,
-but it will try novel combinations and may retry earlier flowchart
-specimens that could become viable.
-%
-The \textbf{result} that system is aiming for is to discover new
-combinations of nodes that can fit together and that generate
-non-empty output.
+Inputs and outputs have constraints.  For instance, the {\tt
+  WordSenseCategoriser} node has a {\tt stringsToCategorise}
+parameter, which is seeded with an ArrayList of strings.  The node
+produces useful output only when these strings can be parsed as as a
+space-separated list of words.  The node's {\tt requiredSense}
+parameter needs to be seeded with a string that represents exactly one
+of the 57 British National Corpus Part of Speech tags.  Given
+constraints of this nature, the first challenge in automated flowchart
+assembly is to match inputs to outputs correctly, and to make sure
+that all required inputs are satisfied.
 
-There is a strong role for \textbf{chance}, in terms of output from
-some of the nodes, and in terms of the combinatorial search strategy
-itself.  The system's ongoing effort to discover new combinations that
-work could be interpreted as \textbf{curiosity}.  Similarly, the fact
-that it remembers viable combinations and doesn't try combinations
-that are known not to work could be thought of as \textbf{sagacity}.
-At the moment, the threshold for \textbf{value} is low, since we are
-only looking for non-empty output.  However, subsequent versions of
-the system may have other evaluation functions plugged in, setting a
+In our current experiment, the system's potential \textbf{triggers}
+result from trial and error with flowchart assembly.  Some valid
+combinations of nodes will produce results, and some will not.  Due to
+the dynamically changing environment (e.g., updates to data sources
+like Twitter) some flowcharts that did not produce results earlier may
+unexpectedly begin to produce results.
+%
+The system's \textbf{prepared mind} lies in a distributed knowledge
+base provided by ProcessNodes, showing the constraints on their inputs
+and outputs, and in the global history of successful and unsuccessful
+combinations.
+%
+The system will not try combinations that it knows cannot produce
+results, but it will try novel combinations and may retry earlier
+flowchart specimens that have the chance to become viable.  Turning a
+collection of nodes for which no known working combination existed
+into a working flowchart is an occasion for a \textbf{focus shift}:
+what made this particular combination work?  Is there a pattern that
+could be exploited in the future?  It may be that no broader pattern
+can be found, other than the fact that the combination works.
+%
+Successful combinations and any further inferences are stored, and
+referred to in future runs.  The \textbf{bridge} to the next set of
+potential results is accordingly found by informed trial and error.
+%
+In these early experiments, the basic \textbf{result} that system is
+aiming to achieve is simply a new combination of nodes that can fit
+together and that generate non-empty output.  However, subsequent
+versions of the system may have other evaluation functions, setting a
 higher bar.  For example, a future version of the system could be
-tuned to search for flowcharts that generate meaningful poetry, as we
-discuss in \cite{corneli2015computational}.
+tuned to search for flowcharts that generate poetry, as we discuss in
+\cite{corneli2015computational}.
 
-The \textbf{dynamic world} is thus dynamic in two ways: in the
-straightforward sense that some of the input sources, like Twitter,
-are changing, and also in the sense that the system's knowledge can
-change.  There is less to say about \textbf{multiple contexts}:
-although we have broken the experiment into separate sub-populations
-to constrain the search, these do not interact.  As more goals are
-added, the system could be seen to have \textbf{multiple tasks}, for
-instance the generation of new poems and the generation of new
-heuristics for assembling flowcharts.  The present version of the
-system does not seem to involve itself with \textbf{multiple
-  influences}, however the FloWr system can be extended modularly with
-new ProcessNodes.  This suggests that there will be more possible
-strategies for assembling flowcharts in the future.
+There is a strong role for \textbf{chance} even in the early
+prototype, regarding both the output from certain nodes, and in terms
+the combinatorial search strategy itself.  The chances of finding a
+novel successful combination of nodes is fairly low.  The system's
+ongoing effort to discover new combinations that work could be
+interpreted as \textbf{curiosity}.  The fact that it remembers viable
+combinations and doesn't try combinations that are known not to work
+could be thought of as moderate \textbf{sagacity}.  At the moment, the
+threshold for \textbf{value} is low, simply a new combination of nodes
+that produces non-empty output.  If this can be accompanied by an
+explanation, the value is higher.
+
+The \textbf{dynamic world} the system operates in is dynamic in two
+ways: first, in the straightforward sense that some of the input
+sources, like Twitter, are changing; and also in the sense that the
+system's knowledge of successful and unsuccessful node combinations
+changes over time.  The current version of the system does not seem to
+deal with \textbf{multiple contexts}; even though we have broken the
+experiment into separate sub-populations to constrain the search,
+these do not interact.  However, in a future version of the system,
+interaction between different heuristically-driven search processes
+would be possible, and could produce more unexpected results.  Along
+these lines, as more goals are added, the system could more readily be
+seen to have \textbf{multiple tasks}.  For instance, one search
+process could look for narrative outlines to structure a poem with,
+and another process could look for lines or stanzas to fill out that
+outline.  As for \textbf{multiple influences}, the population of
+ProcessNodes will constrain (and, as more nodes are added, extend) the
+possible strategies for assembling flowcharts.
 
 \afterpage{\clearpage}
 \begin{table}[p]
 {\centering \renewcommand{\arraystretch}{1.5}
-\footnotesize
-\begin{tabular}{p{.7in}@{\hspace{.1in}}p{1.9in}@{\hspace{.1in}}p{1.9in}}
-\multicolumn{1}{c}{} & \multicolumn{1}{c}{\textbf{EMS}} & \multicolumn{1}{c}{\textbf{RS++}} \\[-.1in]
-\multicolumn{1}{l}{\em Components} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} \\
-\cline{2-3}
-\textbf{Serendipity trigger} & Previous evolutionary operations together with user input & Input from user behaviour \\
-% \cline{2-3}
-\textbf{Prepared mind} & Musical knowledge, evolution mechanisms & Through user/domain model \\
-% \cline{2-3}
-\textbf{Bridge}  & Creation of newly-evolved Improvisors & Elements identified outside clusters \\
-% \cline{2-3}
-\textbf{Result} & Music generated by fittest Improvisors& Dependent on organisation goals \\ \cline{2-3}
-\multicolumn{1}{l}{\em Dimensions} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} \\
-\cline{2-3}
-\textbf{Chance} & If discovered in huge search space & Through imperfect knowledge/if learning from user behaviour \\
-% \cline{2-3}
-\textbf{Curiosity} & Aiming to have a particular user take note of an Improvisor & Making unusual recommendations \\
-% \cline{2-3}
-\textbf{Sagacity} & User appreciation of Improvisor over time & Updating recommendation model after user behaviour \\
-% \cline{2-3}
-\textbf{Value} & Via fitness function (as a proxy measure of creativity) & As per business metrics/objectives \\
-\cline{2-3}
-\multicolumn{1}{l}{\em Factors} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{} \\
-\cline{2-3}
-\textbf{Dynamic world}  & Continuous computational evolution and changes in user tastes& As precondition for testing system's influences on user behaviour\\
-%\cline{2-3}
-\textbf{Multiple contexts} & Multiple users' opinions would change what the system is curious about and require greater sagacity & User model and domain model\\
-% \cline{2-3}
-\textbf{Multiple tasks} & Evolving Improvisors, generating music, collecting user input, fitness calculations & Making recommendations, learning from users, updating models \\
-% \cline{2-3}
-\textbf{Multiple influences} & Through various musical parameter combinations& Experimental design, psychology, domain understanding\\
-\cline{2-3}
+\scriptsize
+\begin{tabular}{p{1.5in}@{\hspace{.1in}}p{1.5in}@{\hspace{.1in}}p{1.5in}}
+\multicolumn{1}{c}{\textbf{{\footnotesize Evolutionary music}}} & \multicolumn{1}{c}{\textbf{{\footnotesize Next-gen.~recommenders\hspace{.4cm}}}} & \multicolumn{1}{c}{\textbf{{\footnotesize Flowchart assembly}}} \\[.05in]
+\multicolumn{3}{l}{\em {\textbf{Condition}}} \\
+\cline{1-3}
+\multicolumn{3}{l}{\em Focus shift} \\[-.1cm]
+Driven by (currently, human) evaluation of samples
+& Unexpected behaviour in the aggregate
+& Find a pattern to explain a successful combination of nodes\\
+\cline{1-3}
+~\\[-.1cm]
+\multicolumn{3}{l}{\em {\textbf{Components}}} \\
+\cline{1-3}
+\multicolumn{3}{l}{\em Trigger} \\[-.1cm]
+% \textbf{Trigger}
+Previous evolutionary steps, in combination with user input
+& Input from user behaviour
+& Trial and error in combinatorial search \\
+% \cline{1-3}
+\multicolumn{3}{l}{\em Prepared mind} \\[-.1cm]
+% \textbf{Prepared mind}
+Musical knowledge, evolution mechanisms
+& Through user/domain model
+& Constraints on node inputs and outputs; history of successes and failures\\
+% \cline{1-3}
+%\textbf{Bridge}
+\multicolumn{3}{l}{\em Bridge} \\[-.1cm]
+Newly-evolved Improvisors
+& Elements identified outside clusters
+& Try novel combinations \\
+% \cline{1-3}
+%\textbf{Result}
+\multicolumn{3}{l}{\em Result} \\[-.1cm]
+Music generated by the fittest Improvisors
+& Dependent on organisation goals
+& Non-empty or more highly qualified output \\ \cline{1-3}
+~\\[-.1cm]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\multicolumn{3}{l}{\em \textbf{Dimensions}}  \\
+\cline{1-3}
+%\textbf{Chance}
+\multicolumn{3}{l}{\em Chance} \\[-.1cm]
+Looking for rare gems in a huge search space
+& Imperfect knowledge of user preferences and behaviour
+& Changing state of the outside world; random selection of nodes to try \\
+% \cline{1-3}
+%\textbf{Curiosity}
+\multicolumn{3}{l}{\em Curiosity} \\[-.1cm]
+Aiming to have a particular user take note of an Improvisor
+& Making unusual recommendations
+& Search for novel combinations \\
+% \cline{1-3}
+%\textbf{Sagacity}
+\multicolumn{3}{l}{\em Sagacity} \\[-.1cm]
+Enhance user appreciation of Improvisor over time,
+using a fitness function
+& Update recommendation model after user behaviour 
+& Don't try things known not to work; consider variations on successful patterns \\
+% \cline{1-3}
+%\textbf{Value} &
+\multicolumn{3}{l}{\em Value} \\[-.1cm]
+Via fitness function (as a proxy measure of creativity)
+& Per business metrics/objectives
+& Currently ``non-empty results''; more interesting evaluation functions possible \\
+\cline{1-3}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+~\\[-.1cm]
+\multicolumn{3}{l}{\em \textbf{Factors}} \\
+\cline{1-3}
+%\textbf{Dynamic world}
+\multicolumn{3}{l}{\em Dynamic world} \\[-.1cm]
+Changes in the user tastes
+& As precondition for testing system's influences on user behaviour
+& Changing data sources and growing domain knowledge \\
+%\cline{1-3}
+%\textbf{Multiple contexts}
+\multicolumn{3}{l}{\em Multiple contexts} \\[-.1cm]
+Multiple users' opinions would change what the system is curious about and require greater sagacity
+& User model, domain model, model of its own behaviour
+& Interaction between different heuristic search processes would increase unexpectedness \\
+% \cline{1-3}
+%\textbf{Multiple tasks}
+\multicolumn{3}{l}{\em Multiple tasks} \\[-.1cm]
+Evolve Improvisors, generate music, collect user input, carry out fitness calculations
+& Make recommendations, learn from users, update models
+& Generate new heuristics and new domain artefacts \\
+% \cline{1-3}
+%\textbf{Multiple influences}
+\multicolumn{3}{l}{\em Multiple influences} \\[-.1cm]
+Through programming of fitness function and musical parameter combinations
+& Experimental design, psychology, domain understanding
+& Learning to combine new kinds of ProcessNodes\\
+\cline{1-3}
 \end{tabular}
 \par}
 \normalsize
 \bigskip
 
-\caption{Summary: applying our computational serendipity model to two case studies\label{caseStudies}}
+\caption{Summary: applying our computational serendipity model to three case studies\label{caseStudies}}
 \end{table}%
 
 \subsection{Summary}
 
-Table \ref{caseStudies} summarises how the components, dimensions and
-factors of our model of serendipity can be mapped to evolutionary
-music systems and the class of ``next-generation'' recommender systems
-discussed above.  These case studies have shown how our model can be
-used to highlight the aspects of existing systems that would need to
-be developed further to enhance measures of the system's serendipity.
+Table \ref{caseStudies} summarises how the condition, components,
+dimensions and factors in our model of serendipity appear in an
+evolutionary music system, in hypothetical ``next-generation''
+recommender systems, and in our current work on a flowchart-assembly
+system.  Each of the case studies shows clear potential for
+serendipity.  There are also clear ways in which the measure of
+serendipity could be enhanced.
 
-%%%
+\begin{enumerate}
+\item A future version of the evolutionary music system would be more
+  convincingly sagacious if it could evaluate works without user
+  intervention.  It might also be able to tailor its fitness function
+  to the individual user.  More broadly, interaction between the
+  system's tasks and more dynamism in its influences would potentially
+  help differentiate individual threads or system runs, which might
+  then be more serendipitous.
 
-%%%
+\item The next-generation recommender systems we've envisioned need to
+  be able to make inferences from aggregate user behaviour.  This
+  points to long-term considerations that go beyond the unique
+  serendipitous event.  How much leeway should these system have to
+  experiment?  
 
-% As a general comment, we would say that this is largely how
-% \emph{research and development} of recommender systems works, but
-% without the same levels of system automony envisioned here.
-
-
-
+\item The clearest way to enhance the serendipity of results from the
+  flowchart assembly process would be to impose more stringent, and
+  more meaningful, criteria for value.  In addition to raising
+  challenges for autonomous evaluation (as in the evolutionary music
+  system case), this requirement would impose more sophisticated
+  constaints on processing in earlier steps.
+\end{enumerate}
 

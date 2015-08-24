@@ -1,16 +1,165 @@
 
 \section{Discussion} \label{sec:discussion}
 
-In the preceding section, we applied our model to evaluate the serendipity of an evolutionary music improvisation system, a class of next-generation recommender systems, and a multi-agent system for assembling flowcharts.  The model has helped to highlight directions for development that would increase the potential for serendipity in existing systems, either incrementally or more transformatively.  The model has helped create a reasonably concrete system design.  Our analysis of these examples illustrates some of steps that can be taken in order to design systems that can observe events that would otherwise not be observed, take an interest in them, and transform observations into artefacts with lasting value.  We will now discuss implications from our findings for future research, and outline potential next steps.
+In the preceding section, we applied our model to evaluate the serendipity of an evolutionary music improvisation system, a hypothetical class of next-generation recommender systems, and a system for assembling flowcharts.  The model has helped to highlight directions for development that would increase the potential for serendipity in existing systems, either incrementally or more transformatively.  Our model suggested case studies of systems that can observe events that would otherwise not be observed, take an interest in them, and transform the observations into artefacts with lasting value.  We will now discuss implications from our findings for future research, and outline potential next steps.
 
-The features of our model match and expand upon Merton's
-\citeyear{merton1948bearing} description of the ``serendipity
-pattern.'' $T$ is an unexpected observation; $T^\star$ highlights its
-interesting or anomalous features and recasts them as ``strategic
-data.''  Finally, the result $R$ and its evaluation may lead to
-updates to the system's operations that will inform further phases of
-research.  
+%\input{12a-recommendations}
+%\input{12b-future-work-intro}
+%\input{12c-future-work-conclusion}
 
-\input{12a-recommendations}
-\input{12b-future-work-intro}
-\input{12c-future-work-conclusion}
+\subsection{Challenges for future research} \label{sec:recommendations}
+
+Viewing the concepts in Section \ref{sec:by-example} through the
+practice scenarios we have discussed, we can describe the following
+challenges for research in computational serendipity.
+
+\begin{itemize}
+\item \textbf{Autonomy}: Our case studies in Section
+  \ref{sec:computational-serendipity} highlight the potential value of
+  increased autonomy on the system side.
+The search for connections that make raw data into ``strategic data''
+is an appropriate theme for research in computational intelligence and
+machine learning to grapple with.  In the standard cybernetic model,
+we control computers, and we also control the computer's operating
+context.  There is little room for serendipity if there is nothing
+outside of our direct control.  In contrast to this mainstream model,
+von Foerster \citeyear[p. 286]{von2003cybernetics} advocated a
+second-order cybernetics in which ``the observer who enters the system
+shall be allowed to stipulate his own purpose.''  \emph{A
+  primary challenge to the serendipitous operation of computers is
+  developing computational agents that specify their own problems.}
+\end{itemize}
+
+\begin{itemize}
+\item \textbf{Learning}: Each of the case studies considered in
+  Section \ref{sec:computational-serendipity} describes a system that
+  is able, in one way or another, to learn from experience.  As we
+  considered ways to enhance measures of serendipity in these
+  examples, we were led to consider computational agents that
+  participate meaningfully in ``our world'' rather than in a
+  circumscribed microdomain.  \emph{A second challenge is for
+    computational agents to learn more and more about the world we
+    live in.}
+\end{itemize}
+
+\begin{itemize}
+\item \textbf{Sociality}: We may be aided in our pursuit of the
+  ``smart mind'' required for serendipity by recalling Turing's
+  proposal that computers should ``be able to converse with each other
+  to sharpen their wits'' \cite{turing-intelligent}.  Turing
+  recognised that computers would have to be coached in the direction
+  of social learning, but that once they attain that standard they
+  will learn much more quickly.  The four supportive factors for
+  serendipity described in this paper resemble nothing more than our
+  experience of social reality.  \emph{A third challenge is for
+    computational agents to interact in a recognisably social way with
+    us and with each other, resulting in emergent effects.}
+\end{itemize}
+
+\begin{itemize}
+\item \textbf{Embedded evaluation}:
+  \citeA{stakeholder-groups-bookchapter} outline a general programme
+  for computational creativity, and examined perceptions of creativity
+  in computational systems found among members of the general public,
+  computational creativity researchers, and existing creative
+  communities.  We should now add a fourth important ``stakeholder''
+  group in computational creativity research: computer systems
+  themselves.  System designers need to teach their systems how to
+  make evaluations in way that is both reasonable and ethical.  This
+  condition is exemplified by the preference for a ``non-zero sum''
+  criterion for value introduced in Section \ref{sec:by-example}.
+  \emph{A fourth challenge is for computational agents to evaluate
+    their own creative process and products.}
+\end{itemize}
+
+
+\subsection{Future Work} \label{sec:futurework} \label{sec:hatching}
+
+In looking for ways to manage and encourage serendipity, we are drawn
+to the approach taken by the \emph{design pattern} community
+\cite{alexander1999origins}. 
+\citeA{meszaros1998pattern} describe the typical scenario for authors of design patterns:
+\begin{quote}
+\noindent ``You are an experienced practitioner in your field.  You
+have noticed that you keep using a certain solution to a commonly
+occurring problem.  You would like to share your experience with
+others.''
+\end{quote}
+There are many ways to describe a solution.
+Meszaros and Doble remark,
+\begin{quote}
+\noindent ``What sets patterns apart is their ability to explain the
+rationale for using the solution (the `why') in addition to describing
+the solution (the `how').''
+\end{quote}
+Regarding the criteria that pattern writers seek to address: 
+\begin{quote}
+\noindent ``The most appropriate solution to a problem in a context is
+the one that best resolves the highest priority forces as determined
+by the particular context.''
+\end{quote}
+
+%
+%% Their article describes a number of criteria relevant to writing
+%% good design patterns, e.g. \emph{Clear target audience},
+%% \emph{Visible forces}, and \emph{Relationship to other patterns}.
+%
+Applying the solution achieves this resolution of forces, and a design
+pattern shows how this works.  The design pattern itself achieves
+something further: it encapsulates knowledge in a brief, shareable
+form, often with meaningful relationships to other patterns.  Tracing
+the steps involved, we see that the creation of a new design pattern
+is always somewhat serendipitous (Figure \ref{fig:pattern-schematic};
+compare Figure \ref{fig:1b}).
+
+\vspace{-.3cm}
+\begin{figure}
+\input{pattern-schematic-tikz.tex}
+\caption{The components of design patterns mapped to our process schematic\label{fig:pattern-schematic}}
+\end{figure}
+
+\vspace{-.3cm} To van Andel's assertion that ``The very moment I can
+plan or programme `serendipity' it cannot be called serendipity
+anymore,'' we reply that we can certainly describe patterns -- and
+programs -- with built-in indeterminacy.  We can foster circumstances
+that may make an unexpected happy outcome more likely.  Figure
+\ref{fig:va-pattern-figure} illustrates this with one van Andel's
+patterns of serendipity, rewritten using the standard design pattern
+template.  In future work, we intend to build a more complete
+serendipity pattern language -- and to use this within autonomous
+programming systems that transform raw data into ``strategic data.''
+
+\setlist[description]{font=\normalfont\itshape}
+\begin{figure}[!h]
+\begin{mdframed}
+\vspace{2mm}
+\textbf{\emph{Successful error}}~
+\begin{description}[leftmargin=0\parindent,labelindent=0em,itemsep=2pt]
+\item[{Context.}] You run an organisation with {\sl different
+  divisions} and contributors with {\sl varied expertise}.  One of
+  them discovers something interesting, but no one knows how to {\sl
+    turn the discovery into a product}.
+\item[{Problem.}]  How can you get value from the discovery?
+\item[{Solution.}] Allow people to work on pet projects, and encourage
+  interaction between people in different divisions.
+\item[{Rationale.}] Prototypes can be discussed, even if they are not
+  directly marketable.  Following the interests of contributors
+  preserves their autonomy; contact with different points of view
+  brings additional knowledge to bear.
+\item[{Resolution.}] 
+Open discussion can
+  expose flaws at any stage, and help guide work in the direction of
+  real innovation.  Participants in these conversations
+  will learn something, and will help each other maximise the value of
+  the discovery.  
+\item[{Example.}] Low-tack restickable glue, discovered by a 3M
+  engineer in 1968, ultimately proved useful for making
+  Post-it\texttrademark\ Notes, which were launched in 1980 after
+  several rounds of in-house prototyping.
+\end{description}
+\vspace{-1mm}
+\end{mdframed}
+\caption{Standard design pattern template applied to van Andel's \em{Successful error}\label{fig:va-pattern-figure}}
+\end{figure}
+
+% Is ``having a stretch goal'' an example of a serendipity pattern?  I think so!

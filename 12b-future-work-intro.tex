@@ -22,29 +22,107 @@ to the approach taken by the \emph{design pattern} community
 %% \end{itemize}
 %%
 \citeA{meszaros1998pattern} describe the typical scenario for authors of design
-patterns: ``You are an experienced practitioner in your
-field. You have noticed that you keep using a certain solution to a
-commonly occurring problem. You would like to share your experience
-with others.''  There are many ways to describe a solution.
-Meszaros and Doble remark, ``What sets patterns apart is their
-ability to explain the rationale for using the solution (the `why') in
-addition to describing the solution (the `how').''  Regarding the
-criteria that pattern writers seek to address: ``The most appropriate
-solution to a problem in a context is the one that best resolves the
-highest priority forces as determined by the particular context.'' 
+patterns:
+\begin{quote}
+\noindent ``You are an experienced practitioner in your field.  You
+have noticed that you keep using a certain solution to a commonly
+occurring problem.  You would like to share your experience with
+others.''
+\end{quote}
+There are many ways to describe a solution.
+Meszaros and Doble remark,
+\begin{quote}
+\noindent ``What sets patterns apart is their ability to explain the
+rationale for using the solution (the `why') in addition to describing
+the solution (the `how').''
+\end{quote}
+Regarding the criteria that pattern writers seek to address: 
+\begin{quote}
+\noindent ``The most appropriate solution to a problem in a context is
+the one that best resolves the highest priority forces as determined
+by the particular context.''
+\end{quote}
+
 %
 %% Their article describes a number of criteria relevant to writing
 %% good design patterns, e.g. \emph{Clear target audience},
 %% \emph{Visible forces}, and \emph{Relationship to other patterns}.
 %
-A good design pattern \emph{describes} the resolution of forces in the
-target domain; in the setting we're interested in, creating a new
-design pattern also \emph{effects} a resolution of forces directly.
-The use case of design pattern development maps into our diagram of
-the basic features of serendipity described in Figure \ref{fig:1b}:
+A good design pattern describes the resolution of forces in the target
+domain, and applying the solution achieves this resolution of forces.
+The design pattern itself is valuable because it achieves something further:
+it encapsulates knowledge in a brief, shareable form (often with
+meaningful relationships to other patterns).  
+
+The steps in this description match the schematic outline of the key
+features of serendipity, as illustrated in Figure
+\ref{fig:pattern-schematic} (compare Figure \ref{fig:1b}).  The
+discovery/invention of a new design pattern would seen as
+serendipitous according to our model, though the SPECS
 
 \begin{figure}
 \input{pattern-schematic-tikz.tex}
-\caption{The components of design patterns mapped to our process schematic}
+\caption{The components of design patterns mapped to our process schematic\label{fig:pattern-schematic}}
 \end{figure}
 
+%% Here we do not mean to suggest that every instance of ``a solution to a
+%% problem in a context'' is due to serendipity at work -- on the
+%% contrary, that is just the discovery step.  Inventing a viable design pattern
+%% only happens when the solution is found to be explicable and useful.
+
+To van Andel's assertion that ``The very moment I can plan or
+programme `serendipity' it cannot be called serendipity anymore,'' we
+would reply that we can certainly describe patterns (and programs)
+with built-in indeterminacy.  Figure \ref{fig:va-pattern-figure}
+presents an example, showing how one of van Andel's patterns of
+serendipity can be rewritten as a design pattern using the standard
+template.
+
+\begin{figure}[!ht]
+\begin{mdframed}
+\paragraph{\textbf{Successful error}}~
+\vskip -1\baselineskip
+\begin{flushright}\emph{Van Andel's example} -- Post-it\texttrademark\ Notes
+\end{flushright}
+\vspace{-.15cm}
+\begin{description}[itemsep=2pt]
+\item[{\tt context}] -- You run a creative organisation with several different divisions and many contributors with different expertise.  
+\item[{\tt problem}] -- One of the members of your organisation
+  discovers something with interesting properties, but no one
+  knows how to turn it into a product with industrial or commercial application.
+\item[{\tt solution}] -- Create a space for sharing and discussing
+  interesting ideas on an ongoing basis.
+\item[{\tt rationale}] -- You suspect it's possible that one of the
+  other members of the firm will come up with an idea about an
+  application; you know that if a potential application is found, it
+  may not be directly marketable, but at least there will be a
+  prototype that can be concretely discussed.
+\item[{\tt resolution}] -- The \emph{Successful error} pattern
+  rewritten using this template is an example of a similar
+  prototype, showing that serendipity can be talked about in
+  terms of design patterns.
+\end{description}
+\end{mdframed}
+\caption{The design pattern template applied to van Andel's \emph{Successful error} pattern\label{fig:va-pattern-figure}}
+\end{figure}
+
+In future work, we would aim to build a more complete pattern language
+along similar lines, and show how this language can be used to
+transform raw data into ``strategic data.''
+%
+The example pattern describes a scenario that is quite close to Pease et al.'s \citeyear{pease2013discussion} description of an online
+system that gathers new modules over time, and for which,
+periodically, new combinations of modules can yield new and
+interesting results.
+%
+Developing experiments along these lines may help prepare the
+groundwork for the more involved development projects discussed in the
+current paper.
+%
+Patterns of serendipity, like the one in Figure \ref{fig:va-pattern-figure},
+offer useful heuristic guidelines for human programmers and convey a sense of our long-term
+plans for serendipitous computing systems.
+
+
+
+% Is ``having a stretch goal'' an example of a serendipity pattern?  I think so!
