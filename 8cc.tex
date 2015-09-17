@@ -57,9 +57,9 @@ uses genetic algorithms.  Reevaluating {\sf GAmprovising} can shed
 light on the degree to which evolutionary computing can encourage
 computational serendipity.
 
-{\sf GAmprovising} uses genetic algorithms to evolve a population of \emph{Improvisors}. Each Improvisor is able to randomly generate music based on various parameters such as the range of notes to be used, preferred notes, rhythmic implications around note lengths and other musical parameters \cite<see>{jordanous10}. These parameters are what define the Improvisor at any point in the system's evolution.  After a cycle of evolution, each Improvisor is evaluated using a fitness function based on Ritchie's \citeyear{ritchie07} formal criteria for creativity.  This model relies on user-supplied ratings of the novelty and appropriateness of the music produced by the Improvisor to calculate 18 metrics that collectively indicate how creative the system is.  The fittest Improvisors are used to seed a new generation of Improvisors, through crossover and mutation operations.
+{\sf GAmprovising} uses genetic algorithms to evolve a population of \emph{Improvisors}. Each Improvisor is able to randomly generate music based on various parameters such as the range of notes to be used, preferred notes, rhythmic implications around note lengths and other musical parameters, see \cite{jordanous10}. These parameters are what define the Improvisor at any point in the system's evolution.  After a cycle of evolution, each Improvisor is evaluated using a fitness function based on Ritchie's \citeyear{ritchie07} formal criteria for creativity.  This model relies on user-supplied ratings of the novelty and appropriateness of the music produced by the Improvisor to calculate 18 metrics that collectively indicate how creative the system is.  The fittest Improvisors are used to seed a new generation of Improvisors, through crossover and mutation operations.
 
-The {\sf GAmprovising} system can be said to have a \textbf{prepared mind} through its background knowledge of what musical concepts to embed in the Improvisors and the evolutionary abilities to evolve Improvisors. A potential \textbf{serendipity trigger} comes from the combination of previous mutation and crossover operations with current user input.  To be clear, in the current version of the system it is a human evaluator is largely responsible for the system's \textbf{focus shift}, since the user tells the system which improvisations are most valuable.   \citeA{jordanous10}
+The {\sf GAmprovising} system can be said to have a \textbf{prepared mind} through its background knowledge of what musical concepts to embed in the Improvisors and the evolutionary abilities to evolve Improvisors. A potential \textbf{serendipity trigger} comes from the combination of previous mutation and crossover operations with current user input.  To be clear, in the current version of the system it is a human evaluator who is largely responsible for the system's \textbf{focus shift}, since the user tells the system which improvisations are most valuable.   \citeA{jordanous10}
 notes that this ``introduces a fitness bottleneck.''  In future versions of the system, autonomous evaluation could potentially take over for the human evaluator.  Once the interesting samples have been collected (from whatever source), a \textbf{bridge} is then built to new results through the creation of new Improvisors.  The \textbf{results} are the various musical improvisations produced by the fittest Improvisors (as well as, perhaps, the parameters that have been considered fittest).
 
 %% The likelihood of serendipitous evolution is greatly enhanced by the
@@ -85,10 +85,14 @@ the user will appreciate a given Improvisor's music (or similar music)
 over time.  With little basis for comparison, we can only say that
 these two dimensions are ``typical.''  The aim of the system is to
 maximise the \textbf{value} of the generated results by employing a
-fitness function, and indeed, the system ``was able to produce jazz
+fitness function, and indeed, the system:
+\begin{quote}
+``{[}W{]}\emph{as able to produce jazz
 improvisations which slowly evolved from what was essentially random
 noise, to become more pleasing and sound more like jazz to the human
-evaluator's ears'' \cite{jordanous10}.  The very reliability of the
+evaluator's ears}'' \cite{jordanous10}.
+\end{quote}
+The very reliability of the
 system ultimately bears against its overall serendipity.  Following
 Step 2, Part B of the SPECS procedure, we find a likelihood measure of
 $\mathit{high}\times\mathit{moderate}\times\mathit{moderate}$, with
@@ -122,7 +126,7 @@ of the primary contexts in computing where serendipity is currently discussed.  
 
 Current recommendation techniques associate less popular items with high unexpectedness \cite{Herlocker2004,Lu2012}, and use clustering to discover latent structures in the search space, e.g., partitioning users into clusters of common interests, or clustering users and domain objects \cite{Kamahara2005,Onuma2009,Zhang2011}.  But even in the Bayesian case, the system has limited autonomy.  A case for giving more autonomy to recommender systems can be made, especially in complex and rapidly evolving domains where hand-tuning is cost-intensive or infeasible.
 
-With this challenge in mind, we investigate how serendipity could be achieved on the system side. In terms of our model, current systems have at least the makings of a \textbf{prepared mind}, comprising both a user- and a domain model, both of which can be updated dynamically.  User behaviour (e.g.~following certain recommendations) or changes to the domain (e.g.~adding a new product) may serve as a potential \textbf{trigger} that could ultimately cause the system to discover a new way to make recommendations in the future.  Note, however, that it is unexpected behaviour in aggregate, rather than a one-off event, that is likely to provide grounds for a \textbf{focus shift}.   A \textbf{bridge} to a new kind of recommendation could be created by looking at exceptional patterns as they appear over time.  For instance, new elements may have been introduced into the domain that do not cluster well, and clusters may appear in the user model that do not have obvious connections between them.  A new recommendation strategy serves the organisational mission would be a serendipitous \textbf{result} for the system.
+With this challenge in mind, we ask how serendipity could be achieved on the system side. In terms of our model, current systems have at least the makings of a \textbf{prepared mind}, comprising both a user- and a domain model, both of which can be updated dynamically.  User behaviour (e.g.~following certain recommendations) or changes to the domain (e.g.~adding a new product) may serve as a potential \textbf{trigger} that could ultimately cause the system to discover a new way to make recommendations in the future.  Note, however, that it is unexpected behaviour in aggregate, rather than a one-off event, that is likely to provide grounds for a \textbf{focus shift}.   A \textbf{bridge} to a new kind of recommendation could be created by looking at exceptional patterns as they appear over time.  For instance, new elements may have been introduced into the domain that do not cluster well, and clusters may appear in the user model that do not have obvious connections between them.  A new recommendation strategy serves the organisational mission would be a serendipitous \textbf{result} for the system.
 
 The system has only imperfect knowledge of user preferences and
 interests.  At least relative to current recommender systems, the
@@ -346,7 +350,7 @@ Through programming of fitness function and musical parameter combinations
 \bigskip
 
 \caption{Summary: applying our computational serendipity model to three case studies\label{caseStudies}}
-\end{table}%
+\end{table}
 
 \subsection{Summary}
 

@@ -10,39 +10,91 @@ familiar patterns, and secondly, to new insight.
 %
 When we consider the practical uses for weak glue, the possibility
 that a life-saving antibiotic might be found growing on contaminated
-petri dishes, and or the idea that burdock burrs could be anything but
+petri dishes, or the idea that burdock burrs could be anything but
 annoying, we encounter radical changes in the evaluation of what's
-interesting.  In the \emph{d\'enouement}, what was initially
-unexpected is found to be both explicable and useful.  Importantly,
-serendipity is not the same as luck.  It involves making sense of
-the unexpected.
+interesting.  Importantly, serendipity is not the same as luck.
+In the \emph{d\'enouement}, through effort, what was initially unexpected is found to be both explicable and useful. 
 
 Serendipity is increasingly seen as relevant in the arts
-\cite{mckay-serendipity}, in the tech industry \cite{rao2015breaking}, and elsewhere.  Serendipity in the workplace may be encouraged with methods drawn from architecture and data science \cite{kakko2009homo,engineering-serendipity}.
-An interdisciplinary perspective on the phenomenon of serendipity promises further illumination.
-This paper reassesses and updates \citeA{pease2013discussion}, developing a robust computational characterisation of serendipity for computer modelling and system evaluation.
+\cite{mckay-serendipity}, in the tech industry \cite{rao2015breaking},
+and elsewhere. 
+Serendipity in the workplace may be encouraged with methods drawn from
+architecture, data science, and cultural engineering
+\cite{kakko2009homo,engineering-serendipity,who-moved-cube}.  Continued development
+of an interdisciplinary perspective on the phenomenon of serendipity
+promises further illumination.  This paper reassesses and updates an
+earlier discussion of serendipity in a computational context
+\cite{pease2013discussion}, and develops robust criteria for computer
+modelling and system evaluation.
 
-Pek van Andel \citeyear{van1994anatomy} -- echoing Poincar\'e's
-\citeyear{poincare1910creation} (negative) reflections on the potential
-for a purely computational approach to mathematics -- claimed that:
+\citeA{van1994anatomy} -- echoing the
+(negative) reflections on the potential
+for a purely computational approach to mathematics from \citeA{poincare1910creation} -- claimed that:
 \begin{quote}
 ``\emph{Like all intuitive operating, pure serendipity is not amenable
     to generation by a computer.  The very moment I can plan or
     programme `serendipity' it cannot be called serendipity
-    anymore}.'' \cite{van1994anatomy}
+    anymore}.'' \citep{van1994anatomy}
 \end{quote}
 We believe that serendipity is not so mystical as such statements
 might seem to imply.  In Section \ref{sec:discussion} we will
 show that ``patterns of serendipity'' like those collected by van Andel
 can be applied in the design of computational systems.
 
-First, in
-Section \ref{sec:literature-review}, we survey the broad literature on
-serendipity including the etymology of the term itself, and examine prior applications of the concept of serendipity in a computing context.  Then in Section \ref{sec:our-model} we present our own
-definition of serendipity, which synthesises the understanding gained from these historical examples, and prepares the way for evaluation of serendipity in computational systems.  Section
-\ref{sec:computational-serendipity} examines
-three such case studies.  Section
-\ref{sec:discussion} offers recommendations for researchers working in the computational modelling of serendipity and related areas such as computational creativity, and describes our own plans for future
-work.  Section \ref{sec:conclusion} reviews the contributions of this paper towards computational modelling and evaluation of serendipity.  
+Serendipity is particularly relevant for thinking about
+\emph{autonomous systems}.  There is a certain amount of fear,
+apprehension, and concern surrounding such systems, which
+\citeA{machine-ethics-status} suggest is largely focused around the
+question: will these systems behave in an ethical manner?  The more we
+constrain the system's operation, the less chance there is of it ``running off
+the rails.''  However, constraints come with a serious downside.
+Highly constained systems will not be able to \emph{learn} anything
+very new while they operate.  They are unlikely to be convincingly
+\emph{social} if emergent behaviour is ruled out in advance.  Systems
+that only act normatively (that is, pursuing purposes for which they have
+been pre-programmed) serve as proxies for their creator's
+judgements, and do not make \emph{evaluations} that are meaningfully
+``their own.''  Section \ref{sec:computational-serendipity} develops
+three case studies considering the potential for serendipity in extant
+and hypothetical computer systems.  Section
+\ref{sec:discussion} will reflect back on these case studies 
+using the themes of autonomy, learning, sociality and embedded evaluation.
+
+With Rao's \citeyearpar{rao2015breaking} useful gloss ``happy
+surprise'' in mind: systems that are able to reason about serendipity
+(and unserendipity) will be able to distinguish between ``happy
+surprises'' and ``unhappy surprises'' and make decisions accordingly.
+In this way, a framework for evaluating serendipity may be an
+important prerequisite to the development of machine ethics.  If
+serendipity was ruled out as a matter of principle, computing would be
+restricted to happy or unhappy (as the case may be)
+\emph{unsurprises}.  But in fact any sufficiently complex system is
+bound to make decisions that its creator could not foresee, and may
+not fully understand \cite{minsky1967programming}.
+
+Less controversial than ``programmed serendipity'', but no less worthy
+of study, is serendipity that arises in the course of user
+interaction.  However, it should not be assumed that a system that can
+accommodate user interaction will directly lead to serendipity; take
+for example the use of a calculator, where the potential for
+serendipity through user interaction is minimal.  The frameworks
+introduced in this paper are likely to be useful in the design,
+modelling, and evaluation of sociotechnical systems, although we focus
+on computational systems in the current work.
+
+In Section \ref{sec:literature-review}, we survey the broad literature
+on serendipity including the etymology of the term itself, and examine
+prior applications of the concept of serendipity in a computing
+context.  Then in Section \ref{sec:our-model} we present our own
+definition of serendipity, which synthesises the understanding gained
+from these historical examples, and prepares the way for evaluation of
+serendipity in computational systems.  Section
+\ref{sec:computational-serendipity} examines three such case studies.
+Section \ref{sec:discussion} offers recommendations for researchers
+working in the computational modelling of serendipity and related
+areas such as computational creativity, and describes our own plans
+for future work.  Section \ref{sec:conclusion} reviews the
+contributions of this paper towards computational modelling and
+evaluation of serendipity.
 
 

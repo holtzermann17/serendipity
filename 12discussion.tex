@@ -53,9 +53,12 @@ shall be allowed to stipulate his own purpose.''  \emph{A
   of social learning, but that once they attain that standard they
   will learn much more quickly.  The four supportive factors for
   serendipity described in this paper resemble nothing more than our
-  experience of social reality.  \emph{A third challenge is for
-    computational agents to interact in a recognisably social way with
-    us and with each other, resulting in emergent effects.}
+  experience of social reality.  For example, our analysis of {\sf
+    GAmprovising} suggested that it should interact more with the
+  outside world and with other improvisers, rather than working in a
+  digital silo.  \emph{A third challenge is for computational agents
+    to interact in a recognisably social way with us and with each
+    other, resulting in emergent effects.}
 \end{itemize}
 
 \begin{itemize}
@@ -66,9 +69,13 @@ shall be allowed to stipulate his own purpose.''  \emph{A
   communities.  We should now add a fourth important ``stakeholder''
   group in computational creativity research: computer systems
   themselves.  System designers need to teach their systems how to
-  make evaluations in way that is both reasonable and ethical.  This
+  make evaluations in a way that is both reasonable and ethical.  This
   condition is exemplified by the preference for a ``non-zero sum''
   criterion for value introduced in Section \ref{sec:by-example}.
+  Embedded evaluation is of immediately pragmatic as well as broader philosophical implacations;
+  thus, for example, the latest implementation of {\sf GAmprovising} is limited
+  because it is ``poor at using reasoned self-evaluation''
+  and ``does not generate novel aesthetic measures''  \cite[pp.~189, 288]{jordanous2012evaluating}.
   \emph{A fourth challenge is for computational agents to evaluate
     their own creative process and products.}
 \end{itemize}
@@ -101,8 +108,6 @@ the one that best resolves the highest priority forces as determined
 by the particular context.''
 \end{quote}
 
-
-
 %
 %% Their article describes a number of criteria relevant to writing
 %% good design patterns, e.g. \emph{Clear target audience},
@@ -121,6 +126,42 @@ compare Figure \ref{fig:1b}).
 \caption{The components of design patterns mapped to our process schematic\label{fig:pattern-schematic}}
 \end{figure}
 
+\begin{figure}[!h]
+\setlist[description]{font=\normalfont\itshape}
+{\normalsize
+\begin{mdframed}
+\vspace{2mm}
+\textbf{\emph{Successful error}}~
+\begin{description}[leftmargin=0\parindent,labelindent=0em,itemsep=2pt]
+\item[{Context.}] You run an organisation with {\sl different
+  divisions} and contributors with {\sl varied expertise}.  People routinely
+  discovers interesting things that no one knows how to {\sl
+    turn into a product}.
+\item[{Problem.}]  How can you get the most value from this sort of discovery?
+\item[{Solution.}] Allow people to work on pet projects, and encourage
+  interaction between people in different divisions.  Set aside time
+  for in-house seminars.
+\item[{Rationale.}] Prototypes can be discussed, even if they are not
+  directly marketable.  Following the interests of contributors
+  preserves their autonomy.  Contact with different points of view
+  brings additional knowledge to bear.
+\item[{Resolution.}] 
+Open discussion can
+  expose flaws at any stage, and can help to guide work in the direction of
+  real innovation.  Participants in these conversations
+  will learn something, and will help each other maximise the value of
+  the discovery.  
+\item[{Example.}] Low-tack restickable glue, discovered by a 3M
+  engineer in 1968, ultimately proved useful for making
+  Post-it\texttrademark\ Notes, which were launched in 1980 after
+  several rounds of in-house prototyping.
+\end{description}
+\vspace{-1mm}
+\end{mdframed}
+}
+\caption{Standard design pattern template applied to van Andel's \em{Successful error}\label{fig:va-pattern-figure}}
+\end{figure}
+
 To van Andel's assertion that ``The
 very moment I can plan or programme `serendipity' it cannot be called
 serendipity anymore,'' we reply that we can certainly describe
@@ -132,38 +173,6 @@ design pattern template.  In future work, we intend to build a more
 complete serendipity pattern language -- and put it to use within
 autonomous programming systems.
 
-
 % Is ``having a stretch goal'' an example of a serendipity pattern?  I think so!
 
-\begin{figure}[!h]
-\setlist[description]{font=\normalfont\itshape}
-\begin{mdframed}
-\vspace{2mm}
-\textbf{\emph{Successful error}}~
-\begin{description}[leftmargin=0\parindent,labelindent=0em,itemsep=2pt]
-\item[{Context.}] You run an organisation with {\sl different
-  divisions} and contributors with {\sl varied expertise}.  One of
-  them discovers something interesting, but no one knows how to {\sl
-    turn the discovery into a product}.
-\item[{Problem.}]  How can you get value from the discovery?
-\item[{Solution.}] Allow people to work on pet projects, and encourage
-  interaction between people in different divisions.
-\item[{Rationale.}] Prototypes can be discussed, even if they are not
-  directly marketable.  Following the interests of contributors
-  preserves their autonomy; contact with different points of view
-  brings additional knowledge to bear.
-\item[{Resolution.}] 
-Open discussion can
-  expose flaws at any stage, and help guide work in the direction of
-  real innovation.  Participants in these conversations
-  will learn something, and will help each other maximise the value of
-  the discovery.  
-\item[{Example.}] Low-tack restickable glue, discovered by a 3M
-  engineer in 1968, ultimately proved useful for making
-  Post-it\texttrademark\ Notes, which were launched in 1980 after
-  several rounds of in-house prototyping.
-\end{description}
-\vspace{-1mm}
-\end{mdframed}
-\caption{Standard design pattern template applied to van Andel's \em{Successful error}\label{fig:va-pattern-figure}}
-\end{figure}
+
