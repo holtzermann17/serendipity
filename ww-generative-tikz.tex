@@ -8,7 +8,7 @@ single/.style={draw, anchor=text, rectangle},
 \draw [-latex] (poet.east) -- (poem.west);
 
 % ``critic listens to poem and offers feedback''
-\node[ellipse, draw, right=9mm of poem.east,text width=1.4cm] (critic) {\emph{feedback}};
+\node[ellipse, draw, right=9mm of poem.east,text width=1.3cm] (critic) {\emph{feedback}};
 \draw [-latex] (poem.east) -- (critic.west);
 \node[single, above=8mm of critic.north,text width=1.4cm] (experience) {\emph{reflective\\ process}};
 \node[draw,diamond,inner sep =.3mm, above right=4mm and 3mm of critic] (comment) {\raisebox{2mm}{$p\vphantom{^{\prime}}_1$}} ;
@@ -32,7 +32,7 @@ single/.style={draw, anchor=text, rectangle},
 \node[below=2cm of discovery] (invention) {\textbf{\emph{Invention:}}};
 
 % ``poet integrates feedback''
-\node[ellipse, draw, right=12mm of invention.east,text width=2.2cm] (integrator) {\emph{understanding}};
+\node[ellipse, draw, right=12mm of invention.east,text width=1.71cm] (integrator) {\emph{verification}};
 
 % nonprinting point to use to bend curve
 \coordinate[above left=2mm and 9mm of integrator] (mid2);

@@ -15,7 +15,7 @@ be sought, or may not be found.  If a result is
 developed, it may turn out to be of little value.  Prior experience
 with a related problem could be informative, but could also hamper
 innovation.  Similarly, multiple tasks, influences, and
-contexts can help to foster an inventive frame of mind, but they can
+contexts can help to foster an inventive frame of mind, but they may
 also be distractions.
 
 Figure \ref{fig:1b} removes these unserendipitous paths to focus on
@@ -81,20 +81,19 @@ system.  An existing \emph{generative process} is assumed.  This may
 be based on observations of the outside world, or it may be a purely
 computational process.  In any case, its products are passed on to the
 next stage.  After running this data through a feedback loop, certain
-aspects of the data are singled out, and marked up, as
+aspects of the data are singled out, and marked up as
 ``interesting.''  Note that this designation need not arise all at
 once: rather, it the outcome of a \emph{reflective process}.  In the
 implementation envisioned here, this process makes use of two primary
 functions: $p_1$, which notices particular aspects of the data, and $p_2$, which
 offers reflections about those aspects.  Together, these functions build up a
 ``feedback object,'' $T^{\star}$, which consists of the original data
-and added metadata.  This is passed on to an \emph{experimental
-  process}, which has the task of understanding what makes the data
-interesting and what it may be useful for.  This is again an iterative
-process, relying on functions $p^{\prime}_1$ and $p^{\prime}_2$, which
-build understanding of the trigger by devising experiments and
-assessing their results.  Once sufficient understanding of the data
-and its potential implications has been reached, a result is
+and further metadata.  This is passed on to an \emph{experimental
+  process}, which has the task of verifying that the data
+is indeed interesting, and determining what it may be useful for.
+This is again an iterative process, relying on functions $p^{\prime}_1$ and $p^{\prime}_2$, which
+build a contextual understanding of the trigger by devising experiments and
+assessing their results.  Once implications or applications have been found, a result is
 generated, which is passed to a final \emph{evaluation process}, and,
 from there, to applications.
 
@@ -107,12 +106,18 @@ cannot, in general, anticipate what the subsequent phases will produce
 or achieve.  If the system's next steps could be anticipated, we would
 not say that the behaviour was serendipitous.  In other words,
 serendipity does not adhere to one specific part of the system, but to
-its operations as a whole.  Also note that a machine could be built
-that implements all of the steps depicted in this diagram, and yet, if
-it only generated uninteresting results it would not be called
-``serendipitous.''  Summarising, we propose the following:
+its operations as a whole.  Although Figures  \ref{fig:1b} and  \ref{fig:1c}
+treat the case of successful serendipity, as indicated in Figure
+ \ref{fig:1a}, each step is fallible, as is the system as a whole.
+Thus, for example, a trigger that has been initially tagged as interesting may prove to be fruitless.
+Similarly a system that implements all of the steps in Figure \ref{fig:1c}, but that never
+achieves results of value does not have potential for serendipity.
+However, a system only produces results of high value would also be
+suspect, since it would indicate a tight coupling between trigger
+and outcome.  Fallibility is a ``meta-criterion'' that transcends the criteria from Section \ref{sec:by-example}.
+Summarising, we propose the following:
 \begin{ndef}
-\emph{(1) Within a system with a prepared mind, a previously uninteresting serendipity trigger arises due to circumstances that the system does not control, and is classified as interesting by the system; and,}
+\emph{(1) Within a system with a prepared mind, a previously uninteresting serendipity trigger arises due to circumstances that the system does not control and cannot predict, and is classified as interesting by the system; and,}
 \emph{(2) The system uses the trigger and prior preparation, together with relevant computational processing, networking, and experimental techniques, to obtain a novel result that is evaluated favourably by the system or by external sources.}
 \end{ndef}
 

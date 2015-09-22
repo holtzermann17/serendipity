@@ -6,10 +6,14 @@ discovery.  Section \ref{sec:our-model} distilled these elements into a computat
 culminating in a method for evaluating computational serendipity in Section \ref{specs-overview}.
 %
 Along with clear criteria, it is important to clearly delineate the
-scope of the system being evaluated.  For example, a standard
-spell-checking program might suggest a substitution that the user
+scope of the system being evaluated, and the position of the evaluator
+(recalling that ``embedded evaluation'' is a requisite part of a
+serendipitous system).
+For example, a standard spell-checking program might suggest a substitution that the user
 deems especially fortuitous; and we might agree that serendipity has
-occurred, but we would not attribute serendipity to the spell-checker.
+occurred, but we would not locate the potential for serendipity in
+the spell-checker itself, but rather to the ``cyborg'' system
+comprised of the user plus the machine and its software.
 
 \citeA{pease2013discussion} used an earlier variant the SPECS criteria
 to analyse three examples of potentially serendipitous behaviour:
@@ -100,7 +104,7 @@ outcomes of moderate value, so that the system as a whole is ``not
 very serendipitous.''  Evaluating individual threads (as members
 of a larger population) would yield varied results, which
 emphasises the importance of system scoping, mentioned above.
-However, it would be inaccurate to simply say that successful threads are serendipitous and unsuccessful threads are unserendipitous,  since that ignores components other than value.  At the moment, individual threads are effectively equivalent regarding chance,
+However, it would be inaccurate to simply say that successful threads are serendipitous and unsuccessful threads are unserendipitous,  since that ignores contributing dimensions apart from value.  At the moment, individual threads are effectively equivalent regarding chance,
 curiosity, and sagacity; a thread-by-thread analysis should be deferred until there would be more to say.
 
 This is related to other changes that would improve the global serendipity score, as the following qualitative factor analysis indicates.
@@ -124,9 +128,11 @@ its potential for serendipity.
 As discussed in Section \ref{sec:related}, recommender systems are one
 of the primary contexts in computing where serendipity is currently discussed.  Serendipity, for current recommender systems, means suggesting items to a user that will be likely to introduce new ideas that are unexpected, but close to what the user is already interested in.  As we noted, these systems mostly focus on supporting \emph{discovery} for the user -- but some architectures also seem to take account of \emph{invention} of new methods for making recommendations, e.g.~using Bayesian methods, as surveyed in \citeNP{shengbo-guo-thesis}.  In light of our working definition of serendipity, we need to distinguish serendipity on the user side from serendipity in the system itself.
 
-Current recommendation techniques associate less popular items with high unexpectedness \cite{Herlocker2004,Lu2012}, and use clustering to discover latent structures in the search space, e.g., partitioning users into clusters of common interests, or clustering users and domain objects \cite{Kamahara2005,Onuma2009,Zhang2011}.  But even in the Bayesian case, the system has limited autonomy.  A case for giving more autonomy to recommender systems can be made, especially in complex and rapidly evolving domains where hand-tuning is cost-intensive or infeasible.
+Current recommendation techniques focused on serendipity associate less popular items with high unexpectedness \cite{Herlocker2004,Lu2012}, and use clustering to discover latent structures in the search space, e.g., partitioning users into clusters of common interests, or clustering users and domain objects \cite{Kamahara2005,Onuma2009,Zhang2011}.  But even in the Bayesian case, the system has limited autonomy.  A case for giving more autonomy to recommender systems can be made, especially in complex and rapidly evolving domains where hand-tuning is cost-intensive or infeasible.
 
-With this challenge in mind, we ask how serendipity could be achieved on the system side. In terms of our model, current systems have at least the makings of a \textbf{prepared mind}, comprising both a user- and a domain model, both of which can be updated dynamically.  User behaviour (e.g.~following certain recommendations) or changes to the domain (e.g.~adding a new product) may serve as a potential \textbf{trigger} that could ultimately cause the system to discover a new way to make recommendations in the future.  Note, however, that it is unexpected behaviour in aggregate, rather than a one-off event, that is likely to provide grounds for a \textbf{focus shift}.   A \textbf{bridge} to a new kind of recommendation could be created by looking at exceptional patterns as they appear over time.  For instance, new elements may have been introduced into the domain that do not cluster well, and clusters may appear in the user model that do not have obvious connections between them.  A new recommendation strategy serves the organisational mission would be a serendipitous \textbf{result} for the system.
+With this challenge in mind, we ask how serendipity could be achieved on the system side. In terms of our model, current systems have at least the makings of a \textbf{prepared mind}, comprising both a user- and a domain model, both of which can be updated dynamically.  User behaviour (e.g.~following certain recommendations) or changes to the domain (e.g.~adding a new product) may serve as a potential \textbf{trigger} that could ultimately cause the system to discover a new way to make recommendations in the future.  
+In the current generation of systems that seek to induce serendipity for the user, the system provides a trigger for the user's focus shift by presenting recommendations that are neither too close, nor too far away from what user already knows; it is the other way around here. Note, however, that it is unexpected behaviour in aggregate, rather than a one-off event, that is likely to provide grounds for a \textbf{focus shift}.   
+A \textbf{bridge} to a new kind of recommendation could be created by looking at exceptional patterns as they appear over time.  For instance, new elements may have been introduced into the domain that do not cluster well, or a user may suddenly indicate a strong preference towards an item that does not fit their preference history.  Clusters may appear in the user model that do not have obvious connections between them.  A new recommendation strategy that addresses the organisation's goals would be a serendipitous \textbf{result}.
 
 The system has only imperfect knowledge of user preferences and
 interests.  At least relative to current recommender systems, the
@@ -150,16 +156,14 @@ $\mathit{low}\times\mathit{variable}\times\mathit{low}$, with outcomes
 of potentially high value, so that such a system is ``potentially
 highly serendipitous.''
 
-Recommender systems have to cope with a \textbf{dynamic world} of changing user preferences and a changing collection of items to recommend.  A dynamic environment which exhibits some degree of regularity represents a precondition for useful A/B testing.  The system's \textbf{multiple contexts} include the user model, the domain model, as well as an evolving model of its own organisation.  A system matching the description here would have \textbf{multiple tasks}: making useful recommendations, generating new experiments to learn about users, and improving its models.  In order to make effective decisions, a system would have to avail itself of \textbf{multiple influences} related to experimental design, psychology, and domain understanding.
+Recommender systems have to cope with a \textbf{dynamic world} of changing user preferences and a changing collection of items to recommend.  A dynamic environment which exhibits some degree of regularity represents a precondition for useful A/B testing.  The system's \textbf{multiple contexts} include the user model, the domain model, as well as an evolving model of its own organisation.  A system matching the description here would have \textbf{multiple tasks}: making useful recommendations, generating new experiments to learn about users, and improving its models.  In order to make effective decisions, a system would have to avail itself of \textbf{multiple influences} related to experimental design, psychology, and domain understanding.  Pathways for user contributions that go beyond answers to the question ``Was this recommendation helpful?'' could be one way make the relevant expertise available.
 
 \subsection{Case Study: Automated flowchart assembly} \label{sec:flowchartassembly}
 
 Here we consider the design of a contemporary experiment with the
 {\sf FloWr} flowcharting framework \cite{colton-flowcharting}.  {\sf FloWr} is a
-user interface for creating and runnable flowcharts, built of small
-modules called ProcessNodes.  In day-to-day use, {\sf FloWr} can be viewed
-as a visual programming environment.  However, it can also be invoked
-programmatically, on the Java Virtual Machine, or with any language
+tool for creating and runnable flowcharts, built of small
+modules called ProcessNodes.  For day-to-day user, {\sf FloWr} functions as a visual programming environment.  However, it can also be invoked programmatically, on the Java Virtual Machine, or with any language
 using a new web API.  The goals of {\sf FloWr} are both to be a user
 friendly tool for co-creativity, and to be an autonomous
 \emph{Flowchart Writer}.  Our experiment targets the latter scenario,
@@ -173,17 +177,10 @@ variable of another node.
 %
 Inputs and outputs have constraints.  For instance, the {\tt
   WordSenseCategoriser} node has a {\tt stringsToCategorise}
-parameter, which is seeded with an ArrayList of strings.  The node
-produces useful output only when these strings can be parsed as as a
-space-separated list of words.  The node's {\tt requiredSense}
-parameter needs to be seeded with a string that represents exactly one
-of the 57 British National Corpus Part of Speech tags.  Given
-constraints of this nature, the first challenge in automated flowchart
-assembly is to match inputs to outputs correctly, and to make sure
-that all required inputs are satisfied.
+parameter, which needs to be seeded with an ArrayList of strings.  The node produces useful output only when these strings can be parsed as as a space-separated list of words.  Similarly, the node's {\tt requiredSense} parameter needs to be seeded with a string that represents one of the 57 British National Corpus Part of Speech tags.  Given constraints of this nature, the first challenge in automated flowchart assembly is to match inputs to outputs correctly, and to make sure that all required inputs are satisfied.
 
 In our current experiment, the system's potential \textbf{triggers}
-result from trial and error with flowchart assembly.  Some valid
+result from random, but constrained, trial and error with flowchart assembly.  Some valid
 combinations of nodes will produce results, and some will not.  Due to
 the dynamically changing environment (e.g., updates to data sources
 like Twitter) some flowcharts that did not produce results earlier may
@@ -191,8 +188,7 @@ unexpectedly begin to produce results.
 %
 The system's \textbf{prepared mind} lies in a distributed knowledge
 base provided by ProcessNodes, showing the constraints on their inputs
-and outputs, and in the global history of successful and unsuccessful
-combinations.
+and outputs; and in the global history of successful and unsuccessful combinations.
 %
 The system will not try combinations that it knows cannot produce
 results, but it will try novel combinations and may retry earlier
@@ -200,35 +196,29 @@ flowchart specimens that have the chance to become viable.  Turning a
 collection of nodes for which no known working combination existed
 into a working flowchart is an occasion for a \textbf{focus shift}:
 what made this particular combination work?  Is there a pattern that
-could be exploited in the future?  However, it may be that no
+could be exploited in the future?  It may be that no
 broader pattern can be found, other than the fact that the combination works.
 %
 Successful combinations and any further inferences are stored, and
-referred to in future runs.  The \textbf{bridge} to the next set of
-results is accordingly found by informed trial and error.
+referred to in future runs.  The \textbf{bridge} to any new
+results is accordingly found by informed trial and error, building
+on previous outcomes.
 %
 In these early experiments, the basic \textbf{result} the system is
-aiming to achieve is simply to generate a new combination of nodes that can fit together and that generate non-empty output.  Subsequent versions of the system may have more detailed evaluation functions, setting a higher bar.  For example, a future version of the system could be tuned to search for flowcharts that generate poetry, as we discuss in \cite{corneli2015computational}.
+aiming to achieve is simply to generate a new combination of nodes that can fit together and that generate non-empty output.  Subsequent versions of the system may have more detailed evaluation functions, setting a higher bar.  For example, a future version of the system could be tuned to search for flowcharts that generate poetry \cite{corneli2015computational}.
 
-The \textbf{chance} of finding a novel successful combination of nodes
-is fairly low, as this depends on both the output from certain nodes,
-and in terms the combinatorial search strategy itself.  Compared to
-humans users of {\sf FloWr}, the seems exceptionally \textbf{curious}
-about finding novel combinations of nodes.  Remembering viable
-combinations and avoiding combinations that are known not to work
-presents only a modest degree of \textbf{sagacity}.  At the moment,
+The \textbf{chance} of finding a novel successful flowchart in any given sample of nodes is fairly low.  Compared to
+humans users of {\sf FloWr}, the search process is exceptionally \textbf{curious}, since tries many combinations programmatically.  However, remembering viable combinations and avoiding combinations that are known not to work offer only a modest degree of \textbf{sagacity}.  At the moment,
 the system's criterion for attributing \textbf{value} is simply that
-the combination of nodes generates non-empty output; however an
-external evaluator is not likely to judge these combinations as
+the combination of nodes generates non-empty output; an
+third-party is not likely to judge these combinations as
 useful.  The associated likelihood score is
 $\mathit{low}\times\mathit{low}\times\mathit{high}$, which
-is favourable, however, until there is a
-more discriminating way to judge value, the
-attribution of serendipity to any particular run may
-be premature.  One fairly obvious route would be to attribute
-value to explanatory heuristics, rather than generated texts;
-this would require increased sagacity on the part of the
-system as well.
+is relatively favourable.  However, until there is a
+more discriminating way to judge value, the attribution of serendipity to any particular run may be premature.  One route
+would be to attribute value to explanatory heuristics, rather
+than generated texts; this would require increased sagacity on
+the part of the system as well.
 
 The \textbf{dynamic world} the system operates in is dynamic in two
 ways: first, in the straightforward sense that some of the input
@@ -376,7 +366,16 @@ serendipity could be enhanced.
   points to long-term considerations that go beyond the unique
   serendipitous event.  How ``curious'' should these systems be?  One
   obvious criterion is that short-term value should be allowed to
-  suffer as long as expected value is still higher.
+  suffer as long as expected value is still higher.  The symmetry
+  between serendipity on the user side, and serendipity on the system
+  side might be exploited.  Current systems seek to induce serendipity
+  by making use of implicit connections between clusters, resulting in
+  an update to the user's conception of the item space.  As in the
+  example of {\sf SerenA} discussed in Section \ref{sec:related}, in
+  current systems the user shares a significant part of the workload
+  when forming the bridge, even when triggered by the system.  Users
+  might be given the explicit task of triggering serendipity on the
+  system-side, as well.
 
 \item The flowchart assembly process would need more stringent, and
   more meaningful, criteria for value before third-party observers
