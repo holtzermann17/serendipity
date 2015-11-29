@@ -21,11 +21,14 @@ to analyse three examples of potentially serendipitous behaviour:
 dynamic investigation problems, model generation, and poetry
 flowcharts.  Using our updated criteria, we discuss two new examples
 below, and revisit poetry flowcharts in our third example, reporting
-on recent work.  As Campbell \citeyear{campbell2005serendipity}
-writes, ``serendipity presupposes a smart mind,'' and these examples
-suggest potential directions for further work in computational
-intelligence.
-
+on recent work and framing the next steps.  The first example reviews
+an existing system that we deem to be not particularly serendipitous,
+which helps to show that our definition is not overly inclusive.  The
+second example outlines a ``grand challenge''.  The third example is
+also prospective, and combines design with prototyping.  As Campbell
+\citeyear{campbell2005serendipity} writes, ``serendipity presupposes a
+smart mind,'' and each of these examples suggest potential directions
+for further work in computational intelligence.
 
 %% If the system learns an $N$th fact or
 %% If applied to a system which could be described as minimally
@@ -54,7 +57,7 @@ intelligence.
 %% However, the current generation of text completion tools are known
 %% more for infelicities than for exceptional wit.
 
-\subsection{Case Study: Evaluation of an existing system} \label{sec:evomusic}
+\subsection{Case Study: Evaluation of an existing evolutionary computing system} \label{sec:evomusic}
 
 \subsubsection{System description}
 
@@ -83,19 +86,19 @@ of Improvisors, through crossover and mutation operations.
 The {\sf GAmprovising} system can be said to have a \textbf{prepared
   mind} through its background knowledge of what musical concepts to
 embed in the Improvisors and the evolutionary abilities to evolve
-Improvisors. A potential \textbf{serendipity trigger} comes from the
-combination of previous mutation and crossover operations with current
-user input.  To be clear, in the current version of the system a human
-evaluator is largely responsible for the system's \textbf{focus
-  shift}, since the user tells the system which improvisations are
-most valuable.  \citeA{jordanous10} notes that this ``introduces a
-fitness bottleneck.''  In future versions of the system, autonomous
-evaluation could potentially take over for the human evaluator.  Once
-the interesting samples have been collected (from whatever source), a
-\textbf{bridge} is then built to new results through the creation of
-new Improvisors.  The \textbf{results} are the various musical
-improvisations produced by the fittest Improvisors (as well as,
-perhaps, the parameters that have been considered fittest).
+Improvisors.  At any given step, the system's \textbf{trigger}
+comprises the combination of previous mutation and crossover
+operations, and current user input.  To be clear, in the current
+version of the system a human evaluator is largely responsible for the
+system's \textbf{focus shift}, since the user tells the system which
+improvisations are most valuable.  \citeA{jordanous10} notes that this
+``introduces a fitness bottleneck.''  In future versions of the
+system, autonomous evaluation could potentially take over for the
+human evaluator.  Once the interesting samples have been collected
+(from whatever source), a \textbf{bridge} is then built to new results
+through the creation of new Improvisors.  The \textbf{results} are the
+various musical improvisations produced by the fittest Improvisors (as
+well as, perhaps, the parameters that have been considered fittest).
 
 %% The likelihood of serendipitous evolution is greatly enhanced by the
 %% use of random mutation and crossover operations within the genetic
@@ -129,14 +132,14 @@ overall potential for serendipity.  Following Step 2, Part B of the
 SPECS procedure, we find a likelihood measure of
 $\mathit{high}\times\mathit{moderate}\times\mathit{moderate}$, with
 outcomes of moderate value, so that the system as a whole is ``not
-very serendipitous.''  Evaluating individual threads as members of a
-the population of all threads would yield more varied results.
-However, in the version of the system under discussion, individual
-threads are effectively equivalent regarding the features of chance,
-curiosity, and sagacity.  The only thing to distinguish them from one
-another is their value.  Referring to the moderate-at-best likelihood
-measure, even those threads which maximise value cannot be regarded as
-particularly serendipitous.
+very serendipitous.''  Note that evaluating individual threads as
+members of the population of all threads would yield more varied
+results.  However, in the version of the system under discussion,
+individual threads are effectively equivalent regarding the features
+of chance, curiosity, and sagacity.  The only thing to distinguish
+them from one another is their value.  Referring to the
+moderate-at-best likelihood measure, even those threads which maximise
+value cannot be regarded as particularly serendipitous.
 
 \subsubsection{Qualitative assessment}
 
@@ -153,7 +156,7 @@ design of the fitness function, and at run time with setting for
 musical parameters.  Greater dynamism in future versions of the system
 would be likely to increase its potential for serendipity.
 
-\subsection{Case Study: Envisioning the future of AI} \label{sec:nextgenrec}
+\subsection{Case Study: Envisioning artificially intelligent recommender systems} \label{sec:nextgenrec}
 
 \subsubsection{System description}
 
@@ -231,24 +234,35 @@ objectives.
 In this case, we compute a likelihood measure of
 $\mathit{low}\times\mathit{variable}\times\mathit{low}$, with outcomes
 of potentially high value, so that such a system is ``potentially
-highly serendipitous.''
+highly serendipitous.''  Realising such a system should be understood
+as a computational grand challenge.  If such a system was ever
+realised, to maintain high value, continued adaptations would be
+required.  If there was a population of super-intelligent systems
+along the lines envisioned here, the likelihood measures would have to
+be rescaled accordingly.
 
 \subsubsection{Qualitative assessment}
 
 Recommender systems have to cope with a \textbf{dynamic world} of changing user preferences and a changing collection of items to recommend.  A dynamic environment which exhibits some degree of regularity represents a precondition for useful A/B testing.  The system's \textbf{multiple contexts} include the user model, the domain model, as well as an evolving model of its own organisation.  A system matching the description here would have \textbf{multiple tasks}: making useful recommendations, generating new experiments to learn about users, and improving its models.  In order to make effective decisions, a system would have to avail itself of \textbf{multiple influences} related to experimental design, psychology, and domain understanding.  Pathways for user feedback that go beyond answers to the question ``Was this recommendation helpful?'' could be one way make the relevant expertise available.
 
-\subsection{Case Study: Designing an experiment} \label{sec:flowchartassembly}
+\subsection{Case Study: Iterative design in automated programming} \label{sec:flowchartassembly}
 
 \subsubsection{System description}
 
 Here we consider the design of a contemporary experiment with the
-{\sf FloWr} flowcharting framework \cite{colton-flowcharting}.  {\sf FloWr} is a
-tool for creating and runnable flowcharts, built of small
-modules called ProcessNodes.  For day-to-day user, {\sf FloWr} functions as a visual programming environment.  However, it can also be invoked programmatically, on the Java Virtual Machine, or with any language
-using a new web API.  The goals of {\sf FloWr} are both to be a user
-friendly tool for co-creativity, and to be an autonomous
-\emph{Flowchart Writer}.  Our experiment targets the latter scenario,
-assembling available ProcessNodes into flowcharts automatically.  This can be viewed as a simple example of automated programming.
+{\sf FloWr} flowcharting framework \cite{colton-flowcharting}.  
+%
+{\sf FloWr} is a tool for creating and running computational
+flowcharts, built of small modules called ProcessNodes.
+%
+For day-to-day user, {\sf FloWr} functions as a visual programming
+environment.  However, it can also be invoked programmatically, on the
+Java Virtual Machine, or with any language using a new web API.  The
+goals of {\sf FloWr} are both to be a user friendly tool for
+co-creativity, and to be an autonomous \emph{Flowchart Writer}.  Our
+experiment targets the latter scenario, assembling available
+ProcessNodes into flowcharts automatically.  This can be viewed as a
+simple example of automated programming.
 
 In the backend, {\sf FloWr}'s flowcharts are stored as scripts.  These
 detail the names of the involved nodes, together with their (input)
