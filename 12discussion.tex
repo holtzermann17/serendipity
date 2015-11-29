@@ -1,5 +1,4 @@
-
-\section{Discussion} \label{sec:discussion}
+\section{Discussion and Related Work} \label{sec:discussion}
 
 In Section \ref{sec:computational-serendipity}, we applied our model
 to evaluate the serendipity of an evolutionary music improvisation
@@ -10,14 +9,17 @@ for serendipity in existing systems, either incrementally or more
 transformatively.  Our model outlines a path towards the development
 of systems that can observe events that would otherwise not be
 observed, take an interest in them, and transform the observations
-into artefacts with lasting value.  In Section \ref{sec:related}, we
-showed how this model gives allows for me precise thinking than other
-existing work touching on this area.  We will now discuss implications
-from our findings for future research.
+into artefacts with lasting value.
+
+In this section, we will show how the model allows for more precise
+thinking than other existing work touching on this area.  We then
+discuss implications from our findings for future research.
 
 %\input{12a-recommendations}
 %\input{12b-future-work-intro}
 %\input{12c-future-work-conclusion}
+
+\input{11related}
 
 \subsection{Challenges for future research} \label{sec:recommendations}
 
@@ -113,59 +115,16 @@ have noticed that you keep using a certain solution to a commonly
 occurring problem.  You would like to share your experience with
 others.''
 \end{quote}
-There are many ways to describe a solution.
-Meszaros and Doble remark,
-\begin{quote}
-\noindent ``What sets patterns apart is their ability to explain the
-rationale for using the solution (the `why') in addition to describing
-the solution (the `how').''
-\end{quote}
-Regarding the criteria that pattern writers seek to address: 
-\begin{quote}
-\noindent ``The most appropriate solution to a problem in a context is
-the one that best resolves the highest priority forces as determined
-by the particular context.''
-\end{quote}
 
-%
-%% Their article describes a number of criteria relevant to writing
-%% good design patterns, e.g. \emph{Clear target audience},
-%% \emph{Visible forces}, and \emph{Relationship to other patterns}.
-%
-Applying the solution achieves this resolution of forces, and a design
-pattern shows how this works.  The design pattern itself achieves
-something further: it encapsulates knowledge in a brief, shareable
-form.  Tracing
-the steps involved, we see that the creation of a new design pattern
-is always somewhat serendipitous (Figure \ref{fig:pattern-schematic};
-compare Figure \ref{fig:1b}).  
-
-To van Andel's assertion that ``The very moment I can plan or
-programme `serendipity' it cannot be called serendipity anymore,'' we
-reply that we can certainly describe patterns -- and programs -- with
-built-in indeterminacy.  Moreover, we can foster circumstances that
-may make unexpected happy outcomes more likely, by developing systems
-that increasingly address the challenges outlined in Section
-\ref{sec:recommendations}.  Such systems would have a chance of encountering
-unexpected stimuli, becoming curious about them, sagaciously pursuing enquiry
-together with others, and assessing the value of any outcomes.  
-%
-Figure \ref{fig:va-pattern-figure} shows one approach to
-planning for serendipity, based on rewriting one of van Andel's
-serendipity patterns using the standard design pattern template.  In
-future work, we intend to build a more complete serendipity pattern
-language -- and put it to work within autonomous programming systems.
-
-% Is ``having a stretch goal'' an example of a serendipity pattern?  I think so!
-
-\begin{figure}
+\begin{figure}[!t]
 \vspace{.3cm}
 \input{pattern-schematic-tikz.tex}
 \vspace{-.3cm}
 \caption{The components of design patterns mapped to our process schematic\label{fig:pattern-schematic}}
+\vspace{.5cm}
 \end{figure}
 
-\begin{figure}[!h]
+\begin{figure}[!t]
 \setlist[description]{font=\normalfont\itshape}
 {\normalsize
 \begin{mdframed}
@@ -200,4 +159,50 @@ Open discussion can
 }
 \caption{Standard design pattern template applied to van Andel's \em{Successful error}\label{fig:va-pattern-figure}}
 \end{figure}
+
+\noindent There are many ways to describe a solution. Meszaros and Doble remark,
+\begin{quote}
+\noindent ``What sets patterns apart is their ability to explain the
+rationale for using the solution (the `why') in addition to describing
+the solution (the `how').''
+\end{quote}
+Regarding the criteria that pattern writers seek to address: 
+\begin{quote}
+\noindent ``The most appropriate solution to a problem in a context is
+the one that best resolves the highest priority forces as determined
+by the particular context.''
+\end{quote}
+
+%
+%% Their article describes a number of criteria relevant to writing
+%% good design patterns, e.g. \emph{Clear target audience},
+%% \emph{Visible forces}, and \emph{Relationship to other patterns}.
+%
+Applying the solution achieves this resolution of forces in the
+application domain.
+The design pattern itself achieves something further: it encapsulates
+knowledge in a brief, shareable form.  Tracing the steps involved, we
+see that the creation of a new design pattern is always somewhat
+serendipitous (Figure \ref{fig:pattern-schematic}; compare Figure
+\ref{fig:1b}).
+
+To van Andel's assertion that ``The very moment I can plan or
+programme `serendipity' it cannot be called serendipity anymore,'' we
+reply that we can certainly describe patterns -- and programs -- with
+built-in indeterminacy.  Moreover, we can foster circumstances that
+may make unexpected happy outcomes more likely, by developing systems
+that increasingly address the challenges outlined in Section
+\ref{sec:recommendations}.  Such systems would have a chance of encountering
+unexpected stimuli, becoming curious about them, sagaciously pursuing enquiry
+together with others, and assessing the value of any outcomes.  
+%
+Figure \ref{fig:va-pattern-figure} shows one approach to
+planning for serendipity, based on rewriting one of van Andel's
+serendipity patterns using the standard design pattern template.  In
+future work, we intend to build a more complete serendipity pattern
+language -- and put it to work within autonomous programming systems.
+
+% Is ``having a stretch goal'' an example of a serendipity pattern?  I think so!
+
+
 
