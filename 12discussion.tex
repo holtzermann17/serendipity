@@ -11,15 +11,214 @@ of systems that can observe events that would otherwise not be
 observed, take an interest in them, and transform the observations
 into artefacts with lasting value.
 
-In this section, we will show how the model allows for more precise
-thinking than other existing work touching on this area.  We then
-discuss implications from our findings for future research.
+%% In this section, we will show how the model allows for more precise
+%% thinking than other existing work touching on this area.  We then
+%% discuss implications from our findings for future research.
 
 %\input{12a-recommendations}
 %\input{12b-future-work-intro}
 %\input{12c-future-work-conclusion}
 
-\input{11related}
+%\input{11related}
+
+\subsection{Related work} \label{sec:related}
+
+Paul Andr{\'e} et al.~\citeyear{andre2009discovery} previously proposed a
+two-part model of serendipity encompassing ``the chance encountering
+of information, and the sagacity to derive insight from the
+encounter.''  The first phase has been automated more frequently --
+but these authors suggest that computational systems should be
+developed that support both aspects.  They specifically suggest to
+pursue this work by developing systems with better representational
+features: \emph{domain expertise} and a \emph{common language model}.
+
+These features seem to exemplify aspects of the \emph{prepared mind}.
+However, the \emph{bridge} is a distinct step in the process that
+preparation can support, but that it does not always fully determine.
+Domain understanding is not always a precondition; it can be emergent.
+For instance, persons involved in a dialogue may understand each other
+quite poorly, while nevertheless finding the conversation interesting
+and ultimately rewarding.  Misunderstandings can present learning
+opportunities, and can develop \emph{new} shared language. %%  Various social strategies, ranging from Writers
+%% Workshops, to open source software, to community-based approaches in
+%% psychological counselling have been developed to exploit similar
+%% emergent effects and to develop \emph{new} shared language
+%% \cite{gabriel2002writer,seikkula2014open}.
+Inspired by social systems that capitalise on this effect, we have investigated the feasibility
+of building multi-agent systems that learn by sharing and discussing
+partial understandings \cite{corneli2015computational,corneli2015feedback}.
+
+As we touched on in Section \ref{sec:nextgenrec}, serendipity in the
+field of recommendation systems is understood to imply that the system
+suggests \emph{unexpected} items, which the user considers to be
+\emph{useful}, \emph{interesting}, \emph{attractive} or
+\emph{relevant} \cite{foster2003serendipity,Toms2000}.
+\citeA{Herlocker2004} and \citeA{McNee2006} view serendipity to be
+important component of recommendation quality, alongside accuracy and
+diversity.
+% \cite{Herlocker2004} \cite{Lu2012},\cite{Ge2010}.  
+Definitions differ as to the requirement of \emph{novelty};
+\citeA{Adamopoulos2011}, for example, describe systems that suggest
+items that may already be known, but which are still unexpected in the
+current context.  While standardised measures such as the $F_1$-score
+or the (R)MSE are used to determine the \emph{accuracy} of a
+recommendation (i.e.~whether the recommended item is very close to
+what the user is already known to prefer), as yet there is no common
+agreement on a measure for serendipity, although there are several
+proposals
+\cite{Murakami2008,Adamopoulos2011,McCay-Peet2011,iaquinta2010can}.
+In terms of the framework from Section \ref{sec:by-example}, these
+systems focus mainly on generating a \emph{trigger} to be processed
+by the user, and prepare the ground for serendipitous \emph{discovery}.
+Intelligent modelling approaches could potentially bring additional aspects
+of serendipity into play in future systems, as  discussed in Section
+\ref{sec:nextgenrec}.
+
+Recent work has examined the related topics of \emph{curiosity}
+\cite{wu2013curiosity} and \emph{surprise} \cite{grace2014using} in
+computing.  The latter example seeks to ``adopt methods from the field of
+computational creativity [$\ldots$] to the generation of scientific
+hypotheses.''  This provides a useful example of an effort focused on
+computational \emph{invention}.
+
+As we indicated earlier, creativity and serendipity are often
+discussed in related ways.  A further terminological clarification is
+warranted.  The word \emph{creative} can be used to describe a
+``creative product'', a ``creative person'', a ``creative process''
+and even the broader ``creative milieu.''  Computational creativity
+must take acount all of these aspects \cite{jordanous2015four}.  In
+contrast, the model we have presented focuses only on serendipity as
+an attribute of a particular kind of process.  Most often, we speak of
+a system's \emph{potential} for serendipity.  In the current work, we
+do not use the term to describe an artefactual property (like novelty
+or usefulness), or a system trait (like skill).
+
+Figueiredo and Campos \citeyear{Figueiredo2001} describe serendipitous ``moves'' from one
+problem to another, which transform a problem that cannot be solved
+into one that can.  
+However, it is important to notice that progress with problems does not always mean transforming a
+problem that cannot be solved into one that can.  Progress may also
+apply to growth in the ability to \emph{posit} problems.  In keeping
+track of progress, it would be useful for system designers to record
+(or get their systems to record) what problem a given system solves,
+and the degree to which the computer was responsible for coming up
+with this problem.
+%
+As Pease et al. \citeyearpar[p. 69]{pease2013discussion} remark,
+anomaly detection and outlier analysis are part of the standard
+machine learning toolkit -- but recognising \emph{new} patterns and
+defining \emph{new} problems is more ambitious (compare von Foerster's
+\citeyearpar{von2003cybernetics} second-order cybernetics).
+Establishing complex analogies between evolving problems and solutions
+is one of the key strategies used by teams of human designers
+\cite{Analogical-problem-evolution-DCC}.  In computational research to
+date, the creation of new patterns and higher-order analogies is
+typically restricted to a simple and fairly abstract ``microdomain''
+\cite{hofstadter1994copycat,DBLP:journals/jetai/Marshall06}.
+%
+Turning over increased responsibility to the machine will be important
+if we want to foster the possibility of genuine surprises.
+
+The {\sf SerenA} system developed by Deborah Maxwell et
+al.~\citeyear{maxwell2012designing} offers a case study in some
+of these concepts.  This system is designed to support
+serendipitous discovery for its (human) users
+\cite{forth2013serena}.  The authors rely on a process-based
+model of serendipity \cite{Makri2012,Makri2012a} that is derived
+from user studies which draw on interviews with 28 researchers.
+Study participants  were asked to look for instances of
+serendipity from both
+their personal and professional lives.  The research aims to
+support the formation of bridging connections from an unexpected
+encounter to a previously unanticipated but valuable outcome.
+The theory focuses on the acts of reflection that support both
+the creation of a bridge, and the estimation of the potential
+value of the result.
+%
+While this description touches on all of the features of our model, {\sf
+  SerenA} largely matches the description offered by Andr{\'e} et
+al.~\citeyear{andre2009discovery} of discovery-focused systems, in which
+the user experiences an ``aha'' moment and takes the
+creative steps to realise the result.  {\sf SerenA}'s primary computational method is to
+search outside of the normal search parameters in order to engineer
+potentially serendipitous (or at least pseudo-serendipitous)
+encounters.
+
+In sum, computer-supported serendipity has been well-studied, but
+purely computational serendipity has been much more constrained.
+This may partly be
+due to the absence of clear criteria for serendipity, which we address
+in the current paper.  Another issue is the widespread reliance on microdomains.  However, there are other underlying factors.
+Existing standards for assessing computational creativity have
+historically focused on product evaluations.
+\citeA{ritchie07} uses metrics that depend on properties that a reasonably sophisticated judge can ascribe to generated artifacts:  ``typicality'', i.e., the extent to which an artifact belongs to a certain genre, and ``quality'' as atomic measures for more complex metrics, including ``novelty.''  Most often, the judge is assumed to be a human.
+%
+In recent years, artefact-centred evaluations are increasingly
+complemented by methods that consider process
+\cite{colton2008creativity} or a combination of product and process
+\cite{jordanous:12,colton-assessingprogress}.  However, processes that
+arise outside of the control of the system (and ultimately, outside of
+the control of the researcher) may still be deemed out of scope for
+computational creativity \emph{per se}.  Unexpected external effects
+may even be seen to ``invalidate'' research into computational
+creativity.
+
+We would argue that the concept of serendipity brings autonomous
+creative systems into clearer focus: not as an abstract notion of
+creativity \emph{sui generis}, but creativity in
+interaction with the world.  This often requires a different mindset,
+and a different approach to system building and evaluation.
+%% \begin{quote}
+%% ``\emph{Tinkering is a process of serendipity-seeking that does not
+%%     just tolerate uncertainty and ambiguity, it requires it.  When
+%%     conditions for it are right, the result is a snowballing effect
+%%     where pleasant surprises lead to more pleasant surprises.}''
+%%   \cite[``Tinkering versus Goals'']{rao2015breaking}
+%% %% What makes this a problem-solving mechanism is diversity of individual perspectives coupled with the law of large numbers (the statistical idea that rare events can become highly probable if there are enough trials going on). If an increasing number of highly diverse individuals operate this way, the chances of any given problem getting solved via a serendipitous new idea slowly rises. This is the luck of networks.
+
+%% %% Serendipitous solutions are not just cheaper than goal-directed ones. They are typically more creative and elegant, and require much less conflict. Sometimes they are so creative, the fact that they even solve a particular problem becomes hard to recognize. For example, telecommuting and video-conferencing do more to “solve” the problem of fossil-fuel dependence than many alternative energy technologies, but are usually understood as technologies for flex-work rather than energy savings.
+
+%% %% Ideas born of tinkering are not targeted solutions aimed at specific problems, such as “climate change” or “save the middle class,” so they can be applied more broadly. As a result, not only do current problems get solved in unexpected ways, but new value is created through surplus and spillover. The clearest early sign of such serendipity at work is unexpectedly rapid growth in the adoption of a new capability. This indicates that it is being used in many unanticipated ways, solving both seen and unseen problems, by both design and “luck”.
+%% \end{quote}
+%% If we control the system, at bottom the best we can hope for is
+%% ``pleasant unsurprises.''  At the same time, understanding serendipity
+%% may help build autonomous systems that produce fewer ``unpleasant surprises,'' a
+%% serious contemporary concern
+%% \cite{philosophy-machine-morality,machine-ethics-status}.
+
+
+Thus, serendipity is particularly relevant for thinking about
+\emph{autonomous systems}.  There is a certain amount of apprehension
+and concern in circulation around the idea of autonomous systems.
+\citeA{machine-ethics-status} suggest that these concerns ultimately
+come back to the question: will these systems behave in an ethical
+manner?  The more we constrain the system's operation, the less chance
+there is of it ``running off the rails.''  However, constraints come
+with a serious downside.  Highly constained systems will not be able
+to \emph{learn} anything very new while they operate.  If this means
+that the system's ethical judgement is fixed once and for all, then we
+cannot trust it to behave ethically when circumstances change
+\cite{powers2005deontological}.  Highly constrained systems are
+unlikely to be convincingly \emph{social}, inasmuch as the constraints
+rule out emergent behaviour in advance.  Systems that only act
+normatively (that is, pursuing purposes for which they have been
+pre-programmed) serve as proxies for their creator's judgements, and
+do not make \emph{evaluations} that are in any way ``their own.''
+Adapting qualitative artefact-oriented measures (like Ritchie's
+\citeyearpar{ritchie07}) may be necessary in order to build systems
+that are capable of carrying out the necessary formative evaluation
+steps that effect a focus shift -- as well as a final summative
+evaluation of the result.  We return to this constellation of issues
+related to system autonomy below.
+
+%
+% Ritchie initially bases his metrics on human judgment, but points out different ways to compute them automatically, arising from practical study.  For instance, quality could be computed using a fitness score of the assessed artifacts, which should highly correlate with human-perceived quality.  The typicality of produced artifacts was calculated as their similarity to the artifacts inspiring the generative process.  Nevertheless, this requires a good distant metric.  Both fitness functions and distance metrics are subject to an ongoing debate in computational aesthetics.
+
+%% Although the notion of serendipity that we have developed is
+%% process-focused, value is a crucial dimension of serendipity, and
+%% evaluations of an outcome (often an artefact) continue to be relevant.
+%% Furthermore, 
+
 
 \subsection{Challenges for future research} \label{sec:recommendations}
 
@@ -170,10 +369,9 @@ language -- and put it to work within autonomous programming systems.
 \vspace{2mm}
 \textbf{\emph{Successful error}}~
 \begin{description}[leftmargin=0\parindent,labelindent=0em,itemsep=10pt]
-\item[{Context.}] You run an organisation with different
-  divisions and contributors with {\em varied expertise}.  People routinely
-  discover interesting things that no one knows how to {\em
-    turn into a product}.
+\item[{Context.}] You run an organisation with different divisions and
+  contributors with varied expertise.  People routinely discover
+  interesting things that no one knows how to turn into a product.
 \item[{Problem.}]  How can you get the most value from this sort of discovery?
 \item[{Solution.}] Allow people to work on pet projects, and encourage
   interaction between people in different divisions.  Set aside time
