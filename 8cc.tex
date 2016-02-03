@@ -20,16 +20,18 @@ the machine and its software.
 to analyse three examples of potentially serendipitous behaviour:
 dynamic investigation problems, model generation, and poetry
 flowcharts.  Using our updated criteria, we discuss two new examples
-below, and revisit poetry flowcharts in our third example, reporting
-on recent work and framing the next steps.  The first example reviews
-an existing system that we deem to be not particularly serendipitous:
-this helps to show that our definition is not overly inclusive.  The
-second example outlines a ``grand challenge''.  The third example
-combines retrospective and prospective positions, as it integrates
-design and prototyping.  As Campbell
-\citeyear{campbell2005serendipity} writes, ``serendipity presupposes a
-smart mind,'' and each of these examples suggest potential directions
-for further work in computational intelligence.
+below, and revisit poetry flowcharts, reporting on recent work and
+outlining the next steps.  The three case studies respectively apply
+the criteria to \emph{evaluate} of an existing system, \emph{design} a
+new experiment, and \emph{frame} a ``grand challenge.''  In the first
+case study, the system we evaluate turns out not to be particularly
+serendipitous according to our criteria.  This helps to show that our
+definition is not overly inclusive.  The second example combines
+retrospective and prospective positions, as it integrates design and
+prototyping.  As Campbell \citeyear{campbell2005serendipity} writes,
+``serendipity presupposes a smart mind,'' and each of these examples
+suggest potential directions for further work in computational
+intelligence.
 
 %% If the system learns an $N$th fact or
 %% If applied to a system which could be described as minimally
@@ -157,94 +159,6 @@ design of the fitness function, and at run time with setting for
 musical parameters.  Greater dynamism in future versions of the system
 would be likely to increase its potential for serendipity.
 
-\subsection{Case Study: Envisioning artificially intelligent recommender systems} \label{sec:nextgenrec}
-
-\subsubsection{System description}
-
-% Stress distinction between serendipity on the system- vs. serendipity on the user's side.
-Recommender systems are one of the primary contexts in computing where
-serendipity is currently discussed.  In the context of the current
-recommender system literature, `serendipity' means suggesting items to
-a user that will be likely to introduce new ideas that are unexpected,
-but thar are close to what the user is already interested in.  These
-systems mostly focus on supporting \emph{discovery} for the user --
-but some architectures also seem to take account of \emph{invention}
-of new methods for making recommendations, e.g.~by using Bayesian
-methods, as surveyed in \citeNP{shengbo-guo-thesis}.  Current
-recommendation techniques that aim to stimulate serendipitous
-discovery associate less popular items with high unexpectedness
-\cite{Herlocker2004,Lu2012}, and use clustering to discover latent
-structures in the search space, e.g., partitioning users into clusters
-of common interests, or clustering users and domain objects
-\cite{Kamahara2005,Onuma2009,Zhang2011}.  But even in the Bayesian
-case, the system has limited autonomy.  A case for giving more
-autonomy to recommender systems can be made, especially in complex and
-rapidly evolving domains where hand-tuning is cost-intensive or
-infeasible.  This suggests the need to distinguish serendipity that
-the recommender induces for the user from serendipity that user
-behaviour induces in the system.
-
-\subsubsection{Application of criteria}
-
-With this challenge in mind, we ask how serendipity could be achieved
-within a next-generation recommender system. In terms of our model,
-current systems have at least the makings of a \textbf{prepared mind},
-comprising both a user- and a domain model, both of which can be
-updated dynamically.  User behaviour (e.g.~following certain
-recommendations) or changes to the domain (e.g.~adding a new product)
-may serve as a potential \textbf{trigger} that could ultimately cause
-the system to discover a new way to make recommendations in the
-future.  In the current generation of systems that seek to induce
-serendipity for the user, the system aims to induce a focus shift by
-presenting recommendations that are neither too close, nor too far
-away from what user already knows.  Here the flow of information is
-the other way around.  Note, however, that it is unexpected pattern of
-behaviour in aggregate, rather than a one-off event, that is likely to
-provide grounds for the system's \textbf{focus shift}.  A
-\textbf{bridge} to a new kind of recommendation could be created by
-looking at exceptional patterns as they appear over time.  For
-instance, new elements may have been introduced into the domain that
-do not cluster well, or a user may suddenly indicate a strong
-preference towards an item that does not fit their preference history.
-Clusters may appear in the user model that do not have obvious
-connections between them.  A new recommendation strategy that
-addresses the organisation's goals would be a valuable
-\textbf{result}.
-
-The system has only imperfect knowledge of user preferences and
-interests.  At least relative to current recommender systems, the
-\textbf{chance} of noticing some particular pattern in user behaviour
-seems quite low.  The urge to make recommendations specifically for
-the purposes of finding out more about users could be described as
-\textbf{curiosity}.  Such recommendations may work to the detriment of
-user satisfaction -- and business metrics -- over the short term.  In
-principle, the system's curiosity could be set as a parameter,
-depending on how much coherence is permitted to suffer for the sake of
-gaining new knowledge.  Measures of \textbf{sagacity} would relate to
-the system's ability to develop useful experiments and draw sensible
-inferences from user behaviour.  For example, the system would have to
-select the best time to initiate an A/B test.  A significant amount of
-programming would have to be invested in order to make this sort of
-judgement autonomously, and currently such systems are beyond rare.
-The \textbf{value} of recommendation strategies can be measured in
-terms of traditional business metrics or other organisational
-objectives.
-
-\subsubsection{Ruling}
-
-In this case, we compute a likelihood measure of
-$\mathit{low}\times\mathit{variable}\times\mathit{low}$, with outcomes
-of potentially high value, so that such a system is ``potentially
-highly serendipitous.''  Realising such a system should be understood
-as a computational grand challenge.  If such a system was ever
-realised, to maintain high value, continued adaptations would be
-required.  If there was a population of super-intelligent systems
-along the lines envisioned here, the likelihood measures would have to
-be rescaled accordingly.
-
-\subsubsection{Qualitative assessment}
-
-Recommender systems have to cope with a \textbf{dynamic world} of changing user preferences and a changing collection of items to recommend.  A dynamic environment which exhibits some degree of regularity represents a precondition for useful A/B testing.  The system's \textbf{multiple contexts} include the user model, the domain model, as well as an evolving model of its own organisation.  A system matching the description here would have \textbf{multiple tasks}: making useful recommendations, generating new experiments to learn about users, and improving its models.  In order to make effective decisions, a system would have to avail itself of \textbf{multiple influences} related to experimental design, psychology, and domain understanding.  Pathways for user feedback that go beyond answers to the question ``Was this recommendation helpful?'' could be one way make the relevant expertise available.
 
 \subsection{Case Study: Iterative design in automated programming} \label{sec:flowchartassembly}
 
@@ -358,18 +272,112 @@ would add to the system's sagacity.  Heuristics for evaluating output
 are another place where domain-specific knowledge can be brought to
 bear.
 
+\subsection{Case Study: Envisioning artificially intelligent recommender systems} \label{sec:nextgenrec}
+
+\subsubsection{System description}
+
+% Stress distinction between serendipity on the system- vs. serendipity on the user's side.
+Recommender systems are one of the primary contexts in computing where
+serendipity is currently discussed.  In the context of the current
+recommender system literature, `serendipity' means suggesting items to
+a user that will be likely to introduce new ideas that are unexpected,
+but thar are close to what the user is already interested in.  These
+systems mostly focus on supporting \emph{discovery} for the user --
+but some architectures also seem to take account of \emph{invention}
+of new methods for making recommendations, e.g.~by using Bayesian
+methods, as surveyed in \citeNP{shengbo-guo-thesis}.  Current
+recommendation techniques that aim to stimulate serendipitous
+discovery associate less popular items with high unexpectedness
+\cite{Herlocker2004,Lu2012}, and use clustering to discover latent
+structures in the search space, e.g., partitioning users into clusters
+of common interests, or clustering users and domain objects
+\cite{Kamahara2005,Onuma2009,Zhang2011}.  But even in the Bayesian
+case, the system has limited autonomy.  A case for giving more
+autonomy to recommender systems can be made, especially in complex and
+rapidly evolving domains where hand-tuning is cost-intensive or
+infeasible.  This suggests the need to distinguish serendipity that
+the recommender induces for the user from serendipity that user
+behaviour induces in the system.
+
+\subsubsection{Application of criteria}
+
+With this challenge in mind, we ask how serendipity could be achieved
+within a next-generation recommender system. In terms of our model,
+current systems have at least the makings of a \textbf{prepared mind},
+comprising both a user- and a domain model, both of which can be
+updated dynamically.  User behaviour (e.g.~following certain
+recommendations) or changes to the domain (e.g.~adding a new product)
+may serve as a potential \textbf{trigger} that could ultimately cause
+the system to discover a new way to make recommendations in the
+future.  In the current generation of systems that seek to induce
+serendipity for the user, the system aims to induce a focus shift by
+presenting recommendations that are neither too close, nor too far
+away from what user already knows.  Here the flow of information is
+the other way around.  Note, however, that it is unexpected pattern of
+behaviour in aggregate, rather than a one-off event, that is likely to
+provide grounds for the system's \textbf{focus shift}.  A
+\textbf{bridge} to a new kind of recommendation could be created by
+looking at exceptional patterns as they appear over time.  For
+instance, new elements may have been introduced into the domain that
+do not cluster well, or a user may suddenly indicate a strong
+preference towards an item that does not fit their preference history.
+Clusters may appear in the user model that do not have obvious
+connections between them.  A new recommendation strategy that
+addresses the organisation's goals would be a valuable
+\textbf{result}.
+
+The system has only imperfect knowledge of user preferences and
+interests.  At least relative to current recommender systems, the
+\textbf{chance} of noticing some particular pattern in user behaviour
+seems quite low.  The urge to make recommendations specifically for
+the purposes of finding out more about users could be described as
+\textbf{curiosity}.  Such recommendations may work to the detriment of
+user satisfaction -- and business metrics -- over the short term.  In
+principle, the system's curiosity could be set as a parameter,
+depending on how much coherence is permitted to suffer for the sake of
+gaining new knowledge.  Measures of \textbf{sagacity} would relate to
+the system's ability to develop useful experiments and draw sensible
+inferences from user behaviour.  For example, the system would have to
+select the best time to initiate an A/B test.  A significant amount of
+programming would have to be invested in order to make this sort of
+judgement autonomously, and currently such systems are beyond rare.
+The \textbf{value} of recommendation strategies can be measured in
+terms of traditional business metrics or other organisational
+objectives.
+
+\subsubsection{Ruling}
+
+In this case, we compute a likelihood measure of
+$\mathit{low}\times\mathit{variable}\times\mathit{low}$, with outcomes
+of potentially high value, so that such a system is ``potentially
+highly serendipitous.''  Realising such a system should be understood
+as a computational grand challenge.  If such a system was ever
+realised, to maintain high value, continued adaptations would be
+required.  If there was a population of super-intelligent systems
+along the lines envisioned here, the likelihood measures would have to
+be rescaled accordingly.
+
+\subsubsection{Qualitative assessment}
+
+Recommender systems have to cope with a \textbf{dynamic world} of changing user preferences and a changing collection of items to recommend.  A dynamic environment which exhibits some degree of regularity represents a precondition for useful A/B testing.  The system's \textbf{multiple contexts} include the user model, the domain model, as well as an evolving model of its own organisation.  A system matching the description here would have \textbf{multiple tasks}: making useful recommendations, generating new experiments to learn about users, and improving its models.  In order to make effective decisions, a system would have to avail itself of \textbf{multiple influences} related to experimental design, psychology, and domain understanding.  Pathways for user feedback that go beyond answers to the question ``Was this recommendation helpful?'' could be one way make the relevant expertise available.
+
+
 \afterpage{\clearpage}
 \begin{table}[p]
 {\centering \renewcommand{\arraystretch}{1.5}
 \scriptsize
 \begin{tabular}{p{1.5in}@{\hspace{.1in}}p{1.5in}@{\hspace{.1in}}p{1.5in}}
-\multicolumn{1}{c}{\textbf{{\footnotesize Evolutionary music}}} & \multicolumn{1}{c}{\hspace{-.3cm}\textbf{{\footnotesize Next-gen.~recommenders\hspace{.3cm}}}} & \multicolumn{1}{c}{\textbf{{\footnotesize Flowchart assembly}}} \\[.05in]
+\multicolumn{1}{c}{\textbf{{\footnotesize Evolutionary music}}} 
+& \multicolumn{1}{c}{\textbf{{\footnotesize Flowchart assembly}}} 
+& \multicolumn{1}{c}{\hspace{-.3cm}\textbf{{\footnotesize Next-gen.~recommenders\hspace{.3cm}}}} 
+\\[.05in]
 \multicolumn{3}{l}{\em {\textbf{Condition}}} \\
 \cline{1-3}
 \multicolumn{3}{l}{\em Focus shift} \\[-.1cm]
 Driven by (currently, human) evaluation of samples
+& Find a pattern to explain a successful combination of nodes
 & Unexpected behaviour in the aggregate
-& Find a pattern to explain a successful combination of nodes\\
+\\
 \cline{1-3}
 ~\\[-.1cm]
 \multicolumn{3}{l}{\em {\textbf{Components}}} \\
@@ -377,26 +385,27 @@ Driven by (currently, human) evaluation of samples
 \multicolumn{3}{l}{\em Trigger} \\[-.1cm]
 % \textbf{Trigger}
 Previous evolutionary steps, in combination with user input
+& Trial and error in combinatorial search 
 & Input from user behaviour
-& Trial and error in combinatorial search \\
+\\
 % \cline{1-3}
 \multicolumn{3}{l}{\em Prepared mind} \\[-.1cm]
 % \textbf{Prepared mind}
 Musical knowledge, evolution mechanisms
-& Through user/domain model
-& Constraints on node inputs and outputs; history of successes and failures\\
+& Constraints on node inputs and outputs; history of successes and failures
+& Through user/domain model\\
 % \cline{1-3}
 %\textbf{Bridge}
 \multicolumn{3}{l}{\em Bridge} \\[-.1cm]
 Newly-evolved Improvisors
-& Elements identified outside clusters
-& Try novel combinations \\
+& Try novel combinations 
+& Elements identified outside clusters\\
 % \cline{1-3}
 %\textbf{Result}
 \multicolumn{3}{l}{\em Result} \\[-.1cm]
 Music generated by the fittest Improvisors
-& Dependent on organisation goals
-& Non-empty or more highly qualified output \\ \cline{1-3}
+& Non-empty or more highly qualified output
+& Dependent on organisation goals \\ \cline{1-3}
 ~\\[-.1cm]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \multicolumn{3}{l}{\em \textbf{Dimensions}}  \\
@@ -404,27 +413,26 @@ Music generated by the fittest Improvisors
 %\textbf{Chance}
 \multicolumn{3}{l}{\em Chance} \\[-.1cm]
 Looking for rare gems in a huge search space
-& Imperfect knowledge of user preferences and behaviour
-& Changing state of the outside world; random selection of nodes to try \\
+& Changing state of the outside world; random selection of nodes to try 
+& Imperfect knowledge of user preferences and behaviour\\
 % \cline{1-3}
 %\textbf{Curiosity}
 \multicolumn{3}{l}{\em Curiosity} \\[-.1cm]
 Aiming to have a particular user take note of an Improvisor
-& Making unusual recommendations
-& Search for novel combinations \\
+& Search for novel combinations 
+& Making unusual recommendations\\
 % \cline{1-3}
 %\textbf{Sagacity}
 \multicolumn{3}{l}{\em Sagacity} \\[-.1cm]
-Enhance user appreciation of Improvisor over time,
-using a fitness function
-& Update recommendation model after user behaviour 
-& Don't try things known not to work; consider variations on successful patterns \\
+Enhance user appreciation of Improvisor over time, using a fitness function
+& Don't try things known not to work; consider variations on successful patterns 
+& Update recommendation model after user behaviour \\
 % \cline{1-3}
 %\textbf{Value} &
 \multicolumn{3}{l}{\em Value} \\[-.1cm]
 Via fitness function (as a proxy measure of creativity)
-& Per business metrics/objectives
-& Currently ``non-empty results''; more interesting evaluation functions possible \\
+& Currently ``non-empty results''; more interesting evaluation functions possible 
+& Per business metrics/objectives\\
 \cline{1-3}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 ~\\[-.1cm]
@@ -433,26 +441,26 @@ Via fitness function (as a proxy measure of creativity)
 %\textbf{Dynamic world}
 \multicolumn{3}{l}{\em Dynamic world} \\[-.1cm]
 Changes in the user tastes
-& As precondition for testing system's influences on user behaviour
-& Changing data sources and growing domain knowledge \\
+& Changing data sources and growing domain knowledge 
+& As precondition for testing system's influences on user behaviour\\
 %\cline{1-3}
 %\textbf{Multiple contexts}
 \multicolumn{3}{l}{\em Multiple contexts} \\[-.1cm]
 Multiple users' opinions would change what the system is curious about and require greater sagacity
-& User model, domain model, model of its own behaviour
-& Interaction between different heuristic search processes would increase unexpectedness \\
+& Interaction between different heuristic search processes would increase unexpectedness 
+& User model, domain model, model of its own behaviour\\
 % \cline{1-3}
 %\textbf{Multiple tasks}
 \multicolumn{3}{l}{\em Multiple tasks} \\[-.1cm]
 Evolve Improvisors, generate music, collect user input, carry out fitness calculations
-& Make recommendations, learn from users, update models
-& Generate new heuristics and new domain artefacts \\
+& Generate new heuristics and new domain artefacts 
+& Make recommendations, learn from users, update models\\
 % \cline{1-3}
 %\textbf{Multiple influences}
 \multicolumn{3}{l}{\em Multiple influences} \\[-.1cm]
 Through programming of fitness function and musical parameter combinations
-& Experimental design, psychology, domain understanding
-& Learning to combine new kinds of ProcessNodes\\
+& Learning to combine new kinds of ProcessNodes
+& Experimental design, psychology, domain understanding\\
 \cline{1-3}
 \end{tabular}
 \par}
