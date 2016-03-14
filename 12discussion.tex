@@ -2,14 +2,15 @@
 
 In Section \ref{sec:computational-serendipity}, we applied our model
 to evaluate the serendipity of an evolutionary music improvisation
-system, a hypothetical class of next-generation recommender systems,
-and a system for assembling flowcharts.  The model has helped to
-highlight directions for development that would increase the potential
-for serendipity in existing systems, either incrementally or more
-transformatively.  Our model outlines a path towards the development
-of systems that can observe events that would otherwise not be
-observed, take an interest in them, and transform the observations
-into artefacts with lasting value.
+system, a system for automatically assembling flowcharts, and
+a hypothetical class of next-generation recommender systems.
+
+The model has helped to highlight directions for development that
+would increase a system's potential for serendipity, either
+incrementally or more transformatively.  Our model outlines a path
+towards the development of systems that can observe events that would
+otherwise not be observed, take an interest in them, and transform the
+observations into artefacts with lasting value.
 
 %% In this section, we will show how the model allows for more precise
 %% thinking than other existing work touching on this area.  We then
@@ -76,17 +77,21 @@ of serendipity into play in future systems, as  discussed in Section
 
 Recent work has examined the related topics of \emph{curiosity}
 \cite{wu2013curiosity} and \emph{surprise} \cite{grace2014using} in
-computing.  The latter example seeks to ``adopt methods from the field of
-computational creativity [$\ldots$] to the generation of scientific
+computing.  The latter example seeks to ``adopt methods from the field
+of computational creativity [$\ldots$] to the generation of scientific
 hypotheses.''  This provides a useful example of an effort focused on
-computational \emph{invention}.
+computational \emph{invention}.  Another related area of contemporary
+computing in which serendipitous events may be found is
+bioinformatics: ``Instead of waiting for the happy accidents in the
+lab, you might be able to find them in the data''
+\cite[p.~70]{kennedy2016inventology}.
 
 As we indicated earlier, creativity and serendipity are often
 discussed in related ways.  A further terminological clarification is
 warranted.  The word \emph{creative} can be used to describe a
 ``creative product'', a ``creative person'', a ``creative process''
 and even the broader ``creative milieu.''  Computational creativity
-must take acount all of these aspects \cite{jordanous2015four}.  In
+must take acount all of these aspects \cite{4Pjournal-version}.  In
 contrast, the model we have presented focuses only on serendipity as
 an attribute of a particular kind of process.  Most often, we speak of
 a system's \emph{potential} for serendipity.  In the current work, we
@@ -151,7 +156,7 @@ due to the absence of clear criteria for serendipity, which we address
 in the current paper.  Another issue is the widespread reliance on microdomains.  However, there are other underlying factors.
 Existing standards for assessing computational creativity have
 historically focused on product evaluations.
-\citeA{ritchie07} uses metrics that depend on properties that a reasonably sophisticated judge can ascribe to generated artifacts:  ``typicality'', i.e., the extent to which an artifact belongs to a certain genre, and ``quality'' as atomic measures for more complex metrics, including ``novelty.''  Most often, the judge is assumed to be a human.
+\citeA{ritchie07} uses metrics that depend on properties that a reasonably sophisticated judge can ascribe to generated artifacts:  ``typicality'', i.e., the extent to which an artifact belongs to a certain genre, and ``quality''.  These are used as atomic measures from which more complex metrics, including ``novelty,'' can be derived.  Most often, the judge is assumed to be a human.
 %
 In recent years, artefact-centred evaluations are increasingly
 complemented by methods that consider process
@@ -164,7 +169,7 @@ may even be seen to ``invalidate'' research into computational
 creativity.
 
 We would argue that the concept of serendipity brings autonomous
-creative systems into clearer focus: not as an abstract notion of
+creative systems into clearer focus: not with an abstract notion of
 creativity \emph{sui generis}, but creativity in
 interaction with the world.  This often requires a different mindset,
 and a different approach to system building and evaluation.
@@ -231,18 +236,23 @@ serendipity.  The essential issues were drawn out in Section \ref{sec:related}, 
 
 \paragraph{\textbf{Autonomy}.} Our case studies in Section
   \ref{sec:computational-serendipity} highlight the potential value of
-  increased autonomy on the system side.
-The search for connections that make raw data into ``strategic data''
-is an appropriate theme for research in computational intelligence and
-machine learning to grapple with.  In the standard cybernetic model,
-we control computers, and we also control the computer's operating
-context.  There is little room for serendipity if there is nothing
-outside of our direct control.  In contrast to this mainstream model,
-von Foerster \citeyear[p. 286]{von2003cybernetics} advocated a
-second-order cybernetics in which ``the observer who enters the system
-shall be allowed to stipulate his own purpose.''  \emph{A
-  primary challenge for the serendipitous operation of computers is
-  developing computational agents that specify their own problems.}
+  increased autonomy on the system side.  The search for connections
+  that make raw data into ``strategic data'' is an appropriate theme
+  for research in computational intelligence and machine learning to
+  grapple with.  In the standard cybernetic model, we control
+  computers, and we also control the computer's operating context.
+  There is little room for serendipity if there is nothing outside of
+  our direct control.  This mainstream model stands in contrast to von
+  Foerster's \citeyear{von2003cybernetics} second-order
+  cybernetics.  \citeA{research-priorities} advise researchers to
+  consider \emph{verification}, \emph{validity} and \emph{security} as
+  well as \emph{control}.  While we wouldn't advocate an uncautious
+  approach, it must be pointed out that the dystopic scenarious
+  surrounding loss of control may have corresponding utopic
+  counter-scenarios; and in any event, we believe there is a more
+  fundamental research problem.  \emph{A primary challenge for
+    the serendipitous operation of computers is developing
+    computational agents that specify their own problems.}
 
 \paragraph{\textbf{Learning}.} Each of the case studies considered in
   Section \ref{sec:computational-serendipity} describes a system that
@@ -334,7 +344,7 @@ knowledge in a brief, shareable form.  Tracing the steps involved, we
 see that the creation of a new design pattern is always somewhat
 serendipitous (Figure \ref{fig:pattern-schematic}; compare Figure
 \ref{fig:1b}).
-
+%%
 To van Andel's assertion that ``The very moment I can plan or
 programme `serendipity' it cannot be called serendipity anymore,'' we
 reply that patterns -- and programs -- can include built-in
@@ -342,18 +352,16 @@ indeterminacy.  Moreover, we can foster circumstances that may make
 unexpected happy outcomes more likely, by designing and developing
 systems that increasingly address the challenges outlined in Section
 \ref{sec:recommendations}.  Such systems will encounter unexpected
-stimuli, become curious about them, sagaciously pursuing enquiry
+stimuli, become curious about them, sagaciously pursue enquiry
 within a social context, and assess the value of any outcomes.
 %
 Figure \ref{fig:va-pattern-figure} shows one example of a design
-pattern that can be used to \emph{plan for serendipity}, based on a
-pattern identified by van Andel: ``\emph{Successful Error}''.  In
+pattern that can be used to \emph{plan for serendipity}, based on the
+``\emph{Successful Error}'' pattern identified by van Andel.  In
 future work, we intend to build a more complete serendipity pattern
 language -- and put it to work within autonomous programming systems.
 
 % Is ``having a stretch goal'' an example of a serendipity pattern?  I think so!
-
-
 
 \begin{figure}[!h]
 \vspace{.3cm}

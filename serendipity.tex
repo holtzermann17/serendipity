@@ -33,7 +33,7 @@ skipabove=\baselineskip,
 skipbelow=\baselineskip,
 innertopmargin=3pt,
 innerbottommargin=8pt,
-apptotikzsetting={\tikzset{mdfbackground/.append style={fill=red,fill opacity=0}}}
+apptotikzsetting={\tikzset{mdfbackground/.append style={fill=white,fill opacity=0}}}
 }
 
 
@@ -72,8 +72,8 @@ apptotikzsetting={\tikzset{mdfbackground/.append style={fill=red,fill opacity=0}
 \usepackage{dialogue}
 \usepackage{placeins}
 \usepackage{tikz}
-\usepackage{onimage}
-\usetikzlibrary{positioning,backgrounds,fit,arrows,arrows.meta,shapes,shadows}
+%\usepackage{onimage}
+\usetikzlibrary{positioning,backgrounds,fit,arrows,shapes,shadows}
 \usetikzlibrary{shapes.multipart}
 \usepackage{wrapfig}
 \usepackage{enumitem}
@@ -216,6 +216,15 @@ inner ysep=10pt
     }%
 }
 \makeatother
+
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}
+%\setlength{\headsep}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\topmargin}{0pt}
+\setlength{\topsep}{0pt}
+\setlength{\partopsep}{0pt}
+\raggedbottom
 
 \begin{document}
 

@@ -1,10 +1,9 @@
 \section{Serendipity in computational systems} \label{sec:computational-serendipity}
 
-The 13 facets of serendipity from Section \ref{sec:literature-review}
-specify the conditions and preconditions that are conducive to
-serendipitous discovery.  Section \ref{sec:our-model} distilled these
-elements into a computational model, culminating in a method for
-evaluating computational serendipity in Section \ref{specs-overview}.
+The 13 facets of serendipity from Section \ref{sec:by-example} specify
+the conditions and preconditions that are conducive to serendipitous
+discovery.  Section \ref{sec:our-model} distilled these elements into
+a computational model.
 %
 Along with clear criteria, it is important to clearly delineate the
 scope of the system being evaluated, and the position of the evaluator
@@ -22,7 +21,7 @@ dynamic investigation problems, model generation, and poetry
 flowcharts.  Using our updated criteria, we discuss two new examples
 below, and revisit poetry flowcharts, reporting on recent work and
 outlining the next steps.  The three case studies respectively apply
-the criteria to \emph{evaluate} of an existing system, \emph{design} a
+the criteria to \emph{evaluate} an existing system, \emph{design} a
 new experiment, and \emph{frame} a ``grand challenge.''  In the first
 case study, the system we evaluate turns out not to be particularly
 serendipitous according to our criteria.  This helps to show that our
@@ -191,18 +190,18 @@ parameter, which needs to be seeded with an ArrayList of strings.  The node prod
 
 \subsubsection{Application of criteria}
 
-In our current experimental design, the system's potential
-\textbf{triggers} result from random, but constrained, trial and error
-with flowchart assembly.  Some valid combinations of nodes will
+In the initial experimental design, following \citeA{pease2013discussion},
+the system's potential \textbf{triggers} result from random, but constrained,
+trial and error with flowchart assembly.  Some valid combinations of nodes will
 produce results, and some will not.  Due to the dynamically changing
 environment (e.g., updates to data sources like Twitter) some
 flowcharts that did not produce results earlier may unexpectedly begin
 to produce results.
 %
 The system's \textbf{prepared mind} lies in a distributed knowledge
-base provided by ProcessNodes themselves, describing the constraints
-on their inputs and outputs; and in the global history of successful
-and unsuccessful combinations.
+base provided by the ProcessNodes, which provide metadata that
+describe constraints on their inputs and outputs -- and also in the
+global history of successful and unsuccessful combinations.
 %
 The system will not try combinations that it knows cannot produce
 results, but it will try novel combinations and may retry earlier
@@ -212,17 +211,19 @@ into a working flowchart is an occasion for a \textbf{focus shift}.
 What made this particular combination work?  Is there a pattern that
 could be exploited in the future?  It may be that no broader pattern
 can be found, and the system will simply record the bare fact that the
-combination works.
+combination works (and this is the simple starting point from which we
+begin).
 %
 Successful combinations and any further inferences are stored, and
-referred to in future runs.  The \textbf{bridge} to any new
-results is accordingly found by informed trial and error, building
-on previous outcomes.
+referred to in future runs.  The \textbf{bridge} to a new result is
+accordingly found by informed trial and error, building on previous
+outcomes.
 %
 The basic \textbf{result} the system is aiming to achieve is simply to
 generate a new combination of nodes that can fit together and that
-generates non-empty output.  Subsequent versions of the system may
-have more detailed evaluation functions, setting a higher bar.  For
+generates non-empty output.  Reviewing this design, we observed that
+subsequent versions of the system may have more detailed evaluation
+functions, setting a higher bar for what counts as success.  For
 example, a future version of the system could be tuned to search for
 flowcharts that generate poetry \cite{corneli2015computational}.
 
@@ -231,11 +232,11 @@ given sample of nodes is fairly low.  Compared to humans users of {\sf
   FloWr}, the search process is exceptionally \textbf{curious}, since
 it tries many combinations programmatically.  However, remembering
 viable combinations and avoiding combinations that are known not to
-work offer unexceptional \textbf{sagacity}.  This will be so until the
-system learns more heuristics, which requires not just pattern
-matching but pattern induction.  At the moment, the system's criterion
-for attributing \textbf{value} is simply that the combination of nodes
-generates non-empty output; an third-party is not likely to judge such
+work does not require exceptional \textbf{sagacity}.  At least, this will be
+so until the system learns more heuristics for flowchart construction, which would
+require not only pattern matching but pattern induction.  At the moment, the
+system's criterion for attributing \textbf{value} is simply that the combination
+of nodes generates non-empty output; an third-party is not likely to judge such
 combinations as useful.
 
 \subsubsection{Ruling}
@@ -244,20 +245,20 @@ The associated likelihood score is
 $\mathit{low}\times\mathit{low}\times\mathit{high}$, which is
 relatively favourable.  However, until there is a more discriminating
 way to judge value, the attribution of serendipity to any particular
-run is premature.  One route forward would be to attribute value to
-explanatory heuristics, rather than generated texts.  This would
-result in (and require) increased sagacity on the part of the system.
+run seems premature.  This motivates a new set of experiments that
+seeks to meaningfully judge the value of explanatory heuristics, generated
+flowcharts, and texts.  This will both result in and require increased
+sagacity on the part of the system.
+%%% JAC - add citations to ICCC papers if they have been accepted.
 
 \subsubsection{Qualitative assessment}
 
-The \textbf{dynamic world} the system operates in is dynamic in two
+The system operates in a \textbf{dynamic world} that is dynamic in two
 ways: first, in the straightforward sense that some of the input
 sources, like Twitter, are changing; additionally, in the sense that
 the system's knowledge of successful and unsuccessful node
-combinations changes over time.  The current version of the system
-does not seem to deal with \textbf{multiple contexts}.  We have broken
-the search process into separate sub-populations to constrain the
-search, but these do not interact.  In a future version of the system,
+combinations changes over time as well.  The current version of the system
+does not seem to deal with \textbf{multiple contexts}.  In a future version of the system,
 interaction between different heuristically-driven search processes
 would be possible, and could lead to more unexpected results.  Along
 these lines, as more goals are added, the system could more readily be
@@ -366,10 +367,10 @@ Recommender systems have to cope with a \textbf{dynamic world} of changing user 
 \begin{table}[p]
 {\centering \renewcommand{\arraystretch}{1.5}
 \scriptsize
-\begin{tabular}{p{1.5in}@{\hspace{.1in}}p{1.5in}@{\hspace{.1in}}p{1.5in}}
+\begin{tabular}{p{1.4in}@{\hspace{.1in}}p{1.4in}@{\hspace{.1in}}p{1.4in}}
 \multicolumn{1}{c}{\textbf{{\footnotesize Evolutionary music}}} 
 & \multicolumn{1}{c}{\textbf{{\footnotesize Flowchart assembly}}} 
-& \multicolumn{1}{c}{\hspace{-.3cm}\textbf{{\footnotesize Next-gen.~recommenders\hspace{.3cm}}}} 
+& \multicolumn{1}{c}{\textbf{{\footnotesize Next-gen.~rec.~sys.}}} 
 \\[.05in]
 \multicolumn{3}{l}{\em {\textbf{Condition}}} \\
 \cline{1-3}
@@ -489,7 +490,15 @@ serendipity could be enhanced.
   differentiate individual threads or system runs.  Some elements of
   this population might be deemed more serendipitous than others.
 
-\item The next-generation recommender systems we've envisioned need to
+\item  The flowchart assembly process would need more stringent, and
+  more meaningful, criteria for value before third-party observers
+  would be likely to attribute serendipity to the system.  In addition
+  to raising challenges for autonomous evaluation (as in the
+  evolutionary music system case), this requirement would impose more
+  sophisticated constaints on processing in earlier steps, which would
+  require the system to be more sagacious.
+
+\item  The next-generation recommender systems we've envisioned need to
   be able to make inferences from aggregate user behaviour.  This
   points to long-term considerations that go beyond the unique
   serendipitous event.  How ``curious'' should these systems be?  One
@@ -504,13 +513,5 @@ serendipity could be enhanced.
   step towards building an artificially-intelligent recommender
   system, users might be explicitly given tasks that are designed to
   trigger serendipity on the system-side.
-
-\item The flowchart assembly process would need more stringent, and
-  more meaningful, criteria for value before third-party observers
-  would be likely to attribute serendipity to the system.  In addition
-  to raising challenges for autonomous evaluation (as in the
-  evolutionary music system case), this requirement would impose more
-  sophisticated constaints on processing in earlier steps, which would
-  require the system to be more sagacious.
 \end{enumerate}
 
